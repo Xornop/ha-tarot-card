@@ -272,21 +272,29 @@ class TarotBase extends HTMLElement {
       reversed ? this._t("reversed") : this._t("upright");
 
     const img = this.shadowRoot.querySelector(".tarot-image");
-    img.src = `${this._config.image_path}${card.id}.avif`;
+    const frame = this.shadowRoot.querySelector(".frame");
+
+    // Hide the frame and drop the old image so the previous card never flashes.
+    frame.classList.remove("reveal");
+    frame.style.visibility = "hidden";
+    img.removeAttribute("src");
     img.alt = name;
     img.classList.toggle("reversed", reversed);
+
+    const show = () => {
+      frame.style.visibility = "visible";
+      void frame.offsetWidth;
+      frame.classList.add("reveal"); // restart the reveal animation
+    };
+    img.onload = show;
     img.onerror = () => {
       img.removeAttribute("src");
       img.alt = lang === "nl"
         ? `Afbeelding niet gevonden: ${card.id}.avif`
         : `Image not found: ${card.id}.avif`;
+      show();
     };
-
-    // Restart the reveal animation on every draw.
-    const frame = this.shadowRoot.querySelector(".frame");
-    frame.classList.remove("reveal");
-    void frame.offsetWidth;
-    frame.classList.add("reveal");
+    img.src = `${this._config.image_path}${card.id}.avif`;
 
     this.shadowRoot.querySelector(".meaning").innerHTML = this._formatText(meaning);
     const dialog = this.shadowRoot.querySelector("dialog");
