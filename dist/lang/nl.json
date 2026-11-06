@@ -1,0 +1,403 @@
+{
+  "ui": {
+    "upright": "RECHTOP",
+    "reversed": "OMGEKEERD",
+    "meaning": "Betekenis",
+    "close": "Sluiten",
+    "title": "Trek een Tarotkaart",
+    "badge_title": "Tarot",
+    "hint": "Tik om je kaart te trekken"
+  },
+  "cards": {
+    "AceOfCups": {
+      "name": "Aas van Bekers",
+      "meaning": "De **Aas van Bekers** staat voor een overvloed aan emotionele energie, nieuwe liefde, medeleven en innerlijke vreugde. Het is het begin van een diepe emotionele vervulling of een nieuwe relatie.",
+      "meaning_reversed": "Omgekeerd kan de Aas van Bekers wijzen op **onderdrukte emoties, geblokkeerde creativiteit**, onbeantwoorde liefde of emotionele overbelasting. Je bent emotioneel leeg of overvol."
+    },
+    "AceOfPentacles": {
+      "name": "Aas van Pentakels",
+      "meaning": "De **Aas van Pentakels** staat voor een nieuwe start op financieel, carrière of fysiek vlak. Het is een kans op stabiliteit, welvaart en een geschenk uit het materiële vlak.",
+      "meaning_reversed": "Omgekeerd kan de Aas van Pentakels wijzen op **gemiste kansen, financiële instabiliteit**, slechte investeringen of gebrek aan planning. Het geschenk is uitgesteld of verloren."
+    },
+    "AceOfSwords": {
+      "name": "Aas van Zwaarden",
+      "meaning": "De **Aas van Zwaarden** staat voor een doorbraak, mentale helderheid, de kracht van intellect en een nieuw idee. Het is het vermogen om door de verwarring heen te snijden en de waarheid te zien.",
+      "meaning_reversed": "Omgekeerd kan de Aas van Zwaarden wijzen op **verwarring, mentale chaos**, misbruik van intellect of wreedheid. De waarheid is vertroebeld of je bent te hardvochtig."
+    },
+    "AceOfWands": {
+      "name": "Aas van Stokken",
+      "meaning": "De **Aas van Stokken** staat voor een nieuwe start, inspiratie, groei en een flits van creativiteit. Het is de kiem van een nieuw idee, project of onderneming. Omarm deze energie en zet de eerste stap.",
+      "meaning_reversed": "Omgekeerd kan de Aas van Stokken wijzen op **uitstelgedrag, een gebrek aan richting**, geblokkeerde creativiteit of gemiste kansen voor actie. Je energie is laag of ongeordend."
+    },
+    "Death": {
+      "name": "De Dood",
+      "meaning": "De **Dood** symboliseert transformatie, eindes en nieuwe beginnen. Het betekent het einde van de ene fase en het begin van een andere. Deze kaart moedigt je aan om verandering te omarmen, het verleden los te laten en je voor te bereiden op nieuwe kansen.",
+      "meaning_reversed": "Omgekeerd duidt De Dood op **weerstand tegen verandering, stagnatie**, angst voor het onbekende of het vastklampen aan een ongezonde situatie. Je weigert het onvermijdelijke los te laten."
+    },
+    "EightOfCups": {
+      "name": "Acht van Bekers",
+      "meaning": "De **Acht van Bekers** duidt op het weglopen van iets dat niet langer voldoening geeft. Je laat het bekende achter je op zoek naar een diepere emotionele of spirituele waarheid.",
+      "meaning_reversed": "Omgekeerd wijst de Acht van Bekers op **angst om weg te gaan, terugkeren naar het oude**, aarzeling of het vastklampen aan een onbevredigende situatie. Je kunt de sprong niet wagen."
+    },
+    "EightOfPentacles": {
+      "name": "Acht van Pentakels",
+      "meaning": "De **Acht van Pentakels** staat voor toewijding, vakmanschap, training en hard werken aan details. Focus je op je vaardigheden en streef naar perfectie in je werk.",
+      "meaning_reversed": "Omgekeerd duidt de Acht van Pentakels op **perfectie-obsessie, gebrek aan ambitie**, slecht vakmanschap of te veel focus op werk. Je bent te kritisch of lui."
+    },
+    "EightOfSwords": {
+      "name": "Acht van Zwaarden",
+      "meaning": "De **Acht van Zwaarden** symboliseert gevangenschap, beperkingen, zelfopgelegde beperkingen en het gevoel vast te zitten. De zwaarden zijn niet gebonden; je kunt de blinddoek zelf afdoen.",
+      "meaning_reversed": "Omgekeerd duidt de Acht van Zwaarden op het **doorbreken van beperkingen, bevrijding**, of het eindelijk zien van de uitweg. Je bent klaar om de blinddoek af te doen."
+    },
+    "EightOfWands": {
+      "name": "Acht van Stokken",
+      "meaning": "De **Acht van Stokken** symboliseert snelheid, actie, beweging en snel nieuws. De dingen komen nu snel in beweging. Bereid je voor op snelle veranderingen en acties in de materiële wereld.",
+      "meaning_reversed": "Omgekeerd wijst de Acht van Stokken op **vertragingen, wachten, frustratie door traagheid** of gemiste kansen. De energie is geblokkeerd of te chaotisch."
+    },
+    "FiveOfCups": {
+      "name": "Vijf van Bekers",
+      "meaning": "De **Vijf van Bekers** vertegenwoordigt verlies, verdriet en spijt, maar ook het onvermogen om de zegeningen die nog over zijn te zien. Het is belangrijk om je te richten op de twee bekers die nog staan.",
+      "meaning_reversed": "Omgekeerd duidt de Vijf van Bekers op het **loslaten van verdriet, acceptatie van verlies**, vergeving en de eerste stappen naar herstel. Je begint het positieve te zien."
+    },
+    "FiveOfPentacles": {
+      "name": "Vijf van Pentakels",
+      "meaning": "De **Vijf van Pentakels** staat voor verlies, armoede, onzekerheid en het gevoel buitengesloten te zijn. Vraag om hulp; er is steun beschikbaar, maar je ziet het niet.",
+      "meaning_reversed": "Omgekeerd wijst de Vijf van Pentakels op **herstel van verlies, het accepteren van hulp**, het einde van ontberingen of het opnieuw vinden van een baan/thuis. De moeilijke tijd is voorbij."
+    },
+    "FiveOfSwords": {
+      "name": "Vijf van Zwaarden",
+      "meaning": "De **Vijf van Zwaarden** vertegenwoordigt conflict, verlies, winnen ten koste van anderen, of pesten. Soms is de overwinning het verlies niet waard. Laat je trots los en vind een vredige oplossing.",
+      "meaning_reversed": "Omgekeerd wijst de Vijf van Zwaarden op **een ongemakkelijke wapenstilstand, berouw**, het verlangen naar vrede of het weigeren om de les van de nederlaag te leren. De prijs van het conflict is te hoog."
+    },
+    "FiveOfWands": {
+      "name": "Vijf van Stokken",
+      "meaning": "De **Vijf van Stokken** duidt op concurrentie, meningsverschillen en kleine conflicten. Er is veel energie, maar het is ongeorganiseerd. Het moedigt je aan om uitdagingen aan te gaan en je standpunt te verdedigen, maar wees bedachtzaam.",
+      "meaning_reversed": "Omgekeerd wijst de Vijf van Stokken op het **vermijden van conflict**, het negeren van meningsverschillen, of het stoppen van een strijd, soms door toe te geven. De onrust gaat ondergronds."
+    },
+    "FourOfCups": {
+      "name": "Vier van Bekers",
+      "meaning": "De **Vier van Bekers** duidt op apathie, verveling, ontevredenheid en het negeren van de aangeboden kansen. Je bent te gefocust op wat je mist om te zien wat je wordt aangeboden.",
+      "meaning_reversed": "Omgekeerd wijst de Vier van Bekers op een **nieuw perspectief, het accepteren van een aanbod**, het loslaten van apathie of een plotselinge bewustwording. Je bent klaar om verder te gaan."
+    },
+    "FourOfPentacles": {
+      "name": "Vier van Pentakels",
+      "meaning": "De **Vier van Pentakels** vertegenwoordigt bezitterigheid, controle, vasthouden aan middelen en een angst voor verandering. Laat de behoefte om te controleren los om ware stabiliteit te vinden.",
+      "meaning_reversed": "Omgekeerd duidt de Vier van Pentakels op het **loslaten van controle, het delen van middelen**, vrijgevigheid of, in het uiterste geval, verspilling. Je bent minder bang om te delen."
+    },
+    "FourOfSwords": {
+      "name": "Vier van Zwaarden",
+      "meaning": "De **Vier van Zwaarden** staat voor rust, herstel, meditatie en de noodzaak om je terug te trekken. Je hebt rust nodig na een periode van stress. Neem de tijd om te genezen.",
+      "meaning_reversed": "Omgekeerd duidt de Vier van Zwaarden op **rusteloosheid, burn-out**, een gebrek aan herstel of het verlaten van je toevluchtsoord te vroeg. Je forceert de actie."
+    },
+    "FourOfWands": {
+      "name": "Vier van Stokken",
+      "meaning": "De **Vier van Stokken** staat voor viering, harmonie, veiligheid en thuiskomen. Het is een kaart van stabiliteit, succes en een vreugdevolle pauze. Het kan een huwelijk, een housewarming of een mijlpaal inhouden.",
+      "meaning_reversed": "Omgekeerd duidt de Vier van Stokken op een **gebrek aan harmonie, onzekerheid in huis**, een onstabiele basis of een gebrek aan viering. Er is onrust in je veilige haven."
+    },
+    "Judgement": {
+      "name": "Oordeel",
+      "meaning": "**Oordeel** belichaamt wedergeboorte, vernieuwing en een oproep tot actie. Het betekent een tijd voor evaluatie, vergeving en het nemen van belangrijke beslissingen. Deze kaart moedigt je aan om na te denken over je verleden, te leren van je ervaringen en een nieuw hoofdstuk te omarmen.",
+      "meaning_reversed": "Omgekeerd wijst Oordeel op **zelfkritiek, twijfel aan jezelf**, uitstel van een beslissing of het weigeren om te leren van fouten uit het verleden. Vergeef jezelf en ga verder."
+    },
+    "Justice": {
+      "name": "Gerechtigheid",
+      "meaning": "**Gerechtigheid** belichaamt eerlijkheid, balans en waarheid. Het betekent de behoefte aan eerlijkheid, integriteit en verantwoordelijkheid. Deze kaart moedigt je aan om je opties zorgvuldig af te wegen, eerlijke beslissingen te nemen en de gevolgen van je acties te accepteren.",
+      "meaning_reversed": "Omgekeerd duidt Gerechtigheid op **onrechtvaardigheid, oneerlijkheid**, juridische problemen of het vermijden van aansprakelijkheid. Je moet je acties herzien en eerlijk zijn."
+    },
+    "KingOfCups": {
+      "name": "Koning van Bekers",
+      "meaning": "De **Koning van Bekers** staat voor emotionele balans, beheersing en diplomatie. Hij kan zijn emoties beheersen en anderen met wijsheid leiden. Beheers je gevoelens en wees kalm.",
+      "meaning_reversed": "Omgekeerd duidt de Koning van Bekers op **stemmingswisselingen, emotionele onbalans**, onderdrukte gevoelens of manipulatie. Je emoties zijn in beroering."
+    },
+    "KingOfPentacles": {
+      "name": "Koning van Pentakels",
+      "meaning": "De **Koning van Pentakels** staat voor welvaart, financiële zekerheid, ondernemerschap en betrouwbaarheid. Hij is een succesvolle, stabiele leider die weet hoe hij middelen moet beheren.",
+      "meaning_reversed": "Omgekeerd duidt de Koning van Pentakels op **corruptie, gokken, hebzucht** of misbruik van macht. Je financiële imperium is op drijfzand gebouwd."
+    },
+    "KingOfSwords": {
+      "name": "Koning van Zwaarden",
+      "meaning": "De **Koning van Zwaarden** staat voor intellectuele autoriteit, duidelijkheid en waarheid. Hij is de ultieme denker, die logica gebruikt om te regeren. Zoek de objectieve waarheid.",
+      "meaning_reversed": "Omgekeerd duidt de Koning van Zwaarden op **tirannie, misbruik van intellect**, cynisme of een gebrek aan ethiek. Je logica is bevooroordeeld of te dominant."
+    },
+    "KingOfWands": {
+      "name": "Koning van Stokken",
+      "meaning": "De **Koning van Stokken** staat voor leiderschap, visie, ondernemerschap en autoriteit. Hij is een inspirerende leider met een duidelijke toekomstvisie. Neem de leiding en inspireer anderen met je passie.",
+      "meaning_reversed": "Omgekeerd duidt de Koning van Stokken op **tirannie, impulsiviteit, overdreven eisen** of een gebrek aan leiderschap. Je gebruikt je macht verkeerd."
+    },
+    "KnightOfCups": {
+      "name": "Ridder van Bekers",
+      "meaning": "De **Ridder van Bekers** is de charmeur, die een uitnodiging of een emotioneel aanbod brengt. Hij staat voor romantiek, idealisme en een beroep op je gevoelens. Hij is de romantische held.",
+      "meaning_reversed": "Omgekeerd duidt de Ridder van Bekers op **een gebrek aan romantiek, teleurstelling**, een vals aanbod of een bedrieger. De idealen zijn verzonnen."
+    },
+    "KnightOfPentacles": {
+      "name": "Ridder van Pentakels",
+      "meaning": "De **Ridder van Pentakels** is betrouwbaar, hardwerkend en geduldig. Hij is de meest stabiele maar langzaamste van de Ridders. Ga gestaag en met toewijding vooruit.",
+      "meaning_reversed": "Omgekeerd duidt de Ridder van Pentakels op **luiheid, stagnatie**, het missen van kansen door traagheid of saaiheid. Je mist de drive om vooruit te komen."
+    },
+    "KnightOfSwords": {
+      "name": "Ridder van Zwaarden",
+      "meaning": "De **Ridder van Zwaarden** is moedig, ambitieus en stormt vooruit. Hij vertegenwoordigt snelle actie, maar kan roekeloos zijn. Denk na voordat je handelt of spreekt.",
+      "meaning_reversed": "Omgekeerd duidt de Ridder van Zwaarden op **roekeloosheid, agressie**, het gevoel te snel te gaan of een plotselinge vertraging. Je acties zijn niet doordacht."
+    },
+    "KnightOfWands": {
+      "name": "Ridder van Stokken",
+      "meaning": "De **Ridder van Stokken** staat voor actie, avontuur en onstuimige energie. Hij is gedreven, maar soms impulsief. Het is een oproep om snel en met passie vooruit te gaan, maar let op waar je naartoe gaat.",
+      "meaning_reversed": "Omgekeerd duidt de Ridder van Stokken op **roekeloosheid, vertragingen, frustratie** of het onvermogen om een plan af te maken. Je rent in het wilde weg."
+    },
+    "NineOfCups": {
+      "name": "Negen van Bekers",
+      "meaning": "De **Negen van Bekers** staat voor wensvervulling, tevredenheid en emotionele voldoening. Dit is de \"wens-kaart\" en duidt aan dat je tevreden bent met je emotionele leven.",
+      "meaning_reversed": "Omgekeerd kan de Negen van Bekers wijzen op **zelfgenoegzaamheid, ontevredenheid**, het niet krijgen van wat je wilt of overdaad. Je wens is nog niet vervuld."
+    },
+    "NineOfPentacles": {
+      "name": "Negen van Pentakels",
+      "meaning": "De **Negen van Pentakels** vertegenwoordigt onafhankelijkheid, verfijning, zelfvoorziening en materiële luxe. Je hebt je eigen succes gecreëerd; geniet ervan.",
+      "meaning_reversed": "Omgekeerd wijst de Negen van Pentakels op **afhankelijkheid, financiële tegenslag**, het onvermogen om van succes te genieten of te veel focus op uiterlijkheden. Je bent niet echt onafhankelijk."
+    },
+    "NineOfSwords": {
+      "name": "Negen van Zwaarden",
+      "meaning": "De **Negen van Zwaarden** staat voor angst, zorgen, nachtmerries en slapeloosheid. Deze mentale kwelling is vaak erger dan de realiteit. Zoek hulp en kalmeer je geest.",
+      "meaning_reversed": "Omgekeerd wijst de Negen van Zwaarden op het **loslaten van angst, het verlichten van zorgen**, het zoeken naar hulp of een diep geheim. Je begint aan je herstel."
+    },
+    "NineOfWands": {
+      "name": "Negen van Stokken",
+      "meaning": "De **Negen van Stokken** staat voor veerkracht, standvastigheid, en het bijna bereiken van de finish. Je bent moe, maar vastbesloten om vol te houden. Je laatste beetje kracht is wat je over de streep zal trekken.",
+      "meaning_reversed": "Omgekeerd kan de Negen van Stokken wijzen op **paranoia, angst, een gebrek aan uithoudingsvermogen** of het opgeven op het laatste moment. Je bent bang om de laatste stap te zetten."
+    },
+    "PageOfCups": {
+      "name": "Schildknaap van Bekers",
+      "meaning": "De **Schildknaap van Bekers** is een boodschapper van nieuws, een nieuwe start of een emotioneel aanbod. Het symboliseert gevoeligheid, creativiteit en het opkomen van nieuwe gevoelens.",
+      "meaning_reversed": "Omgekeerd kan de Schildknaap van Bekers wijzen op **slecht nieuws, creatieve blokkade**, onzekerheid of emotionele onvolwassenheid. Het aanbod is vals of wordt ingetrokken."
+    },
+    "PageOfPentacles": {
+      "name": "Schildknaap van Pentakels",
+      "meaning": "De **Schildknaap van Pentakels** is een student, brenger van financieel nieuws of een kans om een nieuw, praktisch project te starten. Hij is grondig en studeert hard.",
+      "meaning_reversed": "Omgekeerd kan de Schildknaap van Pentakels wijzen op **slecht financieel nieuws, luiheid**, gebrek aan focus op school/werk, of onrealistische financiële plannen. Je bent onvoorbereid."
+    },
+    "PageOfSwords": {
+      "name": "Schildknaap van Zwaarden",
+      "meaning": "De **Schildknaap van Zwaarden** is alert, nieuwsgierig en intellectueel actief. Hij is een boodschapper van nieuws, of een begin van een mentale uitdaging. Wees voorzichtig met wat je zegt.",
+      "meaning_reversed": "Omgekeerd kan de Schildknaap van Zwaarden wijzen op **roddels, ongerichtheid, misbruik van woorden**, of een gebrek aan planning. Je praat te veel of te ondoordacht."
+    },
+    "PageOfWands": {
+      "name": "Schildknaap van Stokken",
+      "meaning": "De **Schildknaap van Stokken** vertegenwoordigt opwinding, inspiratie en het begin van een nieuw avontuur. Het is een bericht over een creatief project of een reis. Omarm het onbekende met enthousiasme.",
+      "meaning_reversed": "Omgekeerd kan de Schildknaap van Stokken wijzen op **slecht nieuws, creatieve blokkades**, een gebrek aan focus of een vertraging in het ontvangen van een belangrijk bericht. De opwinding is kortstondig."
+    },
+    "QueenOfCups": {
+      "name": "Koningin van Bekers",
+      "meaning": "De **Koningin van Bekers** symboliseert mededogen, intuïtie en emotionele stabiliteit. Ze is de verzorger die met het hart leidt. Luister naar je intuïtie en wees meelevend.",
+      "meaning_reversed": "Omgekeerd kan de Koningin van Bekers wijzen op **emotionele afhankelijkheid, hysterie**, onzekerheid of het manipuleren van emoties. Je intuïtie is verstoord."
+    },
+    "QueenOfPentacles": {
+      "name": "Koningin van Pentakels",
+      "meaning": "De **Koningin van Pentakels** symboliseert een verzorger, moederlijkheid, praktische rijkdom en het creëren van een gezellig thuis. Ze is vrijgevig en geaard.",
+      "meaning_reversed": "Omgekeerd kan de Koningin van Pentakels wijzen op **financiële afhankelijkheid, bezitterigheid**, verwaarlozing van jezelf of het creëren van een chaotisch thuis. Je basis is onzeker."
+    },
+    "QueenOfSwords": {
+      "name": "Koningin van Zwaarden",
+      "meaning": "De **Koningin van Zwaarden** symboliseert onafhankelijkheid, scherpe humor en onpartijdigheid. Ze is in staat om met logica en duidelijkheid te communiceren, maar kan koud overkomen.",
+      "meaning_reversed": "Omgekeerd kan de Koningin van Zwaarden wijzen op **emotionele afstand, wreedheid**, partijdigheid of het gebruik van logica om te kwetsen. Je bent te scherp of te emotioneel koud."
+    },
+    "QueenOfWands": {
+      "name": "Koningin van Stokken",
+      "meaning": "De **Koningin van Stokken** symboliseert moed, onafhankelijkheid en sociale flair. Ze is een leider, vol energie en zelfvertrouwen. Gebruik je charisma om je visie te manifesteren.",
+      "meaning_reversed": "Omgekeerd kan de Koningin van Stokken wijzen op **dominantie, jaloezie, egoïsme** of een gebrek aan vertrouwen in jezelf. Je energie is ongericht of te sterk."
+    },
+    "SevenOfCups": {
+      "name": "Zeven van Bekers",
+      "meaning": "De **Zeven van Bekers** symboliseert verbeelding, keuzes en overweldigende opties. Je hebt veel dromen, maar mist focus. Kies één beker en focus je energie daarop.",
+      "meaning_reversed": "Omgekeerd duidt de Zeven van Bekers op een **gebrek aan keuze, onduidelijkheid**, verwarring of het ontbreken van richting. Je hebt te veel opties of geen enkele duidelijke."
+    },
+    "SevenOfPentacles": {
+      "name": "Zeven van Pentakels",
+      "meaning": "De **Zeven van Pentakels** symboliseert geduld, wachten op resultaten en een evaluatie van je investering. Je bent bijna klaar, maar het is nog niet het moment om te oogsten.",
+      "meaning_reversed": "Omgekeerd wijst de Zeven van Pentakels op **ongeduld, onzekerheid over het resultaat**, slechte investering of het verlaten van een project voordat het klaar is. Je mist geduld."
+    },
+    "SevenOfSwords": {
+      "name": "Zeven van Zwaarden",
+      "meaning": "De **Zeven van Zwaarden** staat voor stiekem gedrag, bedrog, een poging om weg te komen van iets, of het nemen van een kortere weg. Wees eerlijk tegen jezelf en anderen.",
+      "meaning_reversed": "Omgekeerd wijst de Zeven van Zwaarden op het **toegeven van bedrog, het onthullen van een geheim** of het aanvaarden van de gevolgen van je oneerlijkheid. Je leert van je fouten."
+    },
+    "SevenOfWands": {
+      "name": "Zeven van Stokken",
+      "meaning": "De **Zeven van Stokken** vertegenwoordigt verdediging, moed en het innemen van een standpunt. Je wordt uitgedaagd, maar je bent in een sterke positie. Sta voor jezelf op en weiger je over te geven.",
+      "meaning_reversed": "Omgekeerd duidt de Zeven van Stokken op **het opgeven, zich overweldigd voelen, lafheid** of het ontlopen van verantwoordelijkheid. Je positie is onzeker geworden."
+    },
+    "SixOfCups": {
+      "name": "Zes van Bekers",
+      "meaning": "De **Zes van Bekers** staat voor nostalgie, herinneringen uit het verleden, jeugd en onschuld. Het kan een terugkeer van iemand uit het verleden aangeven of de behoefte om opnieuw contact te maken met je innerlijke kind.",
+      "meaning_reversed": "Omgekeerd wijst de Zes van Bekers op **leven in het verleden, ongezonde fixatie op herinneringen**, of de noodzaak om het verleden los te laten en je te richten op de toekomst. Het verleden houdt je tegen."
+    },
+    "SixOfPentacles": {
+      "name": "Zes van Pentakels",
+      "meaning": "De **Zes van Pentakels** duidt op geven en nemen, delen, liefdadigheid en het balanceren van financiën. Wees zowel een gever als een ontvanger met gratie.",
+      "meaning_reversed": "Omgekeerd duidt de Zes van Pentakels op **onbalans in geven/nemen, egoïsme**, schuld of het niet nakomen van afspraken. De verdeling van middelen is oneerlijk."
+    },
+    "SixOfSwords": {
+      "name": "Zes van Zwaarden",
+      "meaning": "De **Zes van Zwaarden** duidt op een overgang, weggaan van problemen, reizen en het verhuizen naar betere tijden. Je laat het moeilijke verleden achter je.",
+      "meaning_reversed": "Omgekeerd duidt de Zes van Zwaarden op **stagnatie, terugkeren naar het verleden**, of het niet kunnen ontsnappen aan problemen. Je bent niet in staat om de oversteek te maken."
+    },
+    "SixOfWands": {
+      "name": "Zes van Stokken",
+      "meaning": "De **Zes van Stokken** staat voor overwinning, publieke erkenning, succes en zelfvertrouwen. Je hebt een uitdaging overwonnen en wordt nu erkend voor je prestaties. Geniet van het moment en leid anderen.",
+      "meaning_reversed": "Omgekeerd kan de Zes van Stokken wijzen op **een vertraging van succes, valse hoop**, het verlies van vertrouwen of het niet ontvangen van de verwachte erkenning. Je overwinning is hol."
+    },
+    "Strength": {
+      "name": "Kracht",
+      "meaning": "**Kracht** belichaamt moed, innerlijke kracht en veerkracht. Het betekent het overwinnen van uitdagingen door geduld en mededogen. Deze kaart moedigt je aan om je innerlijke kracht te benutten, je impulsen te beheersen en je angsten met gratie onder ogen te zien.",
+      "meaning_reversed": "Omgekeerd kan Kracht wijzen op **zwakte, onzekerheid, angst** of een gebrek aan zelfbeheersing. Je moet je innerlijke moed herwinnen."
+    },
+    "Temperance": {
+      "name": "Matigheid",
+      "meaning": "**Matigheid** belichaamt balans, harmonie en gematigdheid. Het betekent de behoefte aan geduld, compromis en integratie. Deze kaart moedigt je aan om een middenweg te vinden, verschillende aspecten van je leven te combineren en een gevoel van vrede te creëren.",
+      "meaning_reversed": "Omgekeerd wijst Matigheid op **onbalans, overdaad**, discordantie of het te ver gaan in een extreme richting. Je moet een middenweg en harmonie vinden."
+    },
+    "TenOfCups": {
+      "name": "Tien van Bekers",
+      "meaning": "De **Tien van Bekers** vertegenwoordigt blijvende harmonie, emotionele vervulling en geluk in het gezin. Het symboliseert \"lang en gelukkig leven\" en perfecte emotionele vrede.",
+      "meaning_reversed": "Omgekeerd duidt de Tien van Bekers op **gebroken gezinsharmonie, ruzie**, onenigheid in huis of het najagen van een illusie van perfect geluk. De vrede is verstoord."
+    },
+    "TenOfPentacles": {
+      "name": "Tien van Pentakels",
+      "meaning": "De **Tien van Pentakels** duidt op blijvende rijkdom, financiële zekerheid en een erfenis. Het vertegenwoordigt familie, gemeenschap en een stabiele basis voor de toekomst.",
+      "meaning_reversed": "Omgekeerd duidt de Tien van Pentakels op **financiële onzekerheid, familieruzies**, breuk met traditie of een onstabiele basis voor de toekomst. De zekerheid is verdwenen."
+    },
+    "TenOfSwords": {
+      "name": "Tien van Zwaarden",
+      "meaning": "De **Tien van Zwaarden** vertegenwoordigt een pijnlijk einde, een crisis, het bereiken van de bodem, maar ook een nieuw begin. Het slechtste is voorbij. Er is nu ruimte voor herstel.",
+      "meaning_reversed": "Omgekeerd duidt de Tien van Zwaarden op het **vermijden van een einde, het uitstellen van een crisis**, of het herstellen van een dieptepunt. Het kan ook wijzen op de angst dat het slechtste nog moet komen."
+    },
+    "TenOfWands": {
+      "name": "Tien van Stokken",
+      "meaning": "De **Tien van Stokken** duidt op zware lasten, verantwoordelijkheid en de behoefte om je lasten te verminderen. Je hebt te veel op je genomen. Het is tijd om taken te delegeren of grenzen te stellen.",
+      "meaning_reversed": "Omgekeerd wijst de Tien van Stokken op het **loslaten van lasten, uitputting**, of het falen in het dragen van verantwoordelijkheid. Je bent het zat om alles te dragen."
+    },
+    "TheChariot": {
+      "name": "De Zegewagen",
+      "meaning": "De **Zegewagen** symboliseert wilskracht, vastberadenheid en controle. Het vertegenwoordigt succes door gerichte inspanning en doorzettingsvermogen. Deze kaart moedigt je aan om obstakels te overwinnen, gefocust te blijven op je doelen en met vertrouwen vooruit te gaan.",
+      "meaning_reversed": "Omgekeerd duidt De Zegewagen op een **gebrek aan controle, een gebrek aan richting**, verslagenheid of het laten ontsporen van ambities. Je moet de teugels strakker vastpakken of je doelen heroverwegen."
+    },
+    "TheDevil": {
+      "name": "De Duivel",
+      "meaning": "De **Duivel** vertegenwoordigt verleiding, materialisme en gebondenheid. Het betekent negatieve patronen, verslavingen en het schaduwzelf. Deze kaart moedigt je aan om je angsten onder ogen te zien, je te bevrijden van beperkende overtuigingen en je kracht terug te winnen.",
+      "meaning_reversed": "Omgekeerd duidt De Duivel op het **verbreken van ketens, het ontsnappen aan verslaving** of bevrijding van beperkende overtuigingen. Je begint je schaduwzijde onder controle te krijgen."
+    },
+    "TheEmperor": {
+      "name": "De Keizer",
+      "meaning": "De **Keizer** betekent autoriteit, structuur en controle. Het vertegenwoordigt leiderschap, stabiliteit en het vestigen van orde. Deze kaart moedigt je aan om de leiding over je leven te nemen, duidelijke grenzen te stellen en een solide basis te bouwen voor je doelen.",
+      "meaning_reversed": "Omgekeerd kan De Keizer wijzen op **dominantie, starheid, misbruik van macht** of het ontbreken van structuur. Je moet de controle loslaten of meer discipline creëren."
+    },
+    "TheEmpress": {
+      "name": "De Keizerin",
+      "meaning": "De **Keizerin** symboliseert overvloed, vruchtbaarheid en koestering. Het vertegenwoordigt de kracht van creatie en de schoonheid van de natuur. Deze kaart moedigt je aan om contact te maken met je vrouwelijke energie, sensualiteit te omarmen en groei in je leven te cultiveren.",
+      "meaning_reversed": "Omgekeerd kan De Keizerin duiden op **onvruchtbaarheid, onzekerheid, verstikking** of een gebrek aan creativiteit. Het kan wijzen op het negeren van zelfzorg of materiële problemen."
+    },
+    "TheFool": {
+      "name": "De Dwaas",
+      "meaning": "De **Dwaas** vertegenwoordigt nieuwe beginnen, spontaniteit en een sprong in het diepe. Het suggereert een frisse start, een avontuur in het onbekende en de bereidheid om onzekerheid te omarmen. Deze kaart moedigt je aan om ruimdenkend te zijn en op je instincten te vertrouwen terwijl je aan een nieuwe reis begint.",
+      "meaning_reversed": "Omgekeerd duidt De Dwaas op **roekeloosheid, onbezonnen actie, een gebrek aan planning** en het vermijden van verantwoordelijkheid. Je moet eerst de situatie overwegen voordat je springt."
+    },
+    "TheHangedMan": {
+      "name": "De Gehangene",
+      "meaning": "De **Gehangene** vertegenwoordigt overgave, opoffering en een verandering van perspectief. Het betekent de behoefte om controle los te laten en dingen vanuit een andere hoek te bekijken. Deze kaart moedigt je aan om te pauzeren, na te denken en open te staan voor nieuwe inzichten.",
+      "meaning_reversed": "Omgekeerd wijst De Gehangene op **onwil om op te offeren, stagnerende energie**, het uitstellen van beslissingen of het weigeren van een noodzakelijke pauze. Je blijft vasthouden aan een onhoudbare situatie."
+    },
+    "TheHermit": {
+      "name": "De Kluizenaar",
+      "meaning": "De **Kluizenaar** vertegenwoordigt introspectie, eenzaamheid en zelfontdekking. Het betekent de behoefte om je terug te trekken uit de wereld en innerlijke wijsheid te zoeken. Deze kaart moedigt je aan om tijd te nemen voor reflectie, contemplatie en spirituele groei.",
+      "meaning_reversed": "Omgekeerd duidt De Kluizenaar op **overmatig isolement, eenzaamheid**, je terugtrekken van anderen of het weigeren om hulp te vragen. Je moet de balans vinden tussen eenzaamheid en gemeenschap."
+    },
+    "TheHierophant": {
+      "name": "De Hiërofant",
+      "meaning": "De **Hiërofant** belichaamt traditie, conformiteit en spirituele leiding. Het vertegenwoordigt gevestigde instellingen, conventionele wijsheid en het naleven van regels. Deze kaart moedigt je aan om kennis te zoeken bij gevestigde bronnen en traditionele paden te volgen.",
+      "meaning_reversed": "Omgekeerd duidt De Hiërofant op **non-conformiteit, het tarten van traditie**, beperkende overtuigingen of persoonlijke overtuigingen verkiezen boven de regels. Zoek je eigen waarheid."
+    },
+    "TheHighPriestess": {
+      "name": "De Hogepriesteres",
+      "meaning": "De **Hogepriesteres** vertegenwoordigt intuïtie, mysterie en verborgen kennis. Het moedigt je aan om op je innerlijke wijsheid te vertrouwen en aandacht te besteden aan je dromen en instincten. Deze kaart suggereert dat je naar je innerlijke stem moet luisteren.",
+      "meaning_reversed": "Omgekeerd duidt De Hogepriesteres op het **negeren van je intuïtie, onderdrukte gevoelens**, oppervlakkigheid of de noodzaak om geheimen bloot te leggen. Je verstand overstemt je innerlijke weten."
+    },
+    "TheLovers": {
+      "name": "De Geliefden",
+      "meaning": "De **Geliefden** vertegenwoordigen liefde, partnerschappen en keuzes. Het betekent eenheid, harmonie en het belang van bewuste beslissingen nemen. Deze kaart moedigt je aan om je waarden te overwegen en keuzes te maken die aansluiten bij je hart.",
+      "meaning_reversed": "Omgekeerd wijst De Geliefden op **disharmonie, verkeerde keuzes, relatieproblemen** of een onbalans in waarden. Je worstelt met een belangrijke beslissing."
+    },
+    "TheMagician": {
+      "name": "De Magiër",
+      "meaning": "De **Magiër** belichaamt kracht, vaardigheid en vindingrijkheid. Het betekent het vermogen om je verlangens te manifesteren door gerichte intentie en actie. Deze kaart geeft aan dat je de tools en talenten hebt die nodig zijn om je doelen te bereiken.",
+      "meaning_reversed": "Omgekeerd kan De Magiër **manipulatie, onbenut potentieel, bedrog** of een gebrek aan wilskracht aangeven. Je moet je ware motieven onderzoeken of je focus terugvinden."
+    },
+    "TheMoon": {
+      "name": "De Maan",
+      "meaning": "De **Maan** vertegenwoordigt intuïtie, illusie en het onderbewustzijn. Het betekent verborgen angsten, onzekerheid en de behoefte om op je instincten te vertrouwen. Deze kaart moedigt je aan om je innerlijke wereld te verkennen, je angsten onder ogen te zien en op je intuïtie te vertrouwen.",
+      "meaning_reversed": "Omgekeerd wijst De Maan op het **ophelderen van verwarring, het overwinnen van angst**, het vrijkomen van het onderbewustzijn of het onthullen van geheimen. De illusies beginnen te verdwijnen."
+    },
+    "TheStar": {
+      "name": "De Ster",
+      "meaning": "De **Ster** belichaamt hoop, inspiratie en vernieuwing. Het betekent genezing, geloof en een verbinding met het goddelijke. Deze kaart moedigt je aan om optimistisch te blijven, op je intuïtie te vertrouwen en je dromen te volgen.",
+      "meaning_reversed": "Omgekeerd duidt De Ster op **wanhoop, teleurstelling, een gebrek aan inspiratie** of het voelen van ontmoediging. Je moet opnieuw verbinding maken met je innerlijke hoop."
+    },
+    "TheSun": {
+      "name": "De Zon",
+      "meaning": "De **Zon** symboliseert vreugde, vitaliteit en succes. Het betekent helderheid, positiviteit en het vervullen van doelen. Deze kaart moedigt je aan om geluk te omarmen, je prestaties te vieren en positiviteit uit te stralen.",
+      "meaning_reversed": "Omgekeerd duidt De Zon op **tijdelijke somberheid, een gebrek aan enthousiasme**, onduidelijkheid over een situatie of het uitstellen van geluk. Zoek de helderheid van binnenuit."
+    },
+    "TheTower": {
+      "name": "De Toren",
+      "meaning": "De **Toren** symboliseert plotselinge verandering, opschudding en openbaring. Het betekent de ineenstorting van oude structuren en de behoefte aan wederopbouw. Deze kaart moedigt je aan om verandering te omarmen, los te laten wat je niet langer dient en op een sterkere basis opnieuw op te bouwen.",
+      "meaning_reversed": "Omgekeerd wijst De Toren op **angst voor verandering, het vermijden van een noodzakelijke crisis**, of het uitstellen van het onvermijdelijke. De energie is geblokkeerd en moet losgelaten worden."
+    },
+    "TheWorld": {
+      "name": "De Wereld",
+      "meaning": "De **Wereld** symboliseert voltooiing, vervulling en eenheid. Het betekent de succesvolle afronding van een cyclus en het bereiken van doelen. Deze kaart moedigt je aan om je prestaties te vieren, heelheid te omarmen en je plaats in de wereld te erkennen.",
+      "meaning_reversed": "Omgekeerd duidt De Wereld op een **onvolledige cyclus, een vertraging in de voltooiing**, of het zoeken naar een afsluiting die nog niet is bereikt. Er moet nog één laatste inspanning geleverd worden."
+    },
+    "ThreeOfCups": {
+      "name": "Drie van Bekers",
+      "meaning": "De **Drie van Bekers** staat voor viering, vriendschap, gemeenschap en succesvolle samenwerking. Geniet van het gezelschap van anderen en vier de vreugde van het leven.",
+      "meaning_reversed": "Omgekeerd kan de Drie van Bekers wijzen op **overdaad, roddels**, buitensluiting of het te veel feesten. De vreugde is oppervlakkig of je voelt je een buitenstaander."
+    },
+    "ThreeOfPentacles": {
+      "name": "Drie van Pentakels",
+      "meaning": "De **Drie van Pentakels** symboliseert teamsamenwerking, erkenning van vaardigheden en het eerste succes van een project. Je talenten worden gezien en gewaardeerd.",
+      "meaning_reversed": "Omgekeerd kan de Drie van Pentakels wijzen op **gebrek aan teamwork, onenigheid**, slechte kwaliteit van werk of een gebrek aan erkenning. De samenwerking faalt."
+    },
+    "ThreeOfSwords": {
+      "name": "Drie van Zwaarden",
+      "meaning": "De **Drie van Zwaarden** symboliseert verdriet, teleurstelling, verlies en hartzeer. Het is een pijnlijke kaart die vaak een emotionele wond vertegenwoordigt. De pijn is echt, maar de genezing begint nu.",
+      "meaning_reversed": "Omgekeerd wijst de Drie van Zwaarden op het **loslaten van verdriet, het overwinnen van hartzeer** of het uitstellen van noodzakelijke pijn. Je weigert de waarheid van je pijn te erkennen."
+    },
+    "ThreeOfWands": {
+      "name": "Drie van Stokken",
+      "meaning": "De **Drie van Stokken** symboliseert vooruitgang, expansie en het zien van de eerste resultaten van je inspanningen. Je bent op de goede weg en je plannen beginnen vruchten af te werpen. Blijf vertrouwen in je visie en wacht op je schepen.",
+      "meaning_reversed": "Omgekeerd kan de Drie van Stokken wijzen op **vertragingen, belemmeringen in de groei**, tegenslag in de handel of het niet afronden van plannen. Je verwachtingen zijn mogelijk te vroeg."
+    },
+    "TwoOfCups": {
+      "name": "Twee van Bekers",
+      "meaning": "De **Twee van Bekers** symboliseert eenheid, harmonie, wederzijdse aantrekking en het vormen van partnerschappen (romantisch of zakelijk). Het staat voor het balanceren van twee zielen in perfecte harmonie.",
+      "meaning_reversed": "Omgekeerd duidt de Twee van Bekers op een **breuk, disharmonie in een relatie**, een scheiding of het einde van een partnerschap. De verbinding is verbroken."
+    },
+    "TwoOfPentacles": {
+      "name": "Twee van Pentakels",
+      "meaning": "De **Twee van Pentakels** duidt op het balanceren van meerdere verantwoordelijkheden, flexibiliteit en prioriteiten stellen. Je jongleert met je middelen; behoud je evenwicht.",
+      "meaning_reversed": "Omgekeerd duidt de Twee van Pentakels op **financiële onbalans, overbelasting**, verwarring of het onvermogen om prioriteiten te stellen. Je laat de bal vallen."
+    },
+    "TwoOfSwords": {
+      "name": "Twee van Zwaarden",
+      "meaning": "De **Twee van Zwaarden** duidt op een patstelling, het vermijden van een beslissing, en een geblokkeerde geest. Je weigert de feiten onder ogen te zien. Je moet de blinddoek afdoen en een keuze maken.",
+      "meaning_reversed": "Omgekeerd duidt de Twee van Zwaarden op het **einde van een patstelling, het onder ogen zien van de waarheid**, of uitstel van een beslissing. Je moet actie ondernemen, maar bent bang voor de gevolgen."
+    },
+    "TwoOfWands": {
+      "name": "Twee van Stokken",
+      "meaning": "De **Twee van Stokken** gaat over het plannen van de toekomst en het nemen van een beslissing over je volgende stap. Je hebt al iets bereikt en kijkt nu naar de horizon. Bepaal je richting en wees moedig in je ambities.",
+      "meaning_reversed": "Omgekeerd duidt de Twee van Stokken op **angst voor het onbekende, het uitstellen van plannen**, gebrek aan voorbereiding of een terugtrekking van een ambitieus doel. Je moet je horizon verbreden."
+    },
+    "WheelofFortune": {
+      "name": "Rad van Fortuin",
+      "meaning": "Het **Rad van Fortuin** symboliseert cycli, verandering en het lot. Het vertegenwoordigt de ups en downs van het leven en de invloed van het lot. Deze kaart moedigt je aan om verandering te omarmen en erop te vertrouwen dat dingen in je voordeel zullen keren.",
+      "meaning_reversed": "Omgekeerd wijst het Rad van Fortuin op **pech, weerstand tegen verandering**, onverwachte storingen of het niet leren van lessen uit het verleden. Je voelt je machteloos tegen het lot."
+    }
+  }
+}
