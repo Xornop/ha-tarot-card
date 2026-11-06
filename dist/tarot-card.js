@@ -6,63 +6,131 @@ const TAROT_IMAGE_BASE = new URL("./tarot_cards/", import.meta.url).href;
 
 const TAROT_CARDS = [{"id":"AceOfCups","name":{"en":"Ace of Cups","nl":"Aas van Bekers"},"meaning":{"en":"The Ace of Cups brings emotional abundance, new love, compassion and inner joy. It marks the beginning of deep emotional fulfilment or a new relationship.","nl":"De **Aas van Bekers** staat voor een overvloed aan emotionele energie, nieuwe liefde, medeleven en innerlijke vreugde. Het is het begin van een diepe emotionele vervulling of een nieuwe relatie."},"meaning_reversed":{"en":"Reversed, it points to suppressed emotions, blocked creativity, unrequited love or emotional overwhelm. You may feel emotionally empty or flooded.","nl":"Omgekeerd kan de Aas van Bekers wijzen op **onderdrukte emoties, geblokkeerde creativiteit**, onbeantwoorde liefde of emotionele overbelasting. Je bent emotioneel leeg of overvol."}},{"id":"AceOfPentacles","name":{"en":"Ace of Pentacles","nl":"Aas van Pentakels"},"meaning":{"en":"A new beginning in finances, career or the physical world. An opportunity for stability, prosperity and a material gift is emerging.","nl":"De **Aas van Pentakels** staat voor een nieuwe start op financieel, carrière of fysiek vlak. Het is een kans op stabiliteit, welvaart en een geschenk uit het materiële vlak."},"meaning_reversed":{"en":"Reversed, it can indicate missed opportunities, financial instability, poor investments or a lack of planning. The gift is delayed or lost.","nl":"Omgekeerd kan de Aas van Pentakels wijzen op **gemiste kansen, financiële instabiliteit**, slechte investeringen of gebrek aan planning. Het geschenk is uitgesteld of verloren."}},{"id":"AceOfSwords","name":{"en":"Ace of Swords","nl":"Aas van Zwaarden"},"meaning":{"en":"A breakthrough, mental clarity, intellectual power and a new idea. You can cut through confusion and see the truth.","nl":"De **Aas van Zwaarden** staat voor een doorbraak, mentale helderheid, de kracht van intellect en een nieuw idee. Het is het vermogen om door de verwarring heen te snijden en de waarheid te zien."},"meaning_reversed":{"en":"Reversed, it can indicate confusion, mental chaos, misuse of intellect or cruelty. The truth is clouded, or your approach is too harsh.","nl":"Omgekeerd kan de Aas van Zwaarden wijzen op **verwarring, mentale chaos**, misbruik van intellect of wreedheid. De waarheid is vertroebeld of je bent te hardvochtig."}},{"id":"AceOfWands","name":{"en":"Ace of Wands","nl":"Aas van Stokken"},"meaning":{"en":"A fresh start filled with inspiration, growth and a flash of creativity. Take the first step towards a new idea, project or venture.","nl":"De **Aas van Stokken** staat voor een nieuwe start, inspiratie, groei en een flits van creativiteit. Het is de kiem van een nieuw idee, project of onderneming. Omarm deze energie en zet de eerste stap."},"meaning_reversed":{"en":"Reversed, it points to procrastination, lack of direction, blocked creativity or missed opportunities. Your energy may be low or scattered.","nl":"Omgekeerd kan de Aas van Stokken wijzen op **uitstelgedrag, een gebrek aan richting**, geblokkeerde creativiteit of gemiste kansen voor actie. Je energie is laag of ongeordend."}},{"id":"Death","name":{"en":"Death","nl":"De Dood"},"meaning":{"en":"Death symbolises transformation, endings and new beginnings. One phase is ending so another can begin; embrace change and release the past.","nl":"De **Dood** symboliseert transformatie, eindes en nieuwe beginnen. Het betekent het einde van de ene fase en het begin van een andere. Deze kaart moedigt je aan om verandering te omarmen, het verleden los te laten en je voor te bereiden op nieuwe kansen."},"meaning_reversed":{"en":"Reversed, Death points to resistance to change, stagnation, fear of the unknown or clinging to an unhealthy situation.","nl":"Omgekeerd duidt De Dood op **weerstand tegen verandering, stagnatie**, angst voor het onbekende of het vastklampen aan een ongezonde situatie. Je weigert het onvermijdelijke los te laten."}},{"id":"EightOfCups","name":{"en":"Eight of Cups","nl":"Acht van Bekers"},"meaning":{"en":"Walking away from something that no longer fulfils you. You leave the familiar in search of deeper emotional or spiritual truth.","nl":"De **Acht van Bekers** duidt op het weglopen van iets dat niet langer voldoening geeft. Je laat het bekende achter je op zoek naar een diepere emotionele of spirituele waarheid."},"meaning_reversed":{"en":"Reversed, it points to fear of leaving, returning to the past, hesitation or clinging to an unfulfilling situation.","nl":"Omgekeerd wijst de Acht van Bekers op **angst om weg te gaan, terugkeren naar het oude**, aarzeling of het vastklampen aan een onbevredigende situatie. Je kunt de sprong niet wagen."}},{"id":"EightOfPentacles","name":{"en":"Eight of Pentacles","nl":"Acht van Pentakels"},"meaning":{"en":"Dedication, craftsmanship, training and attention to detail. Focus on your skills and strive to do your work well.","nl":"De **Acht van Pentakels** staat voor toewijding, vakmanschap, training en hard werken aan details. Focus je op je vaardigheden en streef naar perfectie in je werk."},"meaning_reversed":{"en":"Reversed, it points to perfectionism, lack of ambition, poor workmanship or excessive focus on work. You may be too critical or unwilling to try.","nl":"Omgekeerd duidt de Acht van Pentakels op **perfectie-obsessie, gebrek aan ambitie**, slecht vakmanschap of te veel focus op werk. Je bent te kritisch of lui."}},{"id":"EightOfSwords","name":{"en":"Eight of Swords","nl":"Acht van Zwaarden"},"meaning":{"en":"Feeling trapped by restrictions, many of which are self-imposed. The swords are not binding you; you can remove the blindfold yourself.","nl":"De **Acht van Zwaarden** symboliseert gevangenschap, beperkingen, zelfopgelegde beperkingen en het gevoel vast te zitten. De zwaarden zijn niet gebonden; je kunt de blinddoek zelf afdoen."},"meaning_reversed":{"en":"Reversed, it points to breaking free of limitations, liberation and finally seeing a way out. You are ready to remove the blindfold.","nl":"Omgekeerd duidt de Acht van Zwaarden op het **doorbreken van beperkingen, bevrijding**, of het eindelijk zien van de uitweg. Je bent klaar om de blinddoek af te doen."}},{"id":"EightOfWands","name":{"en":"Eight of Wands","nl":"Acht van Stokken"},"meaning":{"en":"Speed, action, movement and swift news. Things are moving quickly; prepare for rapid changes and developments.","nl":"De **Acht van Stokken** symboliseert snelheid, actie, beweging en snel nieuws. De dingen komen nu snel in beweging. Bereid je voor op snelle veranderingen en acties in de materiële wereld."},"meaning_reversed":{"en":"Reversed, it points to delays, waiting, frustration or missed opportunities. Energy is blocked or becoming chaotic.","nl":"Omgekeerd wijst de Acht van Stokken op **vertragingen, wachten, frustratie door traagheid** of gemiste kansen. De energie is geblokkeerd of te chaotisch."}},{"id":"FiveOfCups","name":{"en":"Five of Cups","nl":"Vijf van Bekers"},"meaning":{"en":"Loss, grief and regret, as well as difficulty seeing the blessings that remain. Remember to look at the two cups still standing.","nl":"De **Vijf van Bekers** vertegenwoordigt verlies, verdriet en spijt, maar ook het onvermogen om de zegeningen die nog over zijn te zien. Het is belangrijk om je te richten op de twee bekers die nog staan."},"meaning_reversed":{"en":"Reversed, it points to releasing grief, accepting loss, forgiveness and the first steps towards healing. You are beginning to see the positive.","nl":"Omgekeerd duidt de Vijf van Bekers op het **loslaten van verdriet, acceptatie van verlies**, vergeving en de eerste stappen naar herstel. Je begint het positieve te zien."}},{"id":"FiveOfPentacles","name":{"en":"Five of Pentacles","nl":"Vijf van Pentakels"},"meaning":{"en":"Loss, poverty, insecurity and feeling left out. Ask for help: support is available, even if you cannot see it yet.","nl":"De **Vijf van Pentakels** staat voor verlies, armoede, onzekerheid en het gevoel buitengesloten te zijn. Vraag om hulp; er is steun beschikbaar, maar je ziet het niet."},"meaning_reversed":{"en":"Reversed, it points to recovery, accepting help, the end of hardship or finding work or a home again. A difficult period is passing.","nl":"Omgekeerd wijst de Vijf van Pentakels op **herstel van verlies, het accepteren van hulp**, het einde van ontberingen of het opnieuw vinden van een baan/thuis. De moeilijke tijd is voorbij."}},{"id":"FiveOfSwords","name":{"en":"Five of Swords","nl":"Vijf van Zwaarden"},"meaning":{"en":"Conflict, loss, winning at another's expense or bullying. A victory may not be worth its price; set pride aside and seek peace.","nl":"De **Vijf van Zwaarden** vertegenwoordigt conflict, verlies, winnen ten koste van anderen, of pesten. Soms is de overwinning het verlies niet waard. Laat je trots los en vind een vredige oplossing."},"meaning_reversed":{"en":"Reversed, it points to an uneasy truce, remorse, a desire for peace or refusing to learn from defeat. The cost of conflict is too high.","nl":"Omgekeerd wijst de Vijf van Zwaarden op **een ongemakkelijke wapenstilstand, berouw**, het verlangen naar vrede of het weigeren om de les van de nederlaag te leren. De prijs van het conflict is te hoog."}},{"id":"FiveOfWands","name":{"en":"Five of Wands","nl":"Vijf van Stokken"},"meaning":{"en":"Competition, disagreements and minor conflicts. Energy is high but disorganised; face challenges while remaining thoughtful.","nl":"De **Vijf van Stokken** duidt op concurrentie, meningsverschillen en kleine conflicten. Er is veel energie, maar het is ongeorganiseerd. Het moedigt je aan om uitdagingen aan te gaan en je standpunt te verdedigen, maar wees bedachtzaam."},"meaning_reversed":{"en":"Reversed, it points to avoiding conflict, ignoring disagreements or ending a struggle, sometimes by giving in. The tension may go underground.","nl":"Omgekeerd wijst de Vijf van Stokken op het **vermijden van conflict**, het negeren van meningsverschillen, of het stoppen van een strijd, soms door toe te geven. De onrust gaat ondergronds."}},{"id":"FourOfCups","name":{"en":"Four of Cups","nl":"Vier van Bekers"},"meaning":{"en":"Apathy, boredom, dissatisfaction and overlooking opportunities. You may be so focused on what is missing that you fail to see what is offered.","nl":"De **Vier van Bekers** duidt op apathie, verveling, ontevredenheid en het negeren van de aangeboden kansen. Je bent te gefocust op wat je mist om te zien wat je wordt aangeboden."},"meaning_reversed":{"en":"Reversed, it points to a new perspective, accepting an offer, letting go of apathy or a sudden realisation. You are ready to move on.","nl":"Omgekeerd wijst de Vier van Bekers op een **nieuw perspectief, het accepteren van een aanbod**, het loslaten van apathie of een plotselinge bewustwording. Je bent klaar om verder te gaan."}},{"id":"FourOfPentacles","name":{"en":"Four of Pentacles","nl":"Vier van Pentakels"},"meaning":{"en":"Possessiveness, control, holding on to resources and fear of change. Release the need for control to find genuine stability.","nl":"De **Vier van Pentakels** vertegenwoordigt bezitterigheid, controle, vasthouden aan middelen en een angst voor verandering. Laat de behoefte om te controleren los om ware stabiliteit te vinden."},"meaning_reversed":{"en":"Reversed, it points to letting go of control, sharing resources and generosity, or sometimes wastefulness. You may be less afraid to share.","nl":"Omgekeerd duidt de Vier van Pentakels op het **loslaten van controle, het delen van middelen**, vrijgevigheid of, in het uiterste geval, verspilling. Je bent minder bang om te delen."}},{"id":"FourOfSwords","name":{"en":"Four of Swords","nl":"Vier van Zwaarden"},"meaning":{"en":"Rest, recovery, meditation and the need to withdraw. You need a break after stress; give yourself time to heal.","nl":"De **Vier van Zwaarden** staat voor rust, herstel, meditatie en de noodzaak om je terug te trekken. Je hebt rust nodig na een periode van stress. Neem de tijd om te genezen."},"meaning_reversed":{"en":"Reversed, it points to restlessness, burnout, insufficient recovery or leaving your refuge too soon. You may be forcing yourself into action.","nl":"Omgekeerd duidt de Vier van Zwaarden op **rusteloosheid, burn-out**, een gebrek aan herstel of het verlaten van je toevluchtsoord te vroeg. Je forceert de actie."}},{"id":"FourOfWands","name":{"en":"Four of Wands","nl":"Vier van Stokken"},"meaning":{"en":"Celebration, harmony, security and coming home. A card of stability, success and joyful milestones, such as a wedding or housewarming.","nl":"De **Vier van Stokken** staat voor viering, harmonie, veiligheid en thuiskomen. Het is een kaart van stabiliteit, succes en een vreugdevolle pauze. Het kan een huwelijk, een housewarming of een mijlpaal inhouden."},"meaning_reversed":{"en":"Reversed, it points to disharmony, insecurity at home, an unstable foundation or a lack of celebration. Your safe haven feels unsettled.","nl":"Omgekeerd duidt de Vier van Stokken op een **gebrek aan harmonie, onzekerheid in huis**, een onstabiele basis of een gebrek aan viering. Er is onrust in je veilige haven."}},{"id":"Judgement","name":{"en":"Judgement","nl":"Oordeel"},"meaning":{"en":"Rebirth, renewal and a call to action. Reflect, forgive, make important decisions, learn from the past and embrace a new chapter.","nl":"**Oordeel** belichaamt wedergeboorte, vernieuwing en een oproep tot actie. Het betekent een tijd voor evaluatie, vergeving en het nemen van belangrijke beslissingen. Deze kaart moedigt je aan om na te denken over je verleden, te leren van je ervaringen en een nieuw hoofdstuk te omarmen."},"meaning_reversed":{"en":"Reversed, it points to self-criticism, self-doubt, postponing a decision or refusing to learn from past mistakes. Forgive yourself and move forward.","nl":"Omgekeerd wijst Oordeel op **zelfkritiek, twijfel aan jezelf**, uitstel van een beslissing of het weigeren om te leren van fouten uit het verleden. Vergeef jezelf en ga verder."}},{"id":"Justice","name":{"en":"Justice","nl":"Gerechtigheid"},"meaning":{"en":"Honesty, balance and truth. Act with integrity, weigh your options carefully and accept the consequences of your decisions.","nl":"**Gerechtigheid** belichaamt eerlijkheid, balans en waarheid. Het betekent de behoefte aan eerlijkheid, integriteit en verantwoordelijkheid. Deze kaart moedigt je aan om je opties zorgvuldig af te wegen, eerlijke beslissingen te nemen en de gevolgen van je acties te accepteren."},"meaning_reversed":{"en":"Reversed, it points to injustice, dishonesty, legal trouble or avoiding responsibility. Reconsider your actions and be truthful.","nl":"Omgekeerd duidt Gerechtigheid op **onrechtvaardigheid, oneerlijkheid**, juridische problemen of het vermijden van aansprakelijkheid. Je moet je acties herzien en eerlijk zijn."}},{"id":"KingOfCups","name":{"en":"King of Cups","nl":"Koning van Bekers"},"meaning":{"en":"Emotional balance, self-control and diplomacy. Lead others with wisdom and keep your composure while managing your feelings.","nl":"De **Koning van Bekers** staat voor emotionele balans, beheersing en diplomatie. Hij kan zijn emoties beheersen en anderen met wijsheid leiden. Beheers je gevoelens en wees kalm."},"meaning_reversed":{"en":"Reversed, it points to mood swings, emotional imbalance, suppressed feelings or manipulation. Your emotions may be turbulent.","nl":"Omgekeerd duidt de Koning van Bekers op **stemmingswisselingen, emotionele onbalans**, onderdrukte gevoelens of manipulatie. Je emoties zijn in beroering."}},{"id":"KingOfPentacles","name":{"en":"King of Pentacles","nl":"Koning van Pentakels"},"meaning":{"en":"Prosperity, financial security, enterprise and reliability. A successful, stable leader knows how to manage resources.","nl":"De **Koning van Pentakels** staat voor welvaart, financiële zekerheid, ondernemerschap en betrouwbaarheid. Hij is een succesvolle, stabiele leider die weet hoe hij middelen moet beheren."},"meaning_reversed":{"en":"Reversed, it points to corruption, gambling, greed or abuse of power. Your financial empire may be built on shaky ground.","nl":"Omgekeerd duidt de Koning van Pentakels op **corruptie, gokken, hebzucht** of misbruik van macht. Je financiële imperium is op drijfzand gebouwd."}},{"id":"KingOfSwords","name":{"en":"King of Swords","nl":"Koning van Zwaarden"},"meaning":{"en":"Intellectual authority, clarity and truth. Use logic to lead and seek an objective understanding of the facts.","nl":"De **Koning van Zwaarden** staat voor intellectuele autoriteit, duidelijkheid en waarheid. Hij is de ultieme denker, die logica gebruikt om te regeren. Zoek de objectieve waarheid."},"meaning_reversed":{"en":"Reversed, it points to tyranny, misuse of intellect, cynicism or unethical behaviour. Your reasoning may be biased or domineering.","nl":"Omgekeerd duidt de Koning van Zwaarden op **tirannie, misbruik van intellect**, cynisme of een gebrek aan ethiek. Je logica is bevooroordeeld of te dominant."}},{"id":"KingOfWands","name":{"en":"King of Wands","nl":"Koning van Stokken"},"meaning":{"en":"Leadership, vision, enterprise and authority. Take charge and inspire others with your passion and clear vision of the future.","nl":"De **Koning van Stokken** staat voor leiderschap, visie, ondernemerschap en autoriteit. Hij is een inspirerende leider met een duidelijke toekomstvisie. Neem de leiding en inspireer anderen met je passie."},"meaning_reversed":{"en":"Reversed, it points to tyranny, impulsiveness, excessive demands or poor leadership. You may be misusing your power.","nl":"Omgekeerd duidt de Koning van Stokken op **tirannie, impulsiviteit, overdreven eisen** of een gebrek aan leiderschap. Je gebruikt je macht verkeerd."}},{"id":"KnightOfCups","name":{"en":"Knight of Cups","nl":"Ridder van Bekers"},"meaning":{"en":"A charming messenger bringing an invitation or emotional offer. Romance, idealism and following your heart are central themes.","nl":"De **Ridder van Bekers** is de charmeur, die een uitnodiging of een emotioneel aanbod brengt. Hij staat voor romantiek, idealisme en een beroep op je gevoelens. Hij is de romantische held."},"meaning_reversed":{"en":"Reversed, it points to a lack of romance, disappointment, a false offer or deception. The ideal may be an illusion.","nl":"Omgekeerd duidt de Ridder van Bekers op **een gebrek aan romantiek, teleurstelling**, een vals aanbod of een bedrieger. De idealen zijn verzonnen."}},{"id":"KnightOfPentacles","name":{"en":"Knight of Pentacles","nl":"Ridder van Pentakels"},"meaning":{"en":"Reliable, hardworking and patient. The steadiest, though slowest, of the Knights: make steady progress with dedication.","nl":"De **Ridder van Pentakels** is betrouwbaar, hardwerkend en geduldig. Hij is de meest stabiele maar langzaamste van de Ridders. Ga gestaag en met toewijding vooruit."},"meaning_reversed":{"en":"Reversed, it points to laziness, stagnation, missed opportunities through slowness or boredom. You may lack the drive to move forward.","nl":"Omgekeerd duidt de Ridder van Pentakels op **luiheid, stagnatie**, het missen van kansen door traagheid of saaiheid. Je mist de drive om vooruit te komen."}},{"id":"KnightOfSwords","name":{"en":"Knight of Swords","nl":"Ridder van Zwaarden"},"meaning":{"en":"Courageous, ambitious and charging ahead. This card represents swift action, but can warn against recklessness. Think before you act or speak.","nl":"De **Ridder van Zwaarden** is moedig, ambitieus en stormt vooruit. Hij vertegenwoordigt snelle actie, maar kan roekeloos zijn. Denk na voordat je handelt of spreekt."},"meaning_reversed":{"en":"Reversed, it points to recklessness, aggression, moving too fast or a sudden slowdown. Your actions may be poorly considered.","nl":"Omgekeerd duidt de Ridder van Zwaarden op **roekeloosheid, agressie**, het gevoel te snel te gaan of een plotselinge vertraging. Je acties zijn niet doordacht."}},{"id":"KnightOfWands","name":{"en":"Knight of Wands","nl":"Ridder van Stokken"},"meaning":{"en":"Action, adventure and restless energy. Move forward quickly and passionately, but pay attention to where you are heading.","nl":"De **Ridder van Stokken** staat voor actie, avontuur en onstuimige energie. Hij is gedreven, maar soms impulsief. Het is een oproep om snel en met passie vooruit te gaan, maar let op waar je naartoe gaat."},"meaning_reversed":{"en":"Reversed, it points to recklessness, delays, frustration or an inability to finish a plan. You may be rushing without direction.","nl":"Omgekeerd duidt de Ridder van Stokken op **roekeloosheid, vertragingen, frustratie** of het onvermogen om een plan af te maken. Je rent in het wilde weg."}},{"id":"NineOfCups","name":{"en":"Nine of Cups","nl":"Negen van Bekers"},"meaning":{"en":"Wish fulfilment, contentment and emotional satisfaction. Known as the wish card, it suggests satisfaction with your emotional life.","nl":"De **Negen van Bekers** staat voor wensvervulling, tevredenheid en emotionele voldoening. Dit is de \"wens-kaart\" en duidt aan dat je tevreden bent met je emotionele leven."},"meaning_reversed":{"en":"Reversed, it can point to smugness, dissatisfaction, not getting what you want or excess. Your wish has not yet been fulfilled.","nl":"Omgekeerd kan de Negen van Bekers wijzen op **zelfgenoegzaamheid, ontevredenheid**, het niet krijgen van wat je wilt of overdaad. Je wens is nog niet vervuld."}},{"id":"NineOfPentacles","name":{"en":"Nine of Pentacles","nl":"Negen van Pentakels"},"meaning":{"en":"Independence, refinement, self-sufficiency and material comfort. You created your own success; take time to enjoy it.","nl":"De **Negen van Pentakels** vertegenwoordigt onafhankelijkheid, verfijning, zelfvoorziening en materiële luxe. Je hebt je eigen succes gecreëerd; geniet ervan."},"meaning_reversed":{"en":"Reversed, it points to dependence, financial setbacks, difficulty enjoying success or excessive focus on appearances. You may not be truly independent.","nl":"Omgekeerd wijst de Negen van Pentakels op **afhankelijkheid, financiële tegenslag**, het onvermogen om van succes te genieten of te veel focus op uiterlijkheden. Je bent niet echt onafhankelijk."}},{"id":"NineOfSwords","name":{"en":"Nine of Swords","nl":"Negen van Zwaarden"},"meaning":{"en":"Anxiety, worry, nightmares and sleeplessness. Mental anguish can feel worse than reality; seek support and calm your mind.","nl":"De **Negen van Zwaarden** staat voor angst, zorgen, nachtmerries en slapeloosheid. Deze mentale kwelling is vaak erger dan de realiteit. Zoek hulp en kalmeer je geest."},"meaning_reversed":{"en":"Reversed, it points to releasing fear, easing worries, seeking help or a deep secret. You are beginning to recover.","nl":"Omgekeerd wijst de Negen van Zwaarden op het **loslaten van angst, het verlichten van zorgen**, het zoeken naar hulp of een diep geheim. Je begint aan je herstel."}},{"id":"NineOfWands","name":{"en":"Nine of Wands","nl":"Negen van Stokken"},"meaning":{"en":"Resilience, determination and being close to the finish line. You are tired but determined; that final effort can carry you through.","nl":"De **Negen van Stokken** staat voor veerkracht, standvastigheid, en het bijna bereiken van de finish. Je bent moe, maar vastbesloten om vol te houden. Je laatste beetje kracht is wat je over de streep zal trekken."},"meaning_reversed":{"en":"Reversed, it can point to paranoia, fear, lack of stamina or giving up at the last moment. You may be afraid to take the final step.","nl":"Omgekeerd kan de Negen van Stokken wijzen op **paranoia, angst, een gebrek aan uithoudingsvermogen** of het opgeven op het laatste moment. Je bent bang om de laatste stap te zetten."}},{"id":"PageOfCups","name":{"en":"Page of Cups","nl":"Schildknaap van Bekers"},"meaning":{"en":"A messenger of news, a fresh start or an emotional offer. It represents sensitivity, creativity and the emergence of new feelings.","nl":"De **Schildknaap van Bekers** is een boodschapper van nieuws, een nieuwe start of een emotioneel aanbod. Het symboliseert gevoeligheid, creativiteit en het opkomen van nieuwe gevoelens."},"meaning_reversed":{"en":"Reversed, it can point to bad news, creative blocks, insecurity or emotional immaturity. The offer may be false or withdrawn.","nl":"Omgekeerd kan de Schildknaap van Bekers wijzen op **slecht nieuws, creatieve blokkade**, onzekerheid of emotionele onvolwassenheid. Het aanbod is vals of wordt ingetrokken."}},{"id":"PageOfPentacles","name":{"en":"Page of Pentacles","nl":"Schildknaap van Pentakels"},"meaning":{"en":"A student, financial news or an opportunity to begin a practical project. Be thorough, curious and willing to learn.","nl":"De **Schildknaap van Pentakels** is een student, brenger van financieel nieuws of een kans om een nieuw, praktisch project te starten. Hij is grondig en studeert hard."},"meaning_reversed":{"en":"Reversed, it can point to bad financial news, laziness, lack of focus at school or work, or unrealistic financial plans. You may be unprepared.","nl":"Omgekeerd kan de Schildknaap van Pentakels wijzen op **slecht financieel nieuws, luiheid**, gebrek aan focus op school/werk, of onrealistische financiële plannen. Je bent onvoorbereid."}},{"id":"PageOfSwords","name":{"en":"Page of Swords","nl":"Schildknaap van Zwaarden"},"meaning":{"en":"Alert, curious and intellectually active. A messenger of news or the beginning of a mental challenge; be careful with your words.","nl":"De **Schildknaap van Zwaarden** is alert, nieuwsgierig en intellectueel actief. Hij is een boodschapper van nieuws, of een begin van een mentale uitdaging. Wees voorzichtig met wat je zegt."},"meaning_reversed":{"en":"Reversed, it can point to gossip, lack of focus, misuse of words or poor planning. You may be speaking too much or too carelessly.","nl":"Omgekeerd kan de Schildknaap van Zwaarden wijzen op **roddels, ongerichtheid, misbruik van woorden**, of een gebrek aan planning. Je praat te veel of te ondoordacht."}},{"id":"PageOfWands","name":{"en":"Page of Wands","nl":"Schildknaap van Stokken"},"meaning":{"en":"Excitement, inspiration and the beginning of a new adventure. A message about a creative project or journey invites you to embrace the unknown.","nl":"De **Schildknaap van Stokken** vertegenwoordigt opwinding, inspiratie en het begin van een nieuw avontuur. Het is een bericht over een creatief project of een reis. Omarm het onbekende met enthousiasme."},"meaning_reversed":{"en":"Reversed, it can point to bad news, creative blocks, lack of focus or delays in an important message. The excitement may be short-lived.","nl":"Omgekeerd kan de Schildknaap van Stokken wijzen op **slecht nieuws, creatieve blokkades**, een gebrek aan focus of een vertraging in het ontvangen van een belangrijk bericht. De opwinding is kortstondig."}},{"id":"QueenOfCups","name":{"en":"Queen of Cups","nl":"Koningin van Bekers"},"meaning":{"en":"Compassion, intuition and emotional stability. This nurturing figure leads with the heart; listen to your intuition and show empathy.","nl":"De **Koningin van Bekers** symboliseert mededogen, intuïtie en emotionele stabiliteit. Ze is de verzorger die met het hart leidt. Luister naar je intuïtie en wees meelevend."},"meaning_reversed":{"en":"Reversed, it can point to emotional dependence, insecurity, volatility or emotional manipulation. Your intuition may be clouded.","nl":"Omgekeerd kan de Koningin van Bekers wijzen op **emotionele afhankelijkheid, hysterie**, onzekerheid of het manipuleren van emoties. Je intuïtie is verstoord."}},{"id":"QueenOfPentacles","name":{"en":"Queen of Pentacles","nl":"Koningin van Pentakels"},"meaning":{"en":"Nurturing, practical abundance and creating a comfortable home. Generous, grounded and capable of caring for others.","nl":"De **Koningin van Pentakels** symboliseert een verzorger, moederlijkheid, praktische rijkdom en het creëren van een gezellig thuis. Ze is vrijgevig en geaard."},"meaning_reversed":{"en":"Reversed, it can point to financial dependence, possessiveness, neglecting yourself or a chaotic home. Your foundations may feel insecure.","nl":"Omgekeerd kan de Koningin van Pentakels wijzen op **financiële afhankelijkheid, bezitterigheid**, verwaarlozing van jezelf of het creëren van een chaotisch thuis. Je basis is onzeker."}},{"id":"QueenOfSwords","name":{"en":"Queen of Swords","nl":"Koningin van Zwaarden"},"meaning":{"en":"Independence, sharp wit and impartiality. Communicate with logic and clarity, though you may sometimes seem cold.","nl":"De **Koningin van Zwaarden** symboliseert onafhankelijkheid, scherpe humor en onpartijdigheid. Ze is in staat om met logica en duidelijkheid te communiceren, maar kan koud overkomen."},"meaning_reversed":{"en":"Reversed, it can point to emotional distance, cruelty, bias or using logic to hurt others. You may be too sharp or detached.","nl":"Omgekeerd kan de Koningin van Zwaarden wijzen op **emotionele afstand, wreedheid**, partijdigheid of het gebruik van logica om te kwetsen. Je bent te scherp of te emotioneel koud."}},{"id":"QueenOfWands","name":{"en":"Queen of Wands","nl":"Koningin van Stokken"},"meaning":{"en":"Courage, independence and social confidence. An energetic, self-assured leader uses charisma to bring a vision to life.","nl":"De **Koningin van Stokken** symboliseert moed, onafhankelijkheid en sociale flair. Ze is een leider, vol energie en zelfvertrouwen. Gebruik je charisma om je visie te manifesteren."},"meaning_reversed":{"en":"Reversed, it can point to dominance, jealousy, selfishness or low self-confidence. Your energy may be unfocused or overwhelming.","nl":"Omgekeerd kan de Koningin van Stokken wijzen op **dominantie, jaloezie, egoïsme** of een gebrek aan vertrouwen in jezelf. Je energie is ongericht of te sterk."}},{"id":"SevenOfCups","name":{"en":"Seven of Cups","nl":"Zeven van Bekers"},"meaning":{"en":"Imagination, choices and overwhelming possibilities. You have many dreams but lack focus; choose one cup and direct your energy towards it.","nl":"De **Zeven van Bekers** symboliseert verbeelding, keuzes en overweldigende opties. Je hebt veel dromen, maar mist focus. Kies één beker en focus je energie daarop."},"meaning_reversed":{"en":"Reversed, it points to confusion, unclear choices or a lack of direction. You may have too many options or none that feel clear.","nl":"Omgekeerd duidt de Zeven van Bekers op een **gebrek aan keuze, onduidelijkheid**, verwarring of het ontbreken van richting. Je hebt te veel opties of geen enkele duidelijke."}},{"id":"SevenOfPentacles","name":{"en":"Seven of Pentacles","nl":"Zeven van Pentakels"},"meaning":{"en":"Patience, waiting for results and evaluating an investment. You are nearly there, but it is not yet time to harvest.","nl":"De **Zeven van Pentakels** symboliseert geduld, wachten op resultaten en een evaluatie van je investering. Je bent bijna klaar, maar het is nog niet het moment om te oogsten."},"meaning_reversed":{"en":"Reversed, it points to impatience, uncertainty about results, a poor investment or abandoning a project too soon. Give it time.","nl":"Omgekeerd wijst de Zeven van Pentakels op **ongeduld, onzekerheid over het resultaat**, slechte investering of het verlaten van een project voordat het klaar is. Je mist geduld."}},{"id":"SevenOfSwords","name":{"en":"Seven of Swords","nl":"Zeven van Zwaarden"},"meaning":{"en":"Secrecy, deception, trying to get away with something or taking a shortcut. Be honest with yourself and others.","nl":"De **Zeven van Zwaarden** staat voor stiekem gedrag, bedrog, een poging om weg te komen van iets, of het nemen van een kortere weg. Wees eerlijk tegen jezelf en anderen."},"meaning_reversed":{"en":"Reversed, it points to admitting deception, revealing a secret or accepting the consequences of dishonesty. Learn from your mistakes.","nl":"Omgekeerd wijst de Zeven van Zwaarden op het **toegeven van bedrog, het onthullen van een geheim** of het aanvaarden van de gevolgen van je oneerlijkheid. Je leert van je fouten."}},{"id":"SevenOfWands","name":{"en":"Seven of Wands","nl":"Zeven van Stokken"},"meaning":{"en":"Defence, courage and standing your ground. You are being challenged, but you hold a strong position. Stand up for yourself.","nl":"De **Zeven van Stokken** vertegenwoordigt verdediging, moed en het innemen van een standpunt. Je wordt uitgedaagd, maar je bent in een sterke positie. Sta voor jezelf op en weiger je over te geven."},"meaning_reversed":{"en":"Reversed, it points to giving up, feeling overwhelmed, cowardice or avoiding responsibility. Your position may have become uncertain.","nl":"Omgekeerd duidt de Zeven van Stokken op **het opgeven, zich overweldigd voelen, lafheid** of het ontlopen van verantwoordelijkheid. Je positie is onzeker geworden."}},{"id":"SixOfCups","name":{"en":"Six of Cups","nl":"Zes van Bekers"},"meaning":{"en":"Nostalgia, memories of the past, childhood and innocence. Someone from your past may return, or you may reconnect with your inner child.","nl":"De **Zes van Bekers** staat voor nostalgie, herinneringen uit het verleden, jeugd en onschuld. Het kan een terugkeer van iemand uit het verleden aangeven of de behoefte om opnieuw contact te maken met je innerlijke kind."},"meaning_reversed":{"en":"Reversed, it points to living in the past, unhealthy attachment to memories or the need to focus on the future. The past is holding you back.","nl":"Omgekeerd wijst de Zes van Bekers op **leven in het verleden, ongezonde fixatie op herinneringen**, of de noodzaak om het verleden los te laten en je te richten op de toekomst. Het verleden houdt je tegen."}},{"id":"SixOfPentacles","name":{"en":"Six of Pentacles","nl":"Zes van Pentakels"},"meaning":{"en":"Give and take, sharing, charity and financial balance. Be gracious both as a giver and as a receiver.","nl":"De **Zes van Pentakels** duidt op geven en nemen, delen, liefdadigheid en het balanceren van financiën. Wees zowel een gever als een ontvanger met gratie."},"meaning_reversed":{"en":"Reversed, it points to an imbalance in giving and receiving, selfishness, debt or broken promises. Resources are being distributed unfairly.","nl":"Omgekeerd duidt de Zes van Pentakels op **onbalans in geven/nemen, egoïsme**, schuld of het niet nakomen van afspraken. De verdeling van middelen is oneerlijk."}},{"id":"SixOfSwords","name":{"en":"Six of Swords","nl":"Zes van Zwaarden"},"meaning":{"en":"Transition, moving away from trouble, travel and heading towards better times. You are leaving a difficult past behind.","nl":"De **Zes van Zwaarden** duidt op een overgang, weggaan van problemen, reizen en het verhuizen naar betere tijden. Je laat het moeilijke verleden achter je."},"meaning_reversed":{"en":"Reversed, it points to stagnation, returning to the past or being unable to escape problems. You may struggle to make the crossing.","nl":"Omgekeerd duidt de Zes van Zwaarden op **stagnatie, terugkeren naar het verleden**, of het niet kunnen ontsnappen aan problemen. Je bent niet in staat om de oversteek te maken."}},{"id":"SixOfWands","name":{"en":"Six of Wands","nl":"Zes van Stokken"},"meaning":{"en":"Victory, public recognition, success and confidence. You have overcome a challenge and are being recognised; enjoy the moment.","nl":"De **Zes van Stokken** staat voor overwinning, publieke erkenning, succes en zelfvertrouwen. Je hebt een uitdaging overwonnen en wordt nu erkend voor je prestaties. Geniet van het moment en leid anderen."},"meaning_reversed":{"en":"Reversed, it can point to delayed success, false hope, lost confidence or not receiving the recognition you expected. The victory may feel hollow.","nl":"Omgekeerd kan de Zes van Stokken wijzen op **een vertraging van succes, valse hoop**, het verlies van vertrouwen of het niet ontvangen van de verwachte erkenning. Je overwinning is hol."}},{"id":"Strength","name":{"en":"Strength","nl":"Kracht"},"meaning":{"en":"Courage, inner strength and resilience. Meet challenges with patience and compassion, master your impulses and face your fears gracefully.","nl":"**Kracht** belichaamt moed, innerlijke kracht en veerkracht. Het betekent het overwinnen van uitdagingen door geduld en mededogen. Deze kaart moedigt je aan om je innerlijke kracht te benutten, je impulsen te beheersen en je angsten met gratie onder ogen te zien."},"meaning_reversed":{"en":"Reversed, it can point to weakness, insecurity, fear or a lack of self-control. You need to rediscover your inner courage.","nl":"Omgekeerd kan Kracht wijzen op **zwakte, onzekerheid, angst** of een gebrek aan zelfbeheersing. Je moet je innerlijke moed herwinnen."}},{"id":"Temperance","name":{"en":"Temperance","nl":"Matigheid"},"meaning":{"en":"Balance, harmony and moderation. Be patient, find compromise and bring different parts of your life together to create peace.","nl":"**Matigheid** belichaamt balans, harmonie en gematigdheid. Het betekent de behoefte aan geduld, compromis en integratie. Deze kaart moedigt je aan om een middenweg te vinden, verschillende aspecten van je leven te combineren en een gevoel van vrede te creëren."},"meaning_reversed":{"en":"Reversed, it points to imbalance, excess, discord or going too far in one direction. Find a middle ground.","nl":"Omgekeerd wijst Matigheid op **onbalans, overdaad**, discordantie of het te ver gaan in een extreme richting. Je moet een middenweg en harmonie vinden."}},{"id":"TenOfCups","name":{"en":"Ten of Cups","nl":"Tien van Bekers"},"meaning":{"en":"Lasting harmony, emotional fulfilment and family happiness. It represents a happily-ever-after and deep emotional peace.","nl":"De **Tien van Bekers** vertegenwoordigt blijvende harmonie, emotionele vervulling en geluk in het gezin. Het symboliseert \"lang en gelukkig leven\" en perfecte emotionele vrede."},"meaning_reversed":{"en":"Reversed, it points to broken family harmony, arguments, conflict at home or chasing an illusion of perfect happiness. Peace has been disrupted.","nl":"Omgekeerd duidt de Tien van Bekers op **gebroken gezinsharmonie, ruzie**, onenigheid in huis of het najagen van een illusie van perfect geluk. De vrede is verstoord."}},{"id":"TenOfPentacles","name":{"en":"Ten of Pentacles","nl":"Tien van Pentakels"},"meaning":{"en":"Lasting wealth, financial security and inheritance. Family, community and a stable foundation for the future are central themes.","nl":"De **Tien van Pentakels** duidt op blijvende rijkdom, financiële zekerheid en een erfenis. Het vertegenwoordigt familie, gemeenschap en een stabiele basis voor de toekomst."},"meaning_reversed":{"en":"Reversed, it points to financial insecurity, family disputes, breaking with tradition or an unstable future. Your sense of security may be fading.","nl":"Omgekeerd duidt de Tien van Pentakels op **financiële onzekerheid, familieruzies**, breuk met traditie of een onstabiele basis voor de toekomst. De zekerheid is verdwenen."}},{"id":"TenOfSwords","name":{"en":"Ten of Swords","nl":"Tien van Zwaarden"},"meaning":{"en":"A painful ending, crisis or rock bottom, but also the promise of a new beginning. The worst is over and recovery can begin.","nl":"De **Tien van Zwaarden** vertegenwoordigt een pijnlijk einde, een crisis, het bereiken van de bodem, maar ook een nieuw begin. Het slechtste is voorbij. Er is nu ruimte voor herstel."},"meaning_reversed":{"en":"Reversed, it points to avoiding an ending, postponing a crisis or recovering from a low point. You may fear the worst is still to come.","nl":"Omgekeerd duidt de Tien van Zwaarden op het **vermijden van een einde, het uitstellen van een crisis**, of het herstellen van een dieptepunt. Het kan ook wijzen op de angst dat het slechtste nog moet komen."}},{"id":"TenOfWands","name":{"en":"Ten of Wands","nl":"Tien van Stokken"},"meaning":{"en":"Heavy burdens, responsibility and the need to lighten your load. You have taken on too much; delegate tasks or set boundaries.","nl":"De **Tien van Stokken** duidt op zware lasten, verantwoordelijkheid en de behoefte om je lasten te verminderen. Je hebt te veel op je genomen. Het is tijd om taken te delegeren of grenzen te stellen."},"meaning_reversed":{"en":"Reversed, it points to releasing burdens, exhaustion or struggling to carry responsibility. You may be tired of carrying everything.","nl":"Omgekeerd wijst de Tien van Stokken op het **loslaten van lasten, uitputting**, of het falen in het dragen van verantwoordelijkheid. Je bent het zat om alles te dragen."}},{"id":"TheChariot","name":{"en":"The Chariot","nl":"De Zegewagen"},"meaning":{"en":"Willpower, determination and control. Achieve success through focused effort, perseverance and confidence in overcoming obstacles.","nl":"De **Zegewagen** symboliseert wilskracht, vastberadenheid en controle. Het vertegenwoordigt succes door gerichte inspanning en doorzettingsvermogen. Deze kaart moedigt je aan om obstakels te overwinnen, gefocust te blijven op je doelen en met vertrouwen vooruit te gaan."},"meaning_reversed":{"en":"Reversed, it points to lack of control or direction, defeat or ambitions going off course. Regain the reins or reconsider your goals.","nl":"Omgekeerd duidt De Zegewagen op een **gebrek aan controle, een gebrek aan richting**, verslagenheid of het laten ontsporen van ambities. Je moet de teugels strakker vastpakken of je doelen heroverwegen."}},{"id":"TheDevil","name":{"en":"The Devil","nl":"De Duivel"},"meaning":{"en":"Temptation, materialism and bondage. Face negative patterns, addictions and your shadow self to free yourself from limiting beliefs.","nl":"De **Duivel** vertegenwoordigt verleiding, materialisme en gebondenheid. Het betekent negatieve patronen, verslavingen en het schaduwzelf. Deze kaart moedigt je aan om je angsten onder ogen te zien, je te bevrijden van beperkende overtuigingen en je kracht terug te winnen."},"meaning_reversed":{"en":"Reversed, it points to breaking chains, escaping addiction or freeing yourself from limiting beliefs. You are beginning to master your shadow side.","nl":"Omgekeerd duidt De Duivel op het **verbreken van ketens, het ontsnappen aan verslaving** of bevrijding van beperkende overtuigingen. Je begint je schaduwzijde onder controle te krijgen."}},{"id":"TheEmperor","name":{"en":"The Emperor","nl":"De Keizer"},"meaning":{"en":"Authority, structure and control. Take charge, set clear boundaries and build a solid foundation for your goals.","nl":"De **Keizer** betekent autoriteit, structuur en controle. Het vertegenwoordigt leiderschap, stabiliteit en het vestigen van orde. Deze kaart moedigt je aan om de leiding over je leven te nemen, duidelijke grenzen te stellen en een solide basis te bouwen voor je doelen."},"meaning_reversed":{"en":"Reversed, it can point to dominance, rigidity, abuse of power or lack of structure. Loosen your grip or create more discipline.","nl":"Omgekeerd kan De Keizer wijzen op **dominantie, starheid, misbruik van macht** of het ontbreken van structuur. Je moet de controle loslaten of meer discipline creëren."}},{"id":"TheEmpress","name":{"en":"The Empress","nl":"De Keizerin"},"meaning":{"en":"Abundance, fertility and nurturing. Connect with creativity, sensuality and the beauty of nature; cultivate growth in your life.","nl":"De **Keizerin** symboliseert overvloed, vruchtbaarheid en koestering. Het vertegenwoordigt de kracht van creatie en de schoonheid van de natuur. Deze kaart moedigt je aan om contact te maken met je vrouwelijke energie, sensualiteit te omarmen en groei in je leven te cultiveren."},"meaning_reversed":{"en":"Reversed, it can point to insecurity, smothering, blocked creativity or neglecting self-care. Material concerns may also arise.","nl":"Omgekeerd kan De Keizerin duiden op **onvruchtbaarheid, onzekerheid, verstikking** of een gebrek aan creativiteit. Het kan wijzen op het negeren van zelfzorg of materiële problemen."}},{"id":"TheFool","name":{"en":"The Fool","nl":"De Dwaas"},"meaning":{"en":"New beginnings, spontaneity and taking a leap of faith. Embrace adventure and uncertainty with an open mind and trust your instincts.","nl":"De **Dwaas** vertegenwoordigt nieuwe beginnen, spontaniteit en een sprong in het diepe. Het suggereert een frisse start, een avontuur in het onbekende en de bereidheid om onzekerheid te omarmen. Deze kaart moedigt je aan om ruimdenkend te zijn en op je instincten te vertrouwen terwijl je aan een nieuwe reis begint."},"meaning_reversed":{"en":"Reversed, it points to recklessness, thoughtless action, lack of planning or avoiding responsibility. Consider the situation before you leap.","nl":"Omgekeerd duidt De Dwaas op **roekeloosheid, onbezonnen actie, een gebrek aan planning** en het vermijden van verantwoordelijkheid. Je moet eerst de situatie overwegen voordat je springt."}},{"id":"TheHangedMan","name":{"en":"The Hanged Man","nl":"De Gehangene"},"meaning":{"en":"Surrender, sacrifice and a change of perspective. Let go of control, pause and remain open to new insights.","nl":"De **Gehangene** vertegenwoordigt overgave, opoffering en een verandering van perspectief. Het betekent de behoefte om controle los te laten en dingen vanuit een andere hoek te bekijken. Deze kaart moedigt je aan om te pauzeren, na te denken en open te staan voor nieuwe inzichten."},"meaning_reversed":{"en":"Reversed, it points to unwillingness to make sacrifices, stagnant energy, delayed decisions or refusing a necessary pause.","nl":"Omgekeerd wijst De Gehangene op **onwil om op te offeren, stagnerende energie**, het uitstellen van beslissingen of het weigeren van een noodzakelijke pauze. Je blijft vasthouden aan een onhoudbare situatie."}},{"id":"TheHermit","name":{"en":"The Hermit","nl":"De Kluizenaar"},"meaning":{"en":"Introspection, solitude and self-discovery. Withdraw from the noise of the world to seek inner wisdom and spiritual growth.","nl":"De **Kluizenaar** vertegenwoordigt introspectie, eenzaamheid en zelfontdekking. Het betekent de behoefte om je terug te trekken uit de wereld en innerlijke wijsheid te zoeken. Deze kaart moedigt je aan om tijd te nemen voor reflectie, contemplatie en spirituele groei."},"meaning_reversed":{"en":"Reversed, it points to excessive isolation, loneliness, withdrawing from others or refusing to ask for help. Find balance between solitude and connection.","nl":"Omgekeerd duidt De Kluizenaar op **overmatig isolement, eenzaamheid**, je terugtrekken van anderen of het weigeren om hulp te vragen. Je moet de balans vinden tussen eenzaamheid en gemeenschap."}},{"id":"TheHierophant","name":{"en":"The Hierophant","nl":"De Hiërofant"},"meaning":{"en":"Tradition, conformity and spiritual guidance. Seek wisdom from established sources and consider conventional paths and institutions.","nl":"De **Hiërofant** belichaamt traditie, conformiteit en spirituele leiding. Het vertegenwoordigt gevestigde instellingen, conventionele wijsheid en het naleven van regels. Deze kaart moedigt je aan om kennis te zoeken bij gevestigde bronnen en traditionele paden te volgen."},"meaning_reversed":{"en":"Reversed, it points to nonconformity, challenging tradition or choosing personal beliefs over rules. Find your own truth.","nl":"Omgekeerd duidt De Hiërofant op **non-conformiteit, het tarten van traditie**, beperkende overtuigingen of persoonlijke overtuigingen verkiezen boven de regels. Zoek je eigen waarheid."}},{"id":"TheHighPriestess","name":{"en":"The High Priestess","nl":"De Hogepriesteres"},"meaning":{"en":"Intuition, mystery and hidden knowledge. Trust your inner wisdom and pay attention to your dreams and instincts.","nl":"De **Hogepriesteres** vertegenwoordigt intuïtie, mysterie en verborgen kennis. Het moedigt je aan om op je innerlijke wijsheid te vertrouwen en aandacht te besteden aan je dromen en instincten. Deze kaart suggereert dat je naar je innerlijke stem moet luisteren."},"meaning_reversed":{"en":"Reversed, it points to ignoring intuition, suppressed feelings, superficiality or secrets needing to be revealed. Your mind may be overriding inner knowledge.","nl":"Omgekeerd duidt De Hogepriesteres op het **negeren van je intuïtie, onderdrukte gevoelens**, oppervlakkigheid of de noodzaak om geheimen bloot te leggen. Je verstand overstemt je innerlijke weten."}},{"id":"TheLovers","name":{"en":"The Lovers","nl":"De Geliefden"},"meaning":{"en":"Love, partnerships and choices. This card represents unity, harmony and making conscious decisions aligned with your values and heart.","nl":"De **Geliefden** vertegenwoordigen liefde, partnerschappen en keuzes. Het betekent eenheid, harmonie en het belang van bewuste beslissingen nemen. Deze kaart moedigt je aan om je waarden te overwegen en keuzes te maken die aansluiten bij je hart."},"meaning_reversed":{"en":"Reversed, it points to disharmony, poor choices, relationship problems or conflicting values. You may be struggling with an important decision.","nl":"Omgekeerd wijst De Geliefden op **disharmonie, verkeerde keuzes, relatieproblemen** of een onbalans in waarden. Je worstelt met een belangrijke beslissing."}},{"id":"TheMagician","name":{"en":"The Magician","nl":"De Magiër"},"meaning":{"en":"Power, skill and resourcefulness. Focus your intention and take action: you have the tools and talents needed to reach your goals.","nl":"De **Magiër** belichaamt kracht, vaardigheid en vindingrijkheid. Het betekent het vermogen om je verlangens te manifesteren door gerichte intentie en actie. Deze kaart geeft aan dat je de tools en talenten hebt die nodig zijn om je doelen te bereiken."},"meaning_reversed":{"en":"Reversed, it can point to manipulation, untapped potential, deception or lack of willpower. Examine your motives and regain your focus.","nl":"Omgekeerd kan De Magiër **manipulatie, onbenut potentieel, bedrog** of een gebrek aan wilskracht aangeven. Je moet je ware motieven onderzoeken of je focus terugvinden."}},{"id":"TheMoon","name":{"en":"The Moon","nl":"De Maan"},"meaning":{"en":"Intuition, illusion and the subconscious. Explore hidden fears and uncertainty, face your inner world and trust your instincts.","nl":"De **Maan** vertegenwoordigt intuïtie, illusie en het onderbewustzijn. Het betekent verborgen angsten, onzekerheid en de behoefte om op je instincten te vertrouwen. Deze kaart moedigt je aan om je innerlijke wereld te verkennen, je angsten onder ogen te zien en op je intuïtie te vertrouwen."},"meaning_reversed":{"en":"Reversed, it points to confusion clearing, overcoming fear, subconscious material surfacing or secrets being revealed. Illusions are beginning to fade.","nl":"Omgekeerd wijst De Maan op het **ophelderen van verwarring, het overwinnen van angst**, het vrijkomen van het onderbewustzijn of het onthullen van geheimen. De illusies beginnen te verdwijnen."}},{"id":"TheStar","name":{"en":"The Star","nl":"De Ster"},"meaning":{"en":"Hope, inspiration and renewal. Healing, faith and connection are at hand; remain optimistic and follow your dreams.","nl":"De **Ster** belichaamt hoop, inspiratie en vernieuwing. Het betekent genezing, geloof en een verbinding met het goddelijke. Deze kaart moedigt je aan om optimistisch te blijven, op je intuïtie te vertrouwen en je dromen te volgen."},"meaning_reversed":{"en":"Reversed, it points to despair, disappointment, lack of inspiration or discouragement. Reconnect with your inner hope.","nl":"Omgekeerd duidt De Ster op **wanhoop, teleurstelling, een gebrek aan inspiratie** of het voelen van ontmoediging. Je moet opnieuw verbinding maken met je innerlijke hoop."}},{"id":"TheSun","name":{"en":"The Sun","nl":"De Zon"},"meaning":{"en":"Joy, vitality and success. Embrace clarity and positivity, celebrate your achievements and let happiness shine.","nl":"De **Zon** symboliseert vreugde, vitaliteit en succes. Het betekent helderheid, positiviteit en het vervullen van doelen. Deze kaart moedigt je aan om geluk te omarmen, je prestaties te vieren en positiviteit uit te stralen."},"meaning_reversed":{"en":"Reversed, it points to temporary sadness, lack of enthusiasm, uncertainty or postponed happiness. Look for clarity within.","nl":"Omgekeerd duidt De Zon op **tijdelijke somberheid, een gebrek aan enthousiasme**, onduidelijkheid over een situatie of het uitstellen van geluk. Zoek de helderheid van binnenuit."}},{"id":"TheTower","name":{"en":"The Tower","nl":"De Toren"},"meaning":{"en":"Sudden change, upheaval and revelation. Old structures may collapse so you can rebuild on a stronger foundation.","nl":"De **Toren** symboliseert plotselinge verandering, opschudding en openbaring. Het betekent de ineenstorting van oude structuren en de behoefte aan wederopbouw. Deze kaart moedigt je aan om verandering te omarmen, los te laten wat je niet langer dient en op een sterkere basis opnieuw op te bouwen."},"meaning_reversed":{"en":"Reversed, it points to fear of change, avoiding a necessary crisis or delaying the inevitable. Blocked energy needs to be released.","nl":"Omgekeerd wijst De Toren op **angst voor verandering, het vermijden van een noodzakelijke crisis**, of het uitstellen van het onvermijdelijke. De energie is geblokkeerd en moet losgelaten worden."}},{"id":"TheWorld","name":{"en":"The World","nl":"De Wereld"},"meaning":{"en":"Completion, fulfilment and unity. A cycle is successfully ending and goals have been reached; celebrate what you have achieved.","nl":"De **Wereld** symboliseert voltooiing, vervulling en eenheid. Het betekent de succesvolle afronding van een cyclus en het bereiken van doelen. Deze kaart moedigt je aan om je prestaties te vieren, heelheid te omarmen en je plaats in de wereld te erkennen."},"meaning_reversed":{"en":"Reversed, it points to an unfinished cycle, delayed completion or seeking closure that has not yet arrived. One final effort may be needed.","nl":"Omgekeerd duidt De Wereld op een **onvolledige cyclus, een vertraging in de voltooiing**, of het zoeken naar een afsluiting die nog niet is bereikt. Er moet nog één laatste inspanning geleverd worden."}},{"id":"ThreeOfCups","name":{"en":"Three of Cups","nl":"Drie van Bekers"},"meaning":{"en":"Celebration, friendship, community and successful collaboration. Enjoy the company of others and celebrate life's joys.","nl":"De **Drie van Bekers** staat voor viering, vriendschap, gemeenschap en succesvolle samenwerking. Geniet van het gezelschap van anderen en vier de vreugde van het leven."},"meaning_reversed":{"en":"Reversed, it can point to excess, gossip, exclusion or too much partying. The joy may be superficial, or you may feel left out.","nl":"Omgekeerd kan de Drie van Bekers wijzen op **overdaad, roddels**, buitensluiting of het te veel feesten. De vreugde is oppervlakkig of je voelt je een buitenstaander."}},{"id":"ThreeOfPentacles","name":{"en":"Three of Pentacles","nl":"Drie van Pentakels"},"meaning":{"en":"Teamwork, recognition of skills and the first success of a project. Your talents are being seen and appreciated.","nl":"De **Drie van Pentakels** symboliseert teamsamenwerking, erkenning van vaardigheden en het eerste succes van een project. Je talenten worden gezien en gewaardeerd."},"meaning_reversed":{"en":"Reversed, it can point to poor teamwork, disagreement, low-quality work or lack of recognition. Collaboration is failing.","nl":"Omgekeerd kan de Drie van Pentakels wijzen op **gebrek aan teamwork, onenigheid**, slechte kwaliteit van werk of een gebrek aan erkenning. De samenwerking faalt."}},{"id":"ThreeOfSwords","name":{"en":"Three of Swords","nl":"Drie van Zwaarden"},"meaning":{"en":"Grief, disappointment, loss and heartbreak. A painful emotional wound is real, but healing can now begin.","nl":"De **Drie van Zwaarden** symboliseert verdriet, teleurstelling, verlies en hartzeer. Het is een pijnlijke kaart die vaak een emotionele wond vertegenwoordigt. De pijn is echt, maar de genezing begint nu."},"meaning_reversed":{"en":"Reversed, it points to releasing grief, overcoming heartbreak or postponing necessary pain. You may be refusing to acknowledge your hurt.","nl":"Omgekeerd wijst de Drie van Zwaarden op het **loslaten van verdriet, het overwinnen van hartzeer** of het uitstellen van noodzakelijke pijn. Je weigert de waarheid van je pijn te erkennen."}},{"id":"ThreeOfWands","name":{"en":"Three of Wands","nl":"Drie van Stokken"},"meaning":{"en":"Progress, expansion and seeing the first results of your efforts. You are on the right path; trust your vision and be patient.","nl":"De **Drie van Stokken** symboliseert vooruitgang, expansie en het zien van de eerste resultaten van je inspanningen. Je bent op de goede weg en je plannen beginnen vruchten af te werpen. Blijf vertrouwen in je visie en wacht op je schepen."},"meaning_reversed":{"en":"Reversed, it can point to delays, obstacles to growth, trade setbacks or unfinished plans. Your expectations may have been premature.","nl":"Omgekeerd kan de Drie van Stokken wijzen op **vertragingen, belemmeringen in de groei**, tegenslag in de handel of het niet afronden van plannen. Je verwachtingen zijn mogelijk te vroeg."}},{"id":"TwoOfCups","name":{"en":"Two of Cups","nl":"Twee van Bekers"},"meaning":{"en":"Unity, harmony, mutual attraction and forming romantic or business partnerships. Two people or forces meet in balance.","nl":"De **Twee van Bekers** symboliseert eenheid, harmonie, wederzijdse aantrekking en het vormen van partnerschappen (romantisch of zakelijk). Het staat voor het balanceren van twee zielen in perfecte harmonie."},"meaning_reversed":{"en":"Reversed, it points to a breakup, disharmony in a relationship, separation or the end of a partnership. The connection is strained.","nl":"Omgekeerd duidt de Twee van Bekers op een **breuk, disharmonie in een relatie**, een scheiding of het einde van een partnerschap. De verbinding is verbroken."}},{"id":"TwoOfPentacles","name":{"en":"Two of Pentacles","nl":"Twee van Pentakels"},"meaning":{"en":"Balancing multiple responsibilities, flexibility and setting priorities. You are juggling resources; keep your balance.","nl":"De **Twee van Pentakels** duidt op het balanceren van meerdere verantwoordelijkheden, flexibiliteit en prioriteiten stellen. Je jongleert met je middelen; behoud je evenwicht."},"meaning_reversed":{"en":"Reversed, it points to financial imbalance, overload, confusion or difficulty setting priorities. You may be dropping the ball.","nl":"Omgekeerd duidt de Twee van Pentakels op **financiële onbalans, overbelasting**, verwarring of het onvermogen om prioriteiten te stellen. Je laat de bal vallen."}},{"id":"TwoOfSwords","name":{"en":"Two of Swords","nl":"Twee van Zwaarden"},"meaning":{"en":"A stalemate, avoiding a decision and a blocked mind. Face the facts, remove the blindfold and make a choice.","nl":"De **Twee van Zwaarden** duidt op een patstelling, het vermijden van een beslissing, en een geblokkeerde geest. Je weigert de feiten onder ogen te zien. Je moet de blinddoek afdoen en een keuze maken."},"meaning_reversed":{"en":"Reversed, it points to the end of a stalemate, facing the truth or delaying a decision. You may fear the consequences of taking action.","nl":"Omgekeerd duidt de Twee van Zwaarden op het **einde van een patstelling, het onder ogen zien van de waarheid**, of uitstel van een beslissing. Je moet actie ondernemen, maar bent bang voor de gevolgen."}},{"id":"TwoOfWands","name":{"en":"Two of Wands","nl":"Twee van Stokken"},"meaning":{"en":"Planning for the future and deciding on your next step. You have achieved something already; choose a direction and be bold.","nl":"De **Twee van Stokken** gaat over het plannen van de toekomst en het nemen van een beslissing over je volgende stap. Je hebt al iets bereikt en kijkt nu naar de horizon. Bepaal je richting en wees moedig in je ambities."},"meaning_reversed":{"en":"Reversed, it points to fear of the unknown, postponed plans, poor preparation or retreating from an ambitious goal. Broaden your horizons.","nl":"Omgekeerd duidt de Twee van Stokken op **angst voor het onbekende, het uitstellen van plannen**, gebrek aan voorbereiding of een terugtrekking van een ambitieus doel. Je moet je horizon verbreden."}},{"id":"WheelofFortune","name":{"en":"Wheel of Fortune","nl":"Rad van Fortuin"},"meaning":{"en":"Cycles, change and destiny. Life has its ups and downs; embrace change and trust that circumstances can turn in your favour.","nl":"Het **Rad van Fortuin** symboliseert cycli, verandering en het lot. Het vertegenwoordigt de ups en downs van het leven en de invloed van het lot. Deze kaart moedigt je aan om verandering te omarmen en erop te vertrouwen dat dingen in je voordeel zullen keren."},"meaning_reversed":{"en":"Reversed, it points to bad luck, resistance to change, unexpected disruption or failing to learn from the past. You may feel powerless against fate.","nl":"Omgekeerd wijst het Rad van Fortuin op **pech, weerstand tegen verandering**, onverwachte storingen of het niet leren van lessen uit het verleden. Je voelt je machteloos tegen het lot."}}];
 
-class TarotCard extends HTMLElement {
+const TAROT_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-14 10.5 11.5)"><rect x="5" y="3" width="11" height="17" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55"/></g><g transform="rotate(9 13.5 12.5)"><rect x="8" y="4" width="11" height="17" rx="1.6" fill="#2a1a52" stroke="currentColor" stroke-width="1.4"/><path d="M13.5 8 L14.6 11.4 L18 12.5 L14.6 13.6 L13.5 17 L12.4 13.6 L9 12.5 L12.4 11.4 Z" fill="currentColor"/></g></svg>`;
+
+const TAROT_STRINGS = {
+  en: {
+    upright: "UPRIGHT",
+    reversed: "REVERSED",
+    meaning: "Meaning",
+    close: "Close",
+    title: "Draw a tarot card",
+    badge_title: "Tarot",
+    hint: "Tap to draw your card",
+  },
+  nl: {
+    upright: "RECHTOP",
+    reversed: "OMGEKEERD",
+    meaning: "Betekenis",
+    close: "Sluiten",
+    title: "Trek een Tarotkaart",
+    badge_title: "Tarot",
+    hint: "Tik om je kaart te trekken",
+  },
+};
+
+const TAROT_DIALOG_CSS = `
+  dialog {
+    width: min(92vw, 560px); max-width: 560px; max-height: 90vh;
+    padding: 0; border: 1px solid color-mix(in srgb, var(--tc-accent) 55%, transparent);
+    border-radius: 20px; overflow: auto; color: #f3e9d2;
+    background:
+      radial-gradient(1.5px 1.5px at 20% 15%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 75% 25%, rgba(255,255,255,.6), transparent),
+      radial-gradient(1.5px 1.5px at 40% 80%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1px 1px at 88% 70%, rgba(255,255,255,.6), transparent),
+      radial-gradient(circle at 50% 0%, #3b2370 0%, #1a1033 55%, #0e0820 100%);
+    box-shadow: 0 0 0 1px rgba(0,0,0,.4), 0 18px 60px rgba(0,0,0,.6), 0 0 40px color-mix(in srgb, var(--tc-accent) 18%, transparent);
+  }
+  dialog::backdrop { background: rgba(6,3,16,.72); backdrop-filter: blur(3px); }
+  .dialog-content { padding: 26px 22px 20px; text-align: center; }
+  .card-name {
+    margin: 0 0 8px; font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px; font-weight: 600; letter-spacing: .06em; color: var(--tc-accent);
+  }
+  .orientation {
+    display: table; margin: 0 auto 18px; padding: 4px 14px;
+    font-size: 11px; font-weight: 700; letter-spacing: .2em;
+    border: 1px solid color-mix(in srgb, var(--tc-accent) 50%, transparent);
+    border-radius: 999px; color: #f3e9d2;
+  }
+  .frame { display: block; width: fit-content; max-width: 100%; margin: 0 auto 22px; perspective: 900px; }
+  .frame.reveal { animation: tc-reveal .8s cubic-bezier(.2,.8,.2,1); }
+  @keyframes tc-reveal {
+    from { transform: rotateY(90deg) scale(.85); opacity: 0; }
+    to { transform: rotateY(0) scale(1); opacity: 1; }
+  }
+  .tarot-image {
+    display: block; width: auto; height: auto;
+    max-width: min(100%, 320px); max-height: 50vh; object-fit: contain;
+    border-radius: 8px; border: 2px solid color-mix(in srgb, var(--tc-accent) 70%, transparent);
+    box-shadow: 0 0 28px color-mix(in srgb, var(--tc-accent) 35%, transparent), 0 10px 30px rgba(0,0,0,.55);
+  }
+  .tarot-image.reversed { transform: rotate(180deg); }
+  .divider {
+    height: 1px; margin: 0 0 16px; border: 0;
+    background: linear-gradient(90deg, transparent, var(--tc-accent), transparent); opacity: .6;
+  }
+  .meaning-title {
+    margin: 0 0 8px; text-align: left; font-family: Georgia, serif;
+    font-size: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--tc-accent);
+  }
+  .meaning { text-align: left; line-height: 1.6; overflow-wrap: anywhere; color: #efe6ff; }
+  .meaning strong { color: #fff; }
+  .actions { display: flex; justify-content: center; margin-top: 22px; }
+  .close {
+    border: 0; border-radius: 999px; padding: 10px 28px; font: inherit; font-weight: 600;
+    cursor: pointer; color: #1a1033;
+    background: linear-gradient(135deg, var(--tc-accent), color-mix(in srgb, var(--tc-accent) 60%, #fff));
+  }
+  .close:hover { filter: brightness(1.08); }
+  @media (max-width: 480px) {
+    .dialog-content { padding: 20px 16px 16px; }
+    .tarot-image { max-height: 44vh; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .frame.reveal, .icon { animation: none !important; }
+  }
+`;
+
+class TarotBase extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this._isBadge = false;
     this._config = {
       title: null,
+      subtitle: null,
+      icon: "tarot",
+      accent: "#d4af37",
       lang: "en",
       image_path: TAROT_IMAGE_BASE,
       reversed_probability: 40,
     };
-    this._dialogOpen = false;
   }
 
   setConfig(config) {
     if (!config || typeof config !== "object") {
-      throw new Error("Invalid tarot-card configuration");
+      throw new Error("Invalid tarot configuration");
     }
-    this._config = {
-      ...this._config,
-      ...config,
-    };
+    this._config = { ...this._config, ...config };
     this._config.lang = this._config.lang === "nl" ? "nl" : "en";
+    this._config.icon = String(this._config.icon || "tarot");
+    this._config.accent = String(this._config.accent || "#d4af37");
     this._config.image_path = String(this._config.image_path || TAROT_IMAGE_BASE);
     if (!this._config.image_path.endsWith("/")) this._config.image_path += "/";
     const probability = Number(this._config.reversed_probability);
     this._config.reversed_probability = Number.isFinite(probability)
       ? Math.min(100, Math.max(0, probability))
       : 40;
+    this.style.setProperty("--tc-accent", this._config.accent);
     this._render();
   }
 
-  getCardSize() {
-    return 1;
-  }
-
-  getGridOptions() {
-    return { columns: 6, min_columns: 3 };
-  }
+  set hass(_hass) {}
 
   _t(key) {
-    const strings = {
-      en: {
-        upright: "UPRIGHT",
-        reversed: "REVERSED",
-        meaning: "Meaning",
-        close: "Close",
-        title: "Draw a tarot card",
-      },
-      nl: {
-        upright: "RECHTOP",
-        reversed: "OMGEKEERD",
-        meaning: "Betekenis",
-        close: "Sluiten",
-        title: "Trek een Tarotkaart",
-      },
-    };
-    return strings[this._config.lang][key];
+    return TAROT_STRINGS[this._config.lang][key];
   }
 
   _escapeHtml(value) {
@@ -76,82 +144,107 @@ class TarotCard extends HTMLElement {
     return this._escapeHtml(value).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
   }
 
-  _render() {
-    const title = this._escapeHtml(this._config.title || this._t("title"));
-    this.shadowRoot.innerHTML = `
-      <style>
-        :host { display: block; }
+  _iconHtml() {
+    return this._config.icon === "tarot"
+      ? TAROT_ICON
+      : `<ha-icon icon="${this._escapeHtml(this._config.icon)}"></ha-icon>`;
+  }
+
+  _triggerCss() {
+    return `
+      :host { display: ${this._isBadge ? "inline-block" : "block"}; --tc-accent: ${this._escapeHtml(this._config.accent)}; }
+      .icon {
+        display: grid; place-items: center; flex: 0 0 auto; color: var(--tc-accent);
+        border: 1px solid color-mix(in srgb, var(--tc-accent) 45%, transparent);
+        background: color-mix(in srgb, var(--tc-accent) 12%, transparent);
+        border-radius: 50%; --mdc-icon-size: 24px;
+        animation: tc-glow 3.5s ease-in-out infinite;
+      }
+      .icon svg { width: 26px; height: 26px; display: block; }
+      @keyframes tc-glow {
+        0%, 100% { box-shadow: 0 0 0 0 transparent; }
+        50% { box-shadow: 0 0 14px color-mix(in srgb, var(--tc-accent) 45%, transparent); }
+      }
+      button { font: inherit; color: inherit; border: 0; background: transparent; cursor: pointer; text-align: left; }
+    `;
+  }
+
+  _cardTrigger(title) {
+    const hint = this._config.subtitle === false
+      ? ""
+      : this._escapeHtml(this._config.subtitle || this._t("hint"));
+    return {
+      css: `
         ha-card {
-          overflow: hidden;
-          cursor: pointer;
-          color: var(--primary-text-color);
-          background: var(--ha-card-background, var(--card-background-color));
+          display: block; overflow: hidden; cursor: pointer; color: #f3e9d2;
+          border: 1px solid color-mix(in srgb, var(--tc-accent) 40%, transparent);
           border-radius: var(--ha-card-border-radius, 12px);
-          transition: filter 120ms ease, transform 120ms ease;
+          background:
+            radial-gradient(1.5px 1.5px at 12% 30%, rgba(255,255,255,.7), transparent),
+            radial-gradient(1px 1px at 55% 20%, rgba(255,255,255,.5), transparent),
+            radial-gradient(1.5px 1.5px at 85% 65%, rgba(255,255,255,.6), transparent),
+            radial-gradient(1px 1px at 38% 80%, rgba(255,255,255,.5), transparent),
+            linear-gradient(135deg, #1a1033 0%, #3b2370 55%, #1a1033 100%);
+          transition: transform 120ms ease, box-shadow 200ms ease;
         }
-        ha-card:active { transform: scale(.99); filter: brightness(.94); }
+        ha-card:hover { box-shadow: 0 0 22px color-mix(in srgb, var(--tc-accent) 30%, transparent); }
+        ha-card:active { transform: scale(.985); }
+        .trigger { width: 100%; min-height: 76px; padding: 16px; display: flex; align-items: center; gap: 14px; }
+        .icon { width: 46px; height: 46px; }
+        .title { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 17px; font-weight: 600; letter-spacing: .04em; }
+        .hint { display: block; margin-top: 2px; font-size: 12px; opacity: .7; }
+      `,
+      html: `
+        <ha-card>
+          <button class="trigger" type="button" aria-label="${title}">
+            <span class="icon">${this._iconHtml()}</span>
+            <span><span class="title">${title}</span>${hint ? `<span class="hint">${hint}</span>` : ""}</span>
+          </button>
+        </ha-card>`,
+    };
+  }
+
+  _badgeTrigger(title) {
+    const showLabel = this._config.show_label !== false;
+    return {
+      css: `
         .trigger {
-          width: 100%; min-height: 76px; padding: 16px;
-          display: flex; align-items: center; gap: 14px;
-          border: 0; background: transparent; color: inherit;
-          text-align: left; font: inherit; cursor: pointer;
+          height: 36px; padding: 0 ${showLabel ? "14px 0 3px" : "0 0 3px"}; display: inline-flex; align-items: center; gap: 8px;
+          border-radius: 18px; color: #f3e9d2; white-space: nowrap;
+          border: 1px solid color-mix(in srgb, var(--tc-accent) 45%, transparent);
+          background: linear-gradient(135deg, #1a1033, #3b2370);
+          box-shadow: var(--ha-card-box-shadow, none);
+          transition: box-shadow 200ms ease, transform 120ms ease;
         }
-        .trigger-icon {
-          width: 42px; height: 42px; flex: 0 0 42px;
-          display: grid; place-items: center;
-          border-radius: 50%; background: var(--secondary-background-color);
-          font-size: 25px;
-        }
-        .trigger-title { font-size: 16px; font-weight: 500; }
-        dialog {
-          width: min(92vw, 620px); max-width: 620px; max-height: 88vh;
-          padding: 0; border: 0; border-radius: 16px;
-          color: var(--primary-text-color);
-          background: var(--ha-card-background, var(--card-background-color));
-          box-shadow: 0 12px 42px rgba(0,0,0,.35);
-          overflow: auto;
-        }
-        dialog::backdrop { background: rgba(0,0,0,.58); }
-        .dialog-content { padding: 22px; text-align: center; }
-        .card-name { margin: 0 0 6px; font-size: 22px; font-weight: 600; }
-        .orientation {
-          margin: 0 0 16px; font-size: 12px; letter-spacing: .12em;
-          color: var(--secondary-text-color); font-weight: 600;
-        }
-        .tarot-image {
-          display: block; width: auto; height: auto;
-          max-width: min(100%, 340px); max-height: 52vh;
-          object-fit: contain; margin: 0 auto 20px;
-          border-radius: 4px;
-        }
-        .tarot-image.reversed { transform: rotate(180deg); }
-        .meaning-title { margin: 0 0 8px; text-align: left; font-size: 16px; }
-        .meaning {
-          text-align: left; line-height: 1.55;
-          color: var(--primary-text-color); overflow-wrap: anywhere;
-        }
-        .actions { display: flex; justify-content: flex-end; margin-top: 20px; }
-        .close {
-          border: 0; border-radius: 8px; padding: 10px 18px;
-          background: var(--primary-color); color: var(--text-primary-color, white);
-          font: inherit; cursor: pointer;
-        }
-        @media (max-width: 480px) {
-          .dialog-content { padding: 16px; }
-          .tarot-image { max-height: 46vh; }
-        }
-      </style>
-      <ha-card>
-        <button class="trigger" type="button" aria-label="${title}">
-          <span class="trigger-icon">🃏</span>
-          <span class="trigger-title">${title}</span>
-        </button>
-      </ha-card>
+        .trigger:hover { box-shadow: 0 0 14px color-mix(in srgb, var(--tc-accent) 40%, transparent); }
+        .trigger:active { transform: scale(.96); }
+        .icon { width: 28px; height: 28px; --mdc-icon-size: 18px; }
+        .icon svg { width: 20px; height: 20px; }
+        .label { font-size: 13px; font-weight: 500; letter-spacing: .03em; }
+        ${showLabel ? "" : ".trigger { width: 36px; justify-content: center; padding: 0; }"}
+      `,
+      html: `
+        <button class="trigger" type="button" aria-label="${title}" title="${title}">
+          <span class="icon">${this._iconHtml()}</span>
+          ${showLabel ? `<span class="label">${title}</span>` : ""}
+        </button>`,
+    };
+  }
+
+  _render() {
+    const title = this._escapeHtml(
+      this._config.title || this._t(this._isBadge ? "badge_title" : "title")
+    );
+    const trigger = this._isBadge ? this._badgeTrigger(title) : this._cardTrigger(title);
+    this.shadowRoot.innerHTML = `
+      <style>${this._triggerCss()}${trigger.css}${TAROT_DIALOG_CSS}</style>
+      ${trigger.html}
       <dialog aria-label="${title}">
         <div class="dialog-content">
           <h2 class="card-name"></h2>
           <div class="orientation"></div>
-          <img class="tarot-image" alt="" />
+          <div class="frame"><img class="tarot-image" alt="" /></div>
+          <hr class="divider" />
           <h3 class="meaning-title">${this._t("meaning")}</h3>
           <div class="meaning"></div>
           <div class="actions"><button class="close" type="button">${this._t("close")}</button></div>
@@ -165,14 +258,12 @@ class TarotCard extends HTMLElement {
     dialog.addEventListener("click", (event) => {
       if (event.target === dialog) this._closeDialog();
     });
-    dialog.addEventListener("cancel", () => { this._dialogOpen = false; });
   }
 
   _drawCard() {
     const card = TAROT_CARDS[Math.floor(Math.random() * TAROT_CARDS.length)];
     const reversed = Math.random() * 100 < this._config.reversed_probability;
     const lang = this._config.lang;
-    const image = `${this._config.image_path}${card.id}.avif`;
     const name = card.name[lang];
     const meaning = reversed ? card.meaning_reversed[lang] : card.meaning[lang];
 
@@ -181,7 +272,7 @@ class TarotCard extends HTMLElement {
       reversed ? this._t("reversed") : this._t("upright");
 
     const img = this.shadowRoot.querySelector(".tarot-image");
-    img.src = image;
+    img.src = `${this._config.image_path}${card.id}.avif`;
     img.alt = name;
     img.classList.toggle("reversed", reversed);
     img.onerror = () => {
@@ -191,21 +282,45 @@ class TarotCard extends HTMLElement {
         : `Image not found: ${card.id}.avif`;
     };
 
+    // Restart the reveal animation on every draw.
+    const frame = this.shadowRoot.querySelector(".frame");
+    frame.classList.remove("reveal");
+    void frame.offsetWidth;
+    frame.classList.add("reveal");
+
     this.shadowRoot.querySelector(".meaning").innerHTML = this._formatText(meaning);
     const dialog = this.shadowRoot.querySelector("dialog");
     if (!dialog.open) dialog.showModal();
-    this._dialogOpen = true;
   }
 
   _closeDialog() {
     const dialog = this.shadowRoot.querySelector("dialog");
     if (dialog?.open) dialog.close();
-    this._dialogOpen = false;
+  }
+}
+
+class TarotCard extends TarotBase {
+  getCardSize() {
+    return 1;
+  }
+
+  getGridOptions() {
+    return { columns: 6, min_columns: 3 };
+  }
+}
+
+class TarotBadge extends TarotBase {
+  constructor() {
+    super();
+    this._isBadge = true;
   }
 }
 
 if (!customElements.get("tarot-card")) {
   customElements.define("tarot-card", TarotCard);
+}
+if (!customElements.get("tarot-badge")) {
+  customElements.define("tarot-badge", TarotBadge);
 }
 
 window.customCards = window.customCards || [];
@@ -214,4 +329,11 @@ window.customCards.push({
   name: "Tarot Card",
   description: "Draw a random tarot card with upright and reversed meanings.",
   preview: true,
+});
+
+window.customBadges = window.customBadges || [];
+window.customBadges.push({
+  type: "tarot-badge",
+  name: "Tarot Badge",
+  description: "Tarot draw button as a badge at the top of a dashboard view.",
 });
