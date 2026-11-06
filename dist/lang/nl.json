@@ -25,7 +25,9 @@
     "arcana_buttons_helper": "Alleen zichtbaar als zowel major als minor arcana zijn geselecteerd.",
     "show_label": "Label Tonen",
     "advanced": "Geavanceerd",
-    "image_path": "Afbeeldingspad"
+    "image_path": "Afbeeldingspad",
+    "themed": "Thema-stijl Gebruiken",
+    "themed_helper": "Haalt het paars/goude design weg en volgt je Home Assistant-thema."
   },
   "cards": {
     "AceOfCups": {

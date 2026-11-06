@@ -25,7 +25,9 @@
     "arcana_buttons_helper": "Only shown when both major and minor arcana are selected.",
     "show_label": "Show Label",
     "advanced": "Advanced",
-    "image_path": "Image Path"
+    "image_path": "Image Path",
+    "themed": "Use Theme Style",
+    "themed_helper": "Removes the purple/gold design and follows your Home Assistant theme."
   },
   "cards": {
     "AceOfCups": {

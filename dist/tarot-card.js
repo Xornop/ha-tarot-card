@@ -5,7 +5,7 @@
 const TAROT_IMAGE_BASE = new URL("./tarot_cards/", import.meta.url).href;
 
 
-const TAROT_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-14 10.5 11.5)"><rect x="5" y="3" width="11" height="17" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55"/></g><g transform="rotate(9 13.5 12.5)"><rect x="8" y="4" width="11" height="17" rx="1.6" fill="#2a1a52" stroke="currentColor" stroke-width="1.4"/><path d="M13.5 8 L14.6 11.4 L18 12.5 L14.6 13.6 L13.5 17 L12.4 13.6 L9 12.5 L12.4 11.4 Z" fill="currentColor"/></g></svg>`;
+const TAROT_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true"><g transform="rotate(-14 10.5 11.5)"><rect x="5" y="3" width="11" height="17" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".55"/></g><g transform="rotate(9 13.5 12.5)"><rect x="8" y="4" width="11" height="17" rx="1.6" style="fill:var(--tc-icon-fill,#2a1a52)" stroke="currentColor" stroke-width="1.4"/><path d="M13.5 8 L14.6 11.4 L18 12.5 L14.6 13.6 L13.5 17 L12.4 13.6 L9 12.5 L12.4 11.4 Z" fill="currentColor"/></g></svg>`;
 
 const TAROT_BACK = `<svg viewBox="0 0 318 540" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
   <defs>
@@ -313,6 +313,23 @@ class TarotBase extends HTMLElement {
 
   _badgeTrigger(title) {
     const showLabel = this._config.show_label !== false;
+    // themed: drop the purple/gold look and follow the Home Assistant theme instead.
+    const themed = this._config.themed === true
+      ? `
+        .trigger {
+          color: var(--primary-text-color);
+          background: var(--ha-card-background, var(--card-background-color));
+          border: var(--ha-card-border-width, 1px) solid var(--ha-card-border-color, var(--divider-color));
+          box-shadow: var(--ha-card-box-shadow, none);
+        }
+        .trigger:hover { background: var(--secondary-background-color); box-shadow: var(--ha-card-box-shadow, none); }
+        .icon {
+          --tc-icon-fill: var(--secondary-background-color);
+          color: var(--primary-text-color); border: 0;
+          background: var(--secondary-background-color); animation: none;
+        }
+        .label { font-weight: 500; }`
+      : "";
     return {
       css: `
         .trigger {
@@ -329,6 +346,7 @@ class TarotBase extends HTMLElement {
         .icon svg { width: 20px; height: 20px; }
         .label { font-size: 13px; font-weight: 500; letter-spacing: .03em; }
         ${showLabel ? "" : ".trigger { width: 36px; justify-content: center; padding: 0; }"}
+        ${themed}
       `,
       html: `
         <button class="trigger" type="button" aria-label="${title}" title="${title}">
@@ -484,6 +502,7 @@ const TAROT_EDITOR_DEFAULTS = {
   minor_arcana: true,
   arcana_buttons: false,
   show_label: true,
+  themed: false,
 };
 
 function tarotHexToRgb(value) {
@@ -547,9 +566,9 @@ class TarotEditorBase extends HTMLElement {
           { name: "minor_arcana", selector: bool },
         ],
       },
-      this._isBadge
-        ? { name: "show_label", selector: bool }
-        : { name: "arcana_buttons", selector: bool },
+      ...(this._isBadge
+        ? [{ name: "show_label", selector: bool }, { name: "themed", selector: bool }]
+        : [{ name: "arcana_buttons", selector: bool }]),
       {
         type: "expandable", name: "", title: this._label("advanced"),
         schema: [
@@ -590,6 +609,7 @@ class TarotEditorBase extends HTMLElement {
     this._form.computeHelper = (item) => {
       if (item.name === "major_arcana" || item.name === "minor_arcana") return this._label("arcana_helper");
       if (item.name === "arcana_buttons") return this._label("arcana_buttons_helper");
+      if (item.name === "themed") return this._label("themed_helper");
       return undefined;
     };
   }
