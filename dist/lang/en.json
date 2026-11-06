@@ -6,7 +6,26 @@
     "close": "Close",
     "title": "Draw a tarot card",
     "badge_title": "Tarot",
-    "hint": "Tap to draw your card"
+    "hint": "Tap to draw your card",
+    "major_only": "Major only",
+    "minor_only": "Minor only"
+  },
+  "editor": {
+    "title": "Title",
+    "subtitle": "Subtitle",
+    "label": "Label",
+    "lang": "Language (en, nl or your own language file)",
+    "icon": "Icon (empty = tarot icon)",
+    "accent": "Accent colour",
+    "reversed_probability": "Chance of a reversed card (%)",
+    "major_arcana": "Major arcana",
+    "minor_arcana": "Minor arcana",
+    "arcana_helper": "Select at least one.",
+    "arcana_buttons": "Extra buttons: major only / minor only",
+    "arcana_buttons_helper": "Only shown when both major and minor arcana are selected.",
+    "show_label": "Show label",
+    "advanced": "Advanced",
+    "image_path": "Image path"
   },
   "cards": {
     "AceOfCups": {

@@ -6,7 +6,26 @@
     "close": "Sluiten",
     "title": "Trek een Tarotkaart",
     "badge_title": "Tarot",
-    "hint": "Tik om je kaart te trekken"
+    "hint": "Tik om je kaart te trekken",
+    "major_only": "Alleen Major",
+    "minor_only": "Alleen Minor"
+  },
+  "editor": {
+    "title": "Titel",
+    "subtitle": "Ondertitel",
+    "label": "Label",
+    "lang": "Taal (en, nl of je eigen taalbestand)",
+    "icon": "Icoon (leeg = tarot-icoon)",
+    "accent": "Accentkleur",
+    "reversed_probability": "Kans op een omgekeerde kaart (%)",
+    "major_arcana": "Grote arcana (Major)",
+    "minor_arcana": "Kleine arcana (Minor)",
+    "arcana_helper": "Kies er minimaal één.",
+    "arcana_buttons": "Extra knoppen: alleen major / alleen minor",
+    "arcana_buttons_helper": "Alleen zichtbaar als zowel major als minor arcana zijn geselecteerd.",
+    "show_label": "Label tonen",
+    "advanced": "Geavanceerd",
+    "image_path": "Afbeeldingspad"
   },
   "cards": {
     "AceOfCups": {

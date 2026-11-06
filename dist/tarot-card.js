@@ -48,23 +48,37 @@ const TAROT_BACK = `<svg viewBox="0 0 318 540" preserveAspectRatio="xMidYMid sli
 const TAROT_LANG_BASE = new URL("./lang/", import.meta.url).href;
 const TAROT_LANG_CACHE = new Map();
 
-// Loads dist/lang/<lang>.json (UI texts + all card names and meanings). Falls back to English.
+const TAROT_MINOR_RE = /^(Ace|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Page|Knight|Queen|King)Of(Cups|Pentacles|Swords|Wands)$/;
+const tarotIsMinor = (id) => TAROT_MINOR_RE.test(id);
+
+function fetchTarotLang(lang) {
+  return fetch(`${TAROT_LANG_BASE}${lang}.json`).then((response) => {
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  });
+}
+
+// Loads dist/lang/<lang>.json (UI texts, editor labels, card names and meanings).
+// Anything missing in a language file falls back to English.
 function loadTarotLang(lang) {
   if (!TAROT_LANG_CACHE.has(lang)) {
-    TAROT_LANG_CACHE.set(
-      lang,
-      fetch(`${TAROT_LANG_BASE}${lang}.json`)
-        .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return response.json();
-        })
-        .catch((error) => {
-          TAROT_LANG_CACHE.delete(lang);
-          if (lang === "en") throw error;
-          console.warn(`tarot-card: language "${lang}" not found, using English`, error);
-          return loadTarotLang("en");
-        })
-    );
+    const english = TAROT_LANG_CACHE.get("en") || fetchTarotLang("en");
+    if (!TAROT_LANG_CACHE.has("en")) TAROT_LANG_CACHE.set("en", english);
+    const promise = lang === "en"
+      ? english
+      : Promise.all([
+          english,
+          fetchTarotLang(lang).catch((error) => {
+            console.warn(`tarot-card: language "${lang}" not found, using English`, error);
+            return null;
+          }),
+        ]).then(([en, other]) => (other ? {
+          ui: { ...en.ui, ...other.ui },
+          editor: { ...en.editor, ...other.editor },
+          cards: { ...en.cards, ...other.cards },
+        } : en));
+    TAROT_LANG_CACHE.set(lang, promise);
+    promise.catch(() => TAROT_LANG_CACHE.delete(lang));
   }
   return TAROT_LANG_CACHE.get(lang);
 }
@@ -160,6 +174,9 @@ class TarotBase extends HTMLElement {
       lang: "en",
       image_path: TAROT_IMAGE_BASE,
       reversed_probability: 40,
+      major_arcana: true,
+      minor_arcana: true,
+      arcana_buttons: false,
     };
   }
 
@@ -178,6 +195,13 @@ class TarotBase extends HTMLElement {
     this._config.reversed_probability = Number.isFinite(probability)
       ? Math.min(100, Math.max(0, probability))
       : 40;
+    this._config.major_arcana = this._config.major_arcana !== false;
+    this._config.minor_arcana = this._config.minor_arcana !== false;
+    // At least one arcana must be selected.
+    if (!this._config.major_arcana && !this._config.minor_arcana) {
+      this._config.major_arcana = true;
+      this._config.minor_arcana = true;
+    }
     this.style.setProperty("--tc-accent", this._config.accent);
     const wanted = this._config.lang;
     loadTarotLang(wanted).then((strings) => {
@@ -233,8 +257,25 @@ class TarotBase extends HTMLElement {
     const hint = this._config.subtitle === false
       ? ""
       : this._escapeHtml(this._config.subtitle || this._t("hint"));
+    const c = this._config;
+    const split = !this._isBadge && c.arcana_buttons === true && c.major_arcana && c.minor_arcana;
+    const arcana = split
+      ? `<div class="arcana">
+           <button class="arcana-btn" type="button" data-kind="major">${this._escapeHtml(this._t("major_only"))}</button>
+           <button class="arcana-btn" type="button" data-kind="minor">${this._escapeHtml(this._t("minor_only"))}</button>
+         </div>`
+      : "";
     return {
       css: `
+        .arcana { display: flex; gap: 10px; padding: 0 16px 14px; }
+        .arcana-btn {
+          flex: 1; padding: 8px 10px; border-radius: 999px; cursor: pointer;
+          font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+          color: var(--tc-accent); background: color-mix(in srgb, var(--tc-accent) 10%, transparent);
+          border: 1px solid color-mix(in srgb, var(--tc-accent) 45%, transparent);
+          text-align: center; transition: background 150ms ease;
+        }
+        .arcana-btn:hover { background: color-mix(in srgb, var(--tc-accent) 22%, transparent); }
         ha-card {
           display: block; overflow: hidden; cursor: pointer; color: #f3e9d2;
           border: 1px solid color-mix(in srgb, var(--tc-accent) 40%, transparent);
@@ -260,6 +301,7 @@ class TarotBase extends HTMLElement {
             <span class="icon">${this._iconHtml()}</span>
             <span><span class="title">${title}</span>${hint ? `<span class="hint">${hint}</span>` : ""}</span>
           </button>
+          ${arcana}
         </ha-card>`,
     };
   }
@@ -312,7 +354,9 @@ class TarotBase extends HTMLElement {
       </dialog>
     `;
 
-    this.shadowRoot.querySelector(".trigger").addEventListener("click", () => this._drawCard());
+    this.shadowRoot.querySelector(".trigger").addEventListener("click", () => this._drawCard("all"));
+    this.shadowRoot.querySelectorAll(".arcana-btn").forEach((btn) =>
+      btn.addEventListener("click", () => this._drawCard(btn.dataset.kind)));
     this.shadowRoot.querySelector(".close").addEventListener("click", () => this._closeDialog());
     const dialog = this.shadowRoot.querySelector("dialog");
     dialog.addEventListener("click", (event) => {
@@ -320,10 +364,18 @@ class TarotBase extends HTMLElement {
     });
   }
 
-  _drawCard() {
+  _drawCard(kind = "all") {
     if (!this._strings) return;
-    const ids = Object.keys(this._strings.cards);
+    const { major_arcana: major, minor_arcana: minor } = this._config;
+    const ids = Object.keys(this._strings.cards).filter((cardId) => {
+      const isMinor = tarotIsMinor(cardId);
+      if (kind === "major" && major && minor) return !isMinor;
+      if (kind === "minor" && major && minor) return isMinor;
+      return isMinor ? minor : major;
+    });
+    if (!ids.length) return;
     const id = ids[Math.floor(Math.random() * ids.length)];
+    this._lastDraw = id;
     const card = this._strings.cards[id];
     const reversed = Math.random() * 100 < this._config.reversed_probability;
     const name = card.name;
@@ -383,8 +435,17 @@ class TarotBase extends HTMLElement {
 }
 
 class TarotCard extends TarotBase {
+  static getConfigElement() {
+    return document.createElement("tarot-card-editor");
+  }
+
+  static getStubConfig() {
+    return {};
+  }
+
   getCardSize() {
-    return 1;
+    const c = this._config;
+    return c.arcana_buttons === true && c.major_arcana && c.minor_arcana ? 2 : 1;
   }
 
   getGridOptions() {
@@ -393,6 +454,179 @@ class TarotCard extends TarotBase {
 }
 
 class TarotBadge extends TarotBase {
+  static getConfigElement() {
+    return document.createElement("tarot-badge-editor");
+  }
+
+  static getStubConfig() {
+    return {};
+  }
+
+  constructor() {
+    super();
+    this._isBadge = true;
+  }
+}
+
+
+// ---------- Visual (UI) editor, based on ha-form ----------
+const TAROT_DEFAULT_ACCENT = "#d4af37";
+const TAROT_EDITOR_DEFAULTS = {
+  lang: "en",
+  accent: TAROT_DEFAULT_ACCENT,
+  reversed_probability: 40,
+  major_arcana: true,
+  minor_arcana: true,
+  arcana_buttons: false,
+  show_label: true,
+};
+
+function tarotHexToRgb(value) {
+  const m = /^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(String(value || "").trim());
+  if (!m) return [212, 175, 55];
+  let hex = m[1];
+  if (hex.length === 3) hex = hex.split("").map((ch) => ch + ch).join("");
+  return [0, 2, 4].map((i) => parseInt(hex.slice(i, i + 2), 16));
+}
+
+function tarotRgbToHex(rgb) {
+  return "#" + rgb.map((n) => Math.max(0, Math.min(255, Math.round(n))).toString(16).padStart(2, "0")).join("");
+}
+
+class TarotEditorBase extends HTMLElement {
+  constructor() {
+    super();
+    this._isBadge = false;
+    this._config = {};
+    this._strings = null;
+    this._form = null;
+  }
+
+  setConfig(config) {
+    this._config = { ...config };
+    const lang = String(this._config.lang || "en").toLowerCase();
+    loadTarotLang(/^[a-z]{2,3}(-[a-z0-9]+)?$/.test(lang) ? lang : "en")
+      .then((strings) => { this._strings = strings; this._build(); })
+      .catch(() => {});
+  }
+
+  set hass(hass) {
+    this._hass = hass;
+    if (this._form) this._form.hass = hass;
+  }
+
+  _label(key) {
+    return this._strings?.editor?.[key] ?? key;
+  }
+
+  _schema() {
+    const bool = { boolean: {} };
+    return [
+      { name: "title", selector: { text: {} } },
+      ...(this._isBadge ? [] : [{ name: "subtitle", selector: { text: {} } }]),
+      {
+        name: "lang",
+        selector: {
+          select: {
+            mode: "dropdown",
+            custom_value: true,
+            options: [{ value: "en", label: "English" }, { value: "nl", label: "Nederlands" }],
+          },
+        },
+      },
+      { name: "icon", selector: { icon: {} } },
+      { name: "accent", selector: { color_rgb: {} } },
+      {
+        name: "reversed_probability",
+        selector: { number: { min: 0, max: 100, step: 5, mode: "slider", unit_of_measurement: "%" } },
+      },
+      {
+        type: "grid", name: "", schema: [
+          { name: "major_arcana", selector: bool },
+          { name: "minor_arcana", selector: bool },
+        ],
+      },
+      this._isBadge
+        ? { name: "show_label", selector: bool }
+        : { name: "arcana_buttons", selector: bool },
+      {
+        type: "expandable", name: "", title: this._label("advanced"),
+        schema: [{ name: "image_path", selector: { text: {} } }],
+      },
+    ];
+  }
+
+  _data() {
+    const c = this._config;
+    this._shownAccent = tarotHexToRgb(c.accent || TAROT_DEFAULT_ACCENT);
+    return {
+      ...TAROT_EDITOR_DEFAULTS,
+      ...c,
+      major_arcana: c.major_arcana !== false,
+      minor_arcana: c.minor_arcana !== false,
+      accent: this._shownAccent,
+      icon: !c.icon || c.icon === "tarot" ? "" : c.icon,
+    };
+  }
+
+  _build() {
+    if (!this._form) {
+      this._form = document.createElement("ha-form");
+      this._form.addEventListener("value-changed", (ev) => this._changed(ev));
+      this.appendChild(this._form);
+    }
+    if (this._hass) this._form.hass = this._hass;
+    this._form.schema = this._schema();
+    this._form.data = this._data();
+    this._form.computeLabel = (item) =>
+      item.name === "title" && this._isBadge ? this._label("label") : this._label(item.name);
+    this._form.computeHelper = (item) => {
+      if (item.name === "major_arcana" || item.name === "minor_arcana") return this._label("arcana_helper");
+      if (item.name === "arcana_buttons") return this._label("arcana_buttons_helper");
+      return undefined;
+    };
+  }
+
+  _changed(ev) {
+    ev.stopPropagation();
+    const prev = this._config;
+    const v = { ...ev.detail.value };
+
+    // Accent: the colour picker works with [r, g, b]; the config stores a hex string.
+    if (Array.isArray(v.accent) && JSON.stringify(v.accent) !== JSON.stringify(this._shownAccent)) {
+      v.accent = tarotRgbToHex(v.accent);
+    } else if (prev.accent) {
+      v.accent = prev.accent;
+    } else {
+      delete v.accent;
+    }
+
+    // At least one arcana must stay selected: undo the toggle that emptied the selection.
+    if (v.major_arcana === false && v.minor_arcana === false) {
+      if (prev.minor_arcana !== false) v.minor_arcana = true;
+      else v.major_arcana = true;
+    }
+
+    // Keep the saved YAML tidy: drop empty values and values equal to the defaults.
+    for (const key of Object.keys(v)) {
+      const val = v[key];
+      if (val === undefined || val === null || val === "") delete v[key];
+      else if (key in TAROT_EDITOR_DEFAULTS && val === TAROT_EDITOR_DEFAULTS[key]) delete v[key];
+    }
+    if (typeof v.accent === "string" && v.accent.toLowerCase() === TAROT_DEFAULT_ACCENT) delete v.accent;
+    if (prev.type) v.type = prev.type;
+
+    this._config = v;
+    this._form.data = this._data(); // re-sync the form (e.g. after an undone toggle)
+    this.dispatchEvent(new CustomEvent("config-changed", {
+      detail: { config: v }, bubbles: true, composed: true,
+    }));
+  }
+}
+
+class TarotCardEditor extends TarotEditorBase {}
+
+class TarotBadgeEditor extends TarotEditorBase {
   constructor() {
     super();
     this._isBadge = true;
@@ -404,6 +638,12 @@ if (!customElements.get("tarot-card")) {
 }
 if (!customElements.get("tarot-badge")) {
   customElements.define("tarot-badge", TarotBadge);
+}
+if (!customElements.get("tarot-card-editor")) {
+  customElements.define("tarot-card-editor", TarotCardEditor);
+}
+if (!customElements.get("tarot-badge-editor")) {
+  customElements.define("tarot-badge-editor", TarotBadgeEditor);
 }
 
 window.customCards = window.customCards || [];
