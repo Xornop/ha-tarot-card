@@ -1,0 +1,7 @@
+{
+  "name": "Tarot Card",
+  "content_in_root": false,
+  "render_readme": true,
+  "filename": "tarot-card.js",
+  "homeassistant": "2024.6.0"
+}
