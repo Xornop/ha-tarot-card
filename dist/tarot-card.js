@@ -51,8 +51,13 @@ const TAROT_LANG_CACHE = new Map();
 const TAROT_MINOR_RE = /^(Ace|Two|Three|Four|Five|Six|Seven|Eight|Nine|Ten|Page|Knight|Queen|King)Of(Cups|Pentacles|Swords|Wands)$/;
 const tarotIsMinor = (id) => TAROT_MINOR_RE.test(id);
 
+// Last-resort label: "reversed_probability" -> "Reversed Probability".
+const tarotHumanize = (key) =>
+  String(key).replace(/_/g, " ").replace(/\b\w/g, (ch) => ch.toUpperCase());
+
 function fetchTarotLang(lang) {
-  return fetch(`${TAROT_LANG_BASE}${lang}.json`).then((response) => {
+  // no-cache: always revalidate, so edited language files are never served stale.
+  return fetch(`${TAROT_LANG_BASE}${lang}.json`, { cache: "no-cache" }).then((response) => {
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     return response.json();
   });
@@ -214,7 +219,7 @@ class TarotBase extends HTMLElement {
   set hass(_hass) {}
 
   _t(key) {
-    return this._strings?.ui?.[key] ?? "";
+    return this._strings?.ui?.[key] ?? tarotHumanize(key);
   }
 
   _escapeHtml(value) {
@@ -269,8 +274,8 @@ class TarotBase extends HTMLElement {
       css: `
         .arcana { display: flex; gap: 10px; padding: 0 16px 14px; }
         .arcana-btn {
-          flex: 1; padding: 8px 10px; border-radius: 999px; cursor: pointer;
-          font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+          flex: 1; min-height: 36px; padding: 8px 10px; border-radius: 999px; cursor: pointer;
+          font-family: inherit; line-height: 1.2; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
           color: var(--tc-accent); background: color-mix(in srgb, var(--tc-accent) 10%, transparent);
           border: 1px solid color-mix(in srgb, var(--tc-accent) 45%, transparent);
           text-align: center; transition: background 150ms ease;
@@ -516,7 +521,7 @@ class TarotEditorBase extends HTMLElement {
   }
 
   _label(key) {
-    return this._strings?.editor?.[key] ?? key;
+    return this._strings?.editor?.[key] ?? tarotHumanize(key);
   }
 
   _schema() {
@@ -537,10 +542,6 @@ class TarotEditorBase extends HTMLElement {
       { name: "icon", selector: { icon: {} } },
       { name: "accent", selector: { color_rgb: {} } },
       {
-        name: "reversed_probability",
-        selector: { number: { min: 0, max: 100, step: 5, mode: "slider", unit_of_measurement: "%" } },
-      },
-      {
         type: "grid", name: "", schema: [
           { name: "major_arcana", selector: bool },
           { name: "minor_arcana", selector: bool },
@@ -551,7 +552,13 @@ class TarotEditorBase extends HTMLElement {
         : { name: "arcana_buttons", selector: bool },
       {
         type: "expandable", name: "", title: this._label("advanced"),
-        schema: [{ name: "image_path", selector: { text: {} } }],
+        schema: [
+          {
+            name: "reversed_probability",
+            selector: { number: { min: 0, max: 100, step: 5, mode: "slider", unit_of_measurement: "%" } },
+          },
+          { name: "image_path", selector: { text: {} } },
+        ],
       },
     ];
   }

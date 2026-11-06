@@ -14,18 +14,18 @@
     "title": "Title",
     "subtitle": "Subtitle",
     "label": "Label",
-    "lang": "Language (en, nl or your own language file)",
-    "icon": "Icon (empty = tarot icon)",
-    "accent": "Accent colour",
-    "reversed_probability": "Chance of a reversed card (%)",
-    "major_arcana": "Major arcana",
-    "minor_arcana": "Minor arcana",
+    "lang": "Language (en, nl Or Your Own Language File)",
+    "icon": "Icon (Empty = Tarot Icon)",
+    "accent": "Accent Colour",
+    "reversed_probability": "Reversed Card Chance (%)",
+    "major_arcana": "Major Arcana",
+    "minor_arcana": "Minor Arcana",
     "arcana_helper": "Select at least one.",
-    "arcana_buttons": "Extra buttons: major only / minor only",
+    "arcana_buttons": "Extra Buttons: Major Only / Minor Only",
     "arcana_buttons_helper": "Only shown when both major and minor arcana are selected.",
-    "show_label": "Show label",
+    "show_label": "Show Label",
     "advanced": "Advanced",
-    "image_path": "Image path"
+    "image_path": "Image Path"
   },
   "cards": {
     "AceOfCups": {
