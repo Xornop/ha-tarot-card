@@ -4,9 +4,9 @@ A standalone Lovelace custom card that draws a random tarot card and opens it in
 
 ## Features
 
-- Includes all 78 original upright `.avif` card images.
+- Includes all 78 original card images.
 - English and Dutch interface, card names and interpretations.
-- Reversed cards are displayed by rotating the original image 180° with CSS; no duplicate reversed images are required.
+- Reversed cards for extra meaning
 - Configurable title, language, image URL and reversed-card probability.
 - Keeps the Dutch card names and interpretations from the original configuration.
 
