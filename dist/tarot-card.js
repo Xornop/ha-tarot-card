@@ -348,21 +348,23 @@ class TarotBase extends HTMLElement {
     img.classList.toggle("reversed", reversed);
     void flipper.offsetWidth;
 
-    // Preload + decode the new card behind the back face, then flip.
-    const pre = new Image();
-    pre.src = url;
-    const loaded = (pre.decode ? pre.decode() : new Promise((r, j) => { pre.onload = r; pre.onerror = j; }))
+    // Load AND decode the image on the real <img> while the card back is still facing us,
+    // then flip. This way the picture is fully ready before the animation starts.
+    img.src = url;
+    const loaded = (img.decode
+      ? img.decode()
+      : new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; }))
       .then(() => true, () => false);
-    const pause = new Promise((r) => setTimeout(r, 500));
+    const pause = new Promise((resolve) => setTimeout(resolve, 500));
     Promise.all([loaded, pause]).then(([ok]) => {
       if (token !== this._drawToken) return; // a newer draw replaced this one
-      if (ok) {
-        img.src = url;
-      } else {
+      if (!ok) {
         img.removeAttribute("src");
         img.alt = `${name} (${id}.avif not found)`;
       }
+      // Wait two frames so the decoded image is painted on the hidden face first.
       requestAnimationFrame(() => requestAnimationFrame(() => {
+        if (token !== this._drawToken) return;
         flipper.classList.remove("instant");
         flipper.classList.add("flipped");
         content.classList.remove("pending");
