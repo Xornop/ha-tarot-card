@@ -45,6 +45,10 @@ const TAROT_BACK = `<svg viewBox="0 0 318 540" preserveAspectRatio="xMidYMid sli
   </g>
 </svg>`;
 
+// Flip durations (ms); keep TAROT_FLIP_MS in sync with --tc-flip in the dialog CSS.
+const TAROT_FLIP_MS = 1800;
+const TAROT_SPIN_MS = 1200;
+
 const TAROT_LANG_BASE = new URL("./lang/", import.meta.url).href;
 const TAROT_LANG_CACHE = new Map();
 
@@ -121,7 +125,6 @@ const TAROT_DIALOG_CSS = `
     position: relative; width: 100%; height: 100%; transform-style: preserve-3d;
     transition: transform var(--tc-flip) cubic-bezier(.45, .05, .25, 1);
   }
-  .flipper.flipped { transform: rotateY(180deg); }
   .flipper.instant { transition: none; }
   .card-name, .orientation, .meaning-title, .meaning, .divider { transition: opacity 1s ease .5s; }
   .dialog-content.pending .card-name, .dialog-content.pending .orientation,
@@ -148,7 +151,18 @@ const TAROT_DIALOG_CSS = `
   }
   .meaning { text-align: left; line-height: 1.6; overflow-wrap: anywhere; color: #efe6ff; }
   .meaning strong { color: #fff; }
-  .actions { display: flex; justify-content: center; margin-top: 22px; }
+  .actions { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin-top: 22px; }
+  .another {
+    justify-self: start; white-space: nowrap; cursor: pointer; font: inherit; font-weight: 600;
+    padding: 10px 20px; border-radius: 999px; color: var(--tc-accent);
+    background: color-mix(in srgb, var(--tc-accent) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--tc-accent) 60%, transparent);
+  }
+  .another:hover:not(:disabled) { background: color-mix(in srgb, var(--tc-accent) 22%, transparent); }
+  .another:disabled { opacity: .45; cursor: default; }
+  .dialog-content.leaving .card-name, .dialog-content.leaving .orientation,
+  .dialog-content.leaving .meaning-title, .dialog-content.leaving .meaning,
+  .dialog-content.leaving .divider { opacity: 0; transition: opacity .4s ease; }
   .close {
     border: 0; border-radius: 999px; padding: 10px 28px; font: inherit; font-weight: 600;
     cursor: pointer; color: #1a1033;
@@ -394,7 +408,7 @@ class TarotBase extends HTMLElement {
           <hr class="divider" />
           <h3 class="meaning-title">${this._t("meaning")}</h3>
           <div class="meaning"></div>
-          <div class="actions"><button class="close" type="button">${this._t("close")}</button></div>
+          <div class="actions"><span></span><button class="close" type="button">${this._t("close")}</button><button class="another" type="button">${this._t("another")}</button></div>
         </div>
       </dialog>
     `;
@@ -403,14 +417,15 @@ class TarotBase extends HTMLElement {
     this.shadowRoot.querySelectorAll(".arcana-btn").forEach((btn) =>
       btn.addEventListener("click", () => this._drawCard(btn.dataset.kind)));
     this.shadowRoot.querySelector(".close").addEventListener("click", () => this._closeDialog());
+    this.shadowRoot.querySelector(".another").addEventListener("click", () => this._another());
     const dialog = this.shadowRoot.querySelector("dialog");
     dialog.addEventListener("click", (event) => {
       if (event.target === dialog) this._closeDialog();
     });
   }
 
-  _drawCard(kind = "all") {
-    if (!this._strings) return;
+  // Picks a random card from the selected arcana (the same card can come up again).
+  _pickCard(kind) {
     const { major_arcana: major, minor_arcana: minor } = this._config;
     const ids = Object.keys(this._strings.cards).filter((cardId) => {
       const isMinor = tarotIsMinor(cardId);
@@ -418,59 +433,148 @@ class TarotBase extends HTMLElement {
       if (kind === "minor" && major && minor) return isMinor;
       return isMinor ? minor : major;
     });
-    if (!ids.length) return;
+    if (!ids.length) return null;
     const id = ids[Math.floor(Math.random() * ids.length)];
-    this._lastDraw = id;
     const card = this._strings.cards[id];
     const reversed = Math.random() * 100 < this._config.reversed_probability;
-    const name = card.name;
-    const meaning = reversed ? card.meaning_reversed : card.meaning;
+    return {
+      id,
+      reversed,
+      name: card.name,
+      meaning: reversed ? card.meaning_reversed : card.meaning,
+      url: `${this._config.image_path}${id}.avif`,
+    };
+  }
 
-    this.shadowRoot.querySelector(".card-name").textContent = name;
+  // Fills the (hidden) dialog texts and prepares the image element for a picked card.
+  _setCardContent(pick) {
+    this.shadowRoot.querySelector(".card-name").textContent = pick.name;
     this.shadowRoot.querySelector(".orientation").textContent =
-      reversed ? this._t("reversed") : this._t("upright");
-
+      pick.reversed ? this._t("reversed") : this._t("upright");
+    this.shadowRoot.querySelector(".meaning").innerHTML = this._formatText(pick.meaning);
     const img = this.shadowRoot.querySelector(".tarot-image");
-    const flipper = this.shadowRoot.querySelector(".flipper");
-    const url = `${this._config.image_path}${id}.avif`;
-    const token = (this._drawToken = (this._drawToken || 0) + 1);
+    img.removeAttribute("src");
+    img.alt = pick.name;
+    img.classList.toggle("reversed", pick.reversed);
+  }
 
-    // Instantly show the card back (no transition) and clear the old front image.
+  _setRotation(deg, duration = "") {
+    const flipper = this.shadowRoot.querySelector(".flipper");
+    flipper.style.transitionDuration = duration;
+    flipper.style.transform = `rotateY(${deg}deg)`;
+    this._rot = deg;
+  }
+
+  // Resolves when the flipper's rotation transition has finished (with a safety timeout).
+  _waitFlip(ms) {
+    const flipper = this.shadowRoot.querySelector(".flipper");
+    return new Promise((resolve) => {
+      let timer;
+      const end = () => {
+        flipper.removeEventListener("transitionend", onEnd);
+        clearTimeout(timer);
+        resolve();
+      };
+      const onEnd = (ev) => {
+        if (ev.target === flipper && ev.propertyName === "transform") end();
+      };
+      flipper.addEventListener("transitionend", onEnd);
+      timer = setTimeout(end, ms + 300);
+    });
+  }
+
+  _setBusy(busy) {
+    this._busy = busy;
+    const button = this.shadowRoot.querySelector(".another");
+    if (button) button.disabled = busy;
+  }
+
+  // Loads the picked image on the real <img> and waits until it is decoded,
+  // so it is ready before the flip starts. Resolves to false if it cannot be loaded.
+  _loadImage(pick) {
+    const img = this.shadowRoot.querySelector(".tarot-image");
+    img.src = pick.url;
+    const decoded = img.decode
+      ? img.decode()
+      : new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; });
+    return decoded.then(() => true, () => {
+      img.removeAttribute("src");
+      img.alt = `${pick.name} (${pick.id}.avif not found)`;
+      return false;
+    });
+  }
+
+  _nextFrames() {
+    return new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+  }
+
+  _drawCard(kind = "all") {
+    if (!this._strings) return;
+    const pick = this._pickCard(kind);
+    if (!pick) return;
+    this._lastKind = kind;
+    this._lastDraw = pick.id;
+    const token = (this._drawToken = (this._drawToken || 0) + 1);
+    const flipper = this.shadowRoot.querySelector(".flipper");
     const content = this.shadowRoot.querySelector(".dialog-content");
+
+    // Instantly show the card back (no transition); texts stay hidden until the flip.
+    content.classList.remove("leaving");
     content.classList.add("pending");
     flipper.classList.add("instant");
-    flipper.classList.remove("flipped");
-    img.removeAttribute("src");
-    img.alt = name;
-    img.classList.toggle("reversed", reversed);
+    this._setRotation(0);
+    this._setCardContent(pick);
     void flipper.offsetWidth;
+    this._setBusy(true);
 
-    // Load AND decode the image on the real <img> while the card back is still facing us,
-    // then flip. This way the picture is fully ready before the animation starts.
-    img.src = url;
-    const loaded = (img.decode
-      ? img.decode()
-      : new Promise((resolve, reject) => { img.onload = resolve; img.onerror = reject; }))
-      .then(() => true, () => false);
-    const pause = new Promise((resolve) => setTimeout(resolve, 500));
-    Promise.all([loaded, pause]).then(([ok]) => {
-      if (token !== this._drawToken) return; // a newer draw replaced this one
-      if (!ok) {
-        img.removeAttribute("src");
-        img.alt = `${name} (${id}.avif not found)`;
-      }
-      // Wait two frames so the decoded image is painted on the hidden face first.
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        if (token !== this._drawToken) return;
-        flipper.classList.remove("instant");
-        flipper.classList.add("flipped");
-        content.classList.remove("pending");
-      }));
-    });
-
-    this.shadowRoot.querySelector(".meaning").innerHTML = this._formatText(meaning);
     const dialog = this.shadowRoot.querySelector("dialog");
     if (!dialog.open) dialog.showModal();
+
+    const pause = new Promise((resolve) => setTimeout(resolve, 500));
+    Promise.all([this._loadImage(pick), pause])
+      .then(() => this._nextFrames())
+      .then(() => {
+        if (token !== this._drawToken) return; // a newer draw replaced this one
+        flipper.classList.remove("instant");
+        this._setRotation(180);
+        content.classList.remove("pending");
+        return this._waitFlip(TAROT_FLIP_MS);
+      })
+      .then(() => {
+        if (token === this._drawToken) this._setBusy(false);
+      });
+  }
+
+  // "Another": keep turning to the card back, then turn again to reveal a new card.
+  async _another() {
+    if (!this._strings || this._busy) return;
+    const pick = this._pickCard(this._lastKind || "all");
+    if (!pick) return;
+    this._lastDraw = pick.id;
+    const token = (this._drawToken = (this._drawToken || 0) + 1);
+    const flipper = this.shadowRoot.querySelector(".flipper");
+    const content = this.shadowRoot.querySelector(".dialog-content");
+    this._setBusy(true);
+
+    // 1. Fade the texts out and keep rotating until the card back faces us.
+    content.classList.add("leaving");
+    this._setRotation((this._rot || 180) + 180, `${TAROT_SPIN_MS}ms`);
+    await this._waitFlip(TAROT_SPIN_MS);
+    if (token !== this._drawToken) return;
+
+    // 2. The back is showing: swap in the new card and wait until it is fully decoded.
+    content.classList.add("pending");
+    content.classList.remove("leaving");
+    this._setCardContent(pick);
+    await this._loadImage(pick);
+    await this._nextFrames();
+    if (token !== this._drawToken) return;
+
+    // 3. Keep rotating in the same direction to reveal the new card.
+    this._setRotation(this._rot + 180);
+    content.classList.remove("pending");
+    await this._waitFlip(TAROT_FLIP_MS);
+    if (token === this._drawToken) this._setBusy(false);
   }
 
   _closeDialog() {
