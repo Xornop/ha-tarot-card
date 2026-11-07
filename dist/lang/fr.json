@@ -1,0 +1,424 @@
+{
+  "ui": {
+    "upright": "À L'ENDROIT",
+    "reversed": "À L'ENVERS",
+    "meaning": "Signification",
+    "close": "Fermer",
+    "title": "Tirer une carte de tarot",
+    "badge_title": "Tarot",
+    "hint": "Touchez pour tirer votre carte",
+    "major_only": "Majeurs seulement",
+    "minor_only": "Mineurs seulement"
+  },
+  "editor": {
+    "title": "Titre",
+    "subtitle": "Sous-titre",
+    "label": "Libellé",
+    "lang": "Langue (Choisissez Ou Saisissez Un Code)",
+    "icon": "Icône (Vide = Icône Tarot)",
+    "accent": "Couleur D'Accent",
+    "reversed_probability": "Probabilité De Carte À L'Envers (%)",
+    "major_arcana": "Arcanes Majeurs",
+    "minor_arcana": "Arcanes Mineurs",
+    "arcana_helper": "Choisissez-en au moins un.",
+    "arcana_buttons": "Boutons Supplémentaires : Majeurs / Mineurs Seulement",
+    "arcana_buttons_helper": "Visibles uniquement si les arcanes majeurs et mineurs sont sélectionnés.",
+    "show_label": "Afficher Le Libellé",
+    "advanced": "Avancé",
+    "image_path": "Chemin Des Images",
+    "themed": "Thème Propre",
+    "themed_helper": "Utilise le design violet/or. Désactivez pour suivre le thème de Home Assistant."
+  },
+  "cards": {
+    "AceOfCups": {
+      "name": "As de Coupes",
+      "meaning": "L'As de Coupes apporte abondance émotionnelle, nouvel amour, compassion et joie intérieure. Il marque le début d'un profond épanouissement affectif ou d'une nouvelle relation.",
+      "meaning_reversed": "Inversé, il évoque des émotions réprimées, une créativité bloquée, un amour non partagé ou un trop-plein émotionnel. Vous pouvez vous sentir vide ou submergé."
+    },
+    "AceOfPentacles": {
+      "name": "As de Pentacles",
+      "meaning": "Un nouveau départ dans les finances, la carrière ou le monde matériel. Une occasion de stabilité, de prospérité et un cadeau matériel se profile.",
+      "meaning_reversed": "Inversé, il peut indiquer des occasions manquées, une instabilité financière, de mauvais investissements ou un manque de planification. Le cadeau est retardé ou perdu."
+    },
+    "AceOfSwords": {
+      "name": "As d'Épées",
+      "meaning": "Une percée, une clarté mentale, une force intellectuelle et une idée nouvelle. Vous pouvez trancher dans la confusion et voir la vérité.",
+      "meaning_reversed": "Inversé, il peut indiquer confusion, chaos mental, mauvais usage de l'intellect ou cruauté. La vérité est brouillée ou votre approche est trop dure."
+    },
+    "AceOfWands": {
+      "name": "As de Bâtons",
+      "meaning": "Un nouveau départ plein d'inspiration, de croissance et d'un éclair de créativité. Faites le premier pas vers une nouvelle idée, un projet ou une entreprise.",
+      "meaning_reversed": "Inversé, il évoque procrastination, manque de direction, créativité bloquée ou occasions manquées. Votre énergie est peut-être faible ou dispersée."
+    },
+    "Death": {
+      "name": "La Mort",
+      "meaning": "La Mort symbolise la transformation, les fins et les nouveaux départs. Une phase se termine pour qu'une autre commence ; accueillez le changement et lâchez le passé.",
+      "meaning_reversed": "Inversée, elle évoque la résistance au changement, la stagnation, la peur de l'inconnu ou l'attachement à une situation malsaine."
+    },
+    "EightOfCups": {
+      "name": "Huit de Coupes",
+      "meaning": "S'éloigner de ce qui ne vous comble plus. Vous quittez le familier à la recherche d'une vérité émotionnelle ou spirituelle plus profonde.",
+      "meaning_reversed": "Inversé, il évoque la peur de partir, le retour vers le passé, l'hésitation ou l'attachement à une situation insatisfaisante."
+    },
+    "EightOfPentacles": {
+      "name": "Huit de Pentacles",
+      "meaning": "Dévouement, savoir-faire, apprentissage et souci du détail. Concentrez-vous sur vos compétences et efforcez-vous de bien faire votre travail.",
+      "meaning_reversed": "Inversé, il évoque perfectionnisme, manque d'ambition, travail bâclé ou concentration excessive sur le travail. Vous êtes peut-être trop critique ou peu enclin à essayer."
+    },
+    "EightOfSwords": {
+      "name": "Huit d'Épées",
+      "meaning": "Se sentir piégé par des restrictions, souvent imposées par soi-même. Les épées ne vous lient pas ; vous pouvez retirer le bandeau vous-même.",
+      "meaning_reversed": "Inversé, il évoque la libération des limites, la délivrance et la perception enfin d'une issue. Vous êtes prêt à retirer le bandeau."
+    },
+    "EightOfWands": {
+      "name": "Huit de Bâtons",
+      "meaning": "Vitesse, action, mouvement et nouvelles rapides. Les choses avancent vite ; préparez-vous à des changements et développements rapides.",
+      "meaning_reversed": "Inversé, il évoque retards, attente, frustration ou occasions manquées. L'énergie est bloquée ou devient chaotique."
+    },
+    "FiveOfCups": {
+      "name": "Cinq de Coupes",
+      "meaning": "Perte, deuil et regret, ainsi que difficulté à voir les bienfaits qui restent. N'oubliez pas de regarder les deux coupes encore debout.",
+      "meaning_reversed": "Inversé, il évoque le fait de lâcher le deuil, d'accepter la perte, de pardonner et de faire les premiers pas vers la guérison. Vous commencez à voir le positif."
+    },
+    "FiveOfPentacles": {
+      "name": "Cinq de Pentacles",
+      "meaning": "Perte, pauvreté, insécurité et sentiment d'être laissé de côté. Demandez de l'aide : du soutien existe, même si vous ne le voyez pas encore.",
+      "meaning_reversed": "Inversé, il évoque le rétablissement, l'acceptation de l'aide, la fin des difficultés ou le fait de retrouver un travail ou un foyer. Une période difficile passe."
+    },
+    "FiveOfSwords": {
+      "name": "Cinq d'Épées",
+      "meaning": "Conflit, perte, victoire aux dépens d'autrui ou harcèlement. Une victoire ne vaut peut-être pas son prix ; mettez votre fierté de côté et cherchez la paix.",
+      "meaning_reversed": "Inversé, il évoque une trêve fragile, des remords, un désir de paix ou le refus d'apprendre de la défaite. Le coût du conflit est trop élevé."
+    },
+    "FiveOfWands": {
+      "name": "Cinq de Bâtons",
+      "meaning": "Compétition, désaccords et conflits mineurs. L'énergie est forte mais désorganisée ; relevez les défis en restant réfléchi.",
+      "meaning_reversed": "Inversé, il évoque l'évitement du conflit, l'oubli des désaccords ou la fin d'une lutte, parfois en cédant. La tension peut devenir souterraine."
+    },
+    "FourOfCups": {
+      "name": "Quatre de Coupes",
+      "meaning": "Apathie, ennui, insatisfaction et occasions négligées. Vous êtes peut-être si concentré sur ce qui manque que vous ne voyez pas ce qui vous est offert.",
+      "meaning_reversed": "Inversé, il évoque une nouvelle perspective, l'acceptation d'une offre, la fin de l'apathie ou une prise de conscience soudaine. Vous êtes prêt à avancer."
+    },
+    "FourOfPentacles": {
+      "name": "Quatre de Pentacles",
+      "meaning": "Possessivité, contrôle, attachement aux ressources et peur du changement. Lâchez le besoin de contrôle pour trouver une véritable stabilité.",
+      "meaning_reversed": "Inversé, il évoque le lâcher-prise sur le contrôle, le partage des ressources et la générosité, ou parfois le gaspillage. Partager vous fait peut-être moins peur."
+    },
+    "FourOfSwords": {
+      "name": "Quatre d'Épées",
+      "meaning": "Repos, récupération, méditation et besoin de se retirer. Vous avez besoin d'une pause après le stress ; donnez-vous le temps de guérir.",
+      "meaning_reversed": "Inversé, il évoque agitation, épuisement, récupération insuffisante ou sortie trop précoce de votre refuge. Vous vous forcez peut-être à agir."
+    },
+    "FourOfWands": {
+      "name": "Quatre de Bâtons",
+      "meaning": "Célébration, harmonie, sécurité et retour à la maison. Une carte de stabilité, de succès et d'étapes joyeuses, comme un mariage ou une pendaison de crémaillère.",
+      "meaning_reversed": "Inversé, il évoque désaccord, insécurité chez soi, fondations instables ou absence de fête. Votre havre de paix vous semble instable."
+    },
+    "Judgement": {
+      "name": "Le Jugement",
+      "meaning": "Renaissance, renouveau et appel à l'action. Réfléchissez, pardonnez, prenez des décisions importantes, apprenez du passé et ouvrez un nouveau chapitre.",
+      "meaning_reversed": "Inversé, il évoque l'autocritique, le doute de soi, le report d'une décision ou le refus d'apprendre de ses erreurs passées. Pardonnez-vous et avancez."
+    },
+    "Justice": {
+      "name": "La Justice",
+      "meaning": "Honnêteté, équilibre et vérité. Agissez avec intégrité, pesez soigneusement vos options et acceptez les conséquences de vos décisions.",
+      "meaning_reversed": "Inversée, elle évoque l'injustice, la malhonnêteté, des ennuis juridiques ou l'évitement des responsabilités. Reconsidérez vos actes et soyez sincère."
+    },
+    "KingOfCups": {
+      "name": "Roi de Coupes",
+      "meaning": "Équilibre émotionnel, maîtrise de soi et diplomatie. Guidez les autres avec sagesse et gardez votre calme en gérant vos sentiments.",
+      "meaning_reversed": "Inversé, il évoque sautes d'humeur, déséquilibre émotionnel, sentiments réprimés ou manipulation. Vos émotions sont peut-être agitées."
+    },
+    "KingOfPentacles": {
+      "name": "Roi de Pentacles",
+      "meaning": "Prospérité, sécurité financière, esprit d'entreprise et fiabilité. Un chef prospère et stable sait gérer les ressources.",
+      "meaning_reversed": "Inversé, il évoque corruption, jeu, cupidité ou abus de pouvoir. Votre empire financier repose peut-être sur un sol fragile."
+    },
+    "KingOfSwords": {
+      "name": "Roi d'Épées",
+      "meaning": "Autorité intellectuelle, clarté et vérité. Utilisez la logique pour diriger et cherchez une compréhension objective des faits.",
+      "meaning_reversed": "Inversé, il évoque tyrannie, mauvais usage de l'intellect, cynisme ou comportement contraire à l'éthique. Votre raisonnement est peut-être partial ou autoritaire."
+    },
+    "KingOfWands": {
+      "name": "Roi de Bâtons",
+      "meaning": "Leadership, vision, esprit d'entreprise et autorité. Prenez les commandes et inspirez les autres par votre passion et votre vision claire de l'avenir.",
+      "meaning_reversed": "Inversé, il évoque tyrannie, impulsivité, exigences excessives ou mauvais leadership. Vous abusez peut-être de votre pouvoir."
+    },
+    "KnightOfCups": {
+      "name": "Cavalier de Coupes",
+      "meaning": "Un messager charmant apportant une invitation ou une offre émotionnelle. Romance, idéalisme et écoute du cœur sont les thèmes centraux.",
+      "meaning_reversed": "Inversé, il évoque manque de romantisme, déception, fausse offre ou tromperie. L'idéal est peut-être une illusion."
+    },
+    "KnightOfPentacles": {
+      "name": "Cavalier de Pentacles",
+      "meaning": "Fiable, travailleur et patient. Le plus constant, quoique le plus lent des Cavaliers : avancez régulièrement avec dévouement.",
+      "meaning_reversed": "Inversé, il évoque paresse, stagnation, occasions manquées par lenteur ou ennui. Il vous manque peut-être l'élan pour avancer."
+    },
+    "KnightOfSwords": {
+      "name": "Cavalier d'Épées",
+      "meaning": "Courageux, ambitieux et fonçant droit devant. Cette carte représente l'action rapide, mais peut mettre en garde contre l'imprudence. Réfléchissez avant d'agir ou de parler.",
+      "meaning_reversed": "Inversé, il évoque imprudence, agressivité, précipitation ou ralentissement soudain. Vos actes sont peut-être mal réfléchis."
+    },
+    "KnightOfWands": {
+      "name": "Cavalier de Bâtons",
+      "meaning": "Action, aventure et énergie agitée. Avancez vite et avec passion, mais faites attention à votre direction.",
+      "meaning_reversed": "Inversé, il évoque imprudence, retards, frustration ou incapacité à terminer un plan. Vous vous précipitez peut-être sans direction."
+    },
+    "NineOfCups": {
+      "name": "Neuf de Coupes",
+      "meaning": "Vœu exaucé, contentement et satisfaction émotionnelle. Connue comme la carte du souhait, elle suggère un épanouissement de votre vie affective.",
+      "meaning_reversed": "Inversé, il peut évoquer la suffisance, l'insatisfaction, un souhait non exaucé ou l'excès. Votre souhait ne s'est pas encore réalisé."
+    },
+    "NineOfPentacles": {
+      "name": "Neuf de Pentacles",
+      "meaning": "Indépendance, raffinement, autosuffisance et confort matériel. Vous avez créé votre propre succès ; prenez le temps d'en profiter.",
+      "meaning_reversed": "Inversé, il évoque dépendance, revers financiers, difficulté à profiter du succès ou excès d'attention aux apparences. Vous n'êtes peut-être pas vraiment indépendant."
+    },
+    "NineOfSwords": {
+      "name": "Neuf d'Épées",
+      "meaning": "Anxiété, inquiétude, cauchemars et insomnie. L'angoisse mentale peut sembler pire que la réalité ; cherchez du soutien et apaisez votre esprit.",
+      "meaning_reversed": "Inversé, il évoque le fait de lâcher la peur, d'apaiser les soucis, de chercher de l'aide ou un secret profond. Vous commencez à vous rétablir."
+    },
+    "NineOfWands": {
+      "name": "Neuf de Bâtons",
+      "meaning": "Résilience, détermination et proximité de la ligne d'arrivée. Vous êtes fatigué mais déterminé ; ce dernier effort peut vous porter jusqu'au bout.",
+      "meaning_reversed": "Inversé, il peut évoquer paranoïa, peur, manque d'endurance ou abandon à la dernière minute. Vous craignez peut-être de faire le dernier pas."
+    },
+    "PageOfCups": {
+      "name": "Valet de Coupes",
+      "meaning": "Un messager de nouvelles, un nouveau départ ou une offre émotionnelle. Il représente la sensibilité, la créativité et l'éveil de nouveaux sentiments.",
+      "meaning_reversed": "Inversé, il peut évoquer mauvaises nouvelles, blocages créatifs, insécurité ou immaturité émotionnelle. L'offre est peut-être fausse ou retirée."
+    },
+    "PageOfPentacles": {
+      "name": "Valet de Pentacles",
+      "meaning": "Un étudiant, des nouvelles financières ou l'occasion de lancer un projet concret. Soyez minutieux, curieux et désireux d'apprendre.",
+      "meaning_reversed": "Inversé, il peut évoquer mauvaises nouvelles financières, paresse, manque de concentration aux études ou au travail, ou projets financiers irréalistes. Vous êtes peut-être mal préparé."
+    },
+    "PageOfSwords": {
+      "name": "Valet d'Épées",
+      "meaning": "Vif, curieux et intellectuellement actif. Un messager de nouvelles ou le début d'un défi mental ; soyez prudent avec vos mots.",
+      "meaning_reversed": "Inversé, il peut évoquer ragots, manque de concentration, mauvais usage des mots ou mauvaise planification. Vous parlez peut-être trop ou trop à la légère."
+    },
+    "PageOfWands": {
+      "name": "Valet de Bâtons",
+      "meaning": "Enthousiasme, inspiration et début d'une nouvelle aventure. Un message concernant un projet créatif ou un voyage vous invite à embrasser l'inconnu.",
+      "meaning_reversed": "Inversé, il peut évoquer mauvaises nouvelles, blocages créatifs, manque de concentration ou retard d'un message important. L'enthousiasme sera peut-être de courte durée."
+    },
+    "QueenOfCups": {
+      "name": "Reine de Coupes",
+      "meaning": "Compassion, intuition et stabilité émotionnelle. Cette figure bienveillante guide avec le cœur ; écoutez votre intuition et faites preuve d'empathie.",
+      "meaning_reversed": "Inversée, elle peut évoquer dépendance affective, insécurité, instabilité ou manipulation émotionnelle. Votre intuition est peut-être brouillée."
+    },
+    "QueenOfPentacles": {
+      "name": "Reine de Pentacles",
+      "meaning": "Soin, abondance concrète et création d'un foyer confortable. Généreuse, ancrée et capable de prendre soin des autres.",
+      "meaning_reversed": "Inversée, elle peut évoquer dépendance financière, possessivité, négligence de soi ou foyer chaotique. Vos fondations vous semblent peut-être fragiles."
+    },
+    "QueenOfSwords": {
+      "name": "Reine d'Épées",
+      "meaning": "Indépendance, esprit vif et impartialité. Communiquez avec logique et clarté, même si vous pouvez parfois sembler froide.",
+      "meaning_reversed": "Inversée, elle peut évoquer distance émotionnelle, cruauté, partialité ou usage de la logique pour blesser. Vous êtes peut-être trop tranchante ou distante."
+    },
+    "QueenOfWands": {
+      "name": "Reine de Bâtons",
+      "meaning": "Courage, indépendance et assurance sociale. Une cheffe énergique et sûre d'elle utilise son charisme pour donner vie à une vision.",
+      "meaning_reversed": "Inversée, elle peut évoquer domination, jalousie, égoïsme ou manque de confiance en soi. Votre énergie est peut-être dispersée ou envahissante."
+    },
+    "SevenOfCups": {
+      "name": "Sept de Coupes",
+      "meaning": "Imagination, choix et possibilités qui donnent le vertige. Vous avez beaucoup de rêves mais manquez de concentration ; choisissez une coupe et dirigez votre énergie vers elle.",
+      "meaning_reversed": "Inversé, il évoque confusion, choix flous ou manque de direction. Vous avez peut-être trop d'options, ou aucune qui paraisse claire."
+    },
+    "SevenOfPentacles": {
+      "name": "Sept de Pentacles",
+      "meaning": "Patience, attente des résultats et évaluation d'un investissement. Vous y êtes presque, mais il n'est pas encore temps de récolter.",
+      "meaning_reversed": "Inversé, il évoque impatience, incertitude sur les résultats, mauvais investissement ou abandon prématuré d'un projet. Laissez du temps au temps."
+    },
+    "SevenOfSwords": {
+      "name": "Sept d'Épées",
+      "meaning": "Secret, tromperie, tentative de s'en tirer à bon compte ou raccourci. Soyez honnête avec vous-même et avec les autres.",
+      "meaning_reversed": "Inversé, il évoque l'aveu d'une tromperie, la révélation d'un secret ou l'acceptation des conséquences de la malhonnêteté. Apprenez de vos erreurs."
+    },
+    "SevenOfWands": {
+      "name": "Sept de Bâtons",
+      "meaning": "Défense, courage et fermeté. On vous met au défi, mais votre position est solide. Défendez-vous.",
+      "meaning_reversed": "Inversé, il évoque abandon, sentiment d'être dépassé, lâcheté ou évitement des responsabilités. Votre position est peut-être devenue incertaine."
+    },
+    "SixOfCups": {
+      "name": "Six de Coupes",
+      "meaning": "Nostalgie, souvenirs du passé, enfance et innocence. Quelqu'un de votre passé peut revenir, ou vous pouvez renouer avec votre enfant intérieur.",
+      "meaning_reversed": "Inversé, il évoque le fait de vivre dans le passé, un attachement malsain aux souvenirs ou le besoin de se tourner vers l'avenir. Le passé vous retient."
+    },
+    "SixOfPentacles": {
+      "name": "Six de Pentacles",
+      "meaning": "Donner et recevoir, partage, charité et équilibre financier. Soyez généreux, aussi bien en donnant qu'en recevant.",
+      "meaning_reversed": "Inversé, il évoque un déséquilibre entre donner et recevoir, égoïsme, dettes ou promesses rompues. Les ressources sont réparties injustement."
+    },
+    "SixOfSwords": {
+      "name": "Six d'Épées",
+      "meaning": "Transition, éloignement des difficultés, voyage et cap vers des jours meilleurs. Vous laissez derrière vous un passé difficile.",
+      "meaning_reversed": "Inversé, il évoque stagnation, retour au passé ou incapacité à échapper aux problèmes. La traversée est peut-être difficile."
+    },
+    "SixOfWands": {
+      "name": "Six de Bâtons",
+      "meaning": "Victoire, reconnaissance publique, succès et confiance. Vous avez surmonté un défi et on vous reconnaît ; savourez l'instant.",
+      "meaning_reversed": "Inversé, il peut évoquer succès retardé, faux espoirs, perte de confiance ou reconnaissance attendue qui ne vient pas. La victoire peut sembler creuse."
+    },
+    "Strength": {
+      "name": "La Force",
+      "meaning": "Courage, force intérieure et résilience. Affrontez les défis avec patience et compassion, maîtrisez vos impulsions et faites face à vos peurs avec grâce.",
+      "meaning_reversed": "Inversée, elle peut évoquer faiblesse, insécurité, peur ou manque de maîtrise de soi. Vous devez redécouvrir votre courage intérieur."
+    },
+    "Temperance": {
+      "name": "La Tempérance",
+      "meaning": "Équilibre, harmonie et modération. Soyez patient, trouvez des compromis et rassemblez les différentes parties de votre vie pour créer la paix.",
+      "meaning_reversed": "Inversée, elle évoque déséquilibre, excès, discorde ou le fait d'aller trop loin dans une direction. Trouvez un juste milieu."
+    },
+    "TenOfCups": {
+      "name": "Dix de Coupes",
+      "meaning": "Harmonie durable, épanouissement affectif et bonheur familial. Il représente une fin heureuse et une profonde paix intérieure.",
+      "meaning_reversed": "Inversé, il évoque harmonie familiale brisée, disputes, conflits à la maison ou poursuite d'une illusion de bonheur parfait. La paix a été perturbée."
+    },
+    "TenOfPentacles": {
+      "name": "Dix de Pentacles",
+      "meaning": "Richesse durable, sécurité financière et héritage. La famille, la communauté et une base stable pour l'avenir sont les thèmes centraux.",
+      "meaning_reversed": "Inversé, il évoque insécurité financière, querelles familiales, rupture avec la tradition ou avenir instable. Votre sentiment de sécurité s'estompe peut-être."
+    },
+    "TenOfSwords": {
+      "name": "Dix d'Épées",
+      "meaning": "Une fin douloureuse, une crise ou le fond du gouffre, mais aussi la promesse d'un nouveau départ. Le pire est passé et la guérison peut commencer.",
+      "meaning_reversed": "Inversé, il évoque l'évitement d'une fin, le report d'une crise ou le rétablissement après un point bas. Vous craignez peut-être que le pire reste à venir."
+    },
+    "TenOfWands": {
+      "name": "Dix de Bâtons",
+      "meaning": "Lourds fardeaux, responsabilité et besoin d'alléger votre charge. Vous en avez trop pris sur vous ; déléguez ou fixez des limites.",
+      "meaning_reversed": "Inversé, il évoque le fait de se délester, l'épuisement ou la difficulté à porter les responsabilités. Vous êtes peut-être las de tout porter."
+    },
+    "TheChariot": {
+      "name": "Le Chariot",
+      "meaning": "Volonté, détermination et maîtrise. Réussissez par un effort ciblé, de la persévérance et la confiance de surmonter les obstacles.",
+      "meaning_reversed": "Inversé, il évoque manque de contrôle ou de direction, défaite ou ambitions qui dévient. Reprenez les rênes ou reconsidérez vos objectifs."
+    },
+    "TheDevil": {
+      "name": "Le Diable",
+      "meaning": "Tentation, matérialisme et asservissement. Affrontez les schémas négatifs, les addictions et votre part d'ombre pour vous libérer des croyances limitantes.",
+      "meaning_reversed": "Inversé, il évoque la rupture des chaînes, la sortie d'une addiction ou la libération des croyances limitantes. Vous commencez à maîtriser votre part d'ombre."
+    },
+    "TheEmperor": {
+      "name": "L'Empereur",
+      "meaning": "Autorité, structure et maîtrise. Prenez les commandes, fixez des limites claires et bâtissez des fondations solides pour vos objectifs.",
+      "meaning_reversed": "Inversé, il peut évoquer domination, rigidité, abus de pouvoir ou manque de structure. Relâchez votre emprise ou instaurez plus de discipline."
+    },
+    "TheEmpress": {
+      "name": "L'Impératrice",
+      "meaning": "Abondance, fertilité et soin. Connectez-vous à la créativité, à la sensualité et à la beauté de la nature ; cultivez la croissance dans votre vie.",
+      "meaning_reversed": "Inversée, elle peut évoquer insécurité, étouffement, créativité bloquée ou négligence de soi. Des préoccupations matérielles peuvent aussi surgir."
+    },
+    "TheFool": {
+      "name": "Le Fou",
+      "meaning": "Nouveaux départs, spontanéité et saut dans l'inconnu. Accueillez l'aventure et l'incertitude l'esprit ouvert et faites confiance à votre instinct.",
+      "meaning_reversed": "Inversé, il évoque imprudence, actes irréfléchis, manque de planification ou évitement des responsabilités. Considérez la situation avant de sauter."
+    },
+    "TheHangedMan": {
+      "name": "Le Pendu",
+      "meaning": "Lâcher-prise, sacrifice et changement de perspective. Abandonnez le contrôle, faites une pause et restez ouvert à de nouvelles idées.",
+      "meaning_reversed": "Inversé, il évoque le refus de faire des sacrifices, une énergie stagnante, des décisions retardées ou le refus d'une pause nécessaire."
+    },
+    "TheHermit": {
+      "name": "L'Ermite",
+      "meaning": "Introspection, solitude et découverte de soi. Éloignez-vous du bruit du monde pour chercher la sagesse intérieure et la croissance spirituelle.",
+      "meaning_reversed": "Inversé, il évoque isolement excessif, solitude, retrait des autres ou refus de demander de l'aide. Trouvez l'équilibre entre solitude et lien."
+    },
+    "TheHierophant": {
+      "name": "Le Hiérophante",
+      "meaning": "Tradition, conformité et guidance spirituelle. Cherchez la sagesse dans les sources établies et envisagez les voies et institutions conventionnelles.",
+      "meaning_reversed": "Inversé, il évoque non-conformisme, remise en cause de la tradition ou préférence pour des croyances personnelles plutôt que pour les règles. Trouvez votre propre vérité."
+    },
+    "TheHighPriestess": {
+      "name": "La Grande Prêtresse",
+      "meaning": "Intuition, mystère et savoir caché. Faites confiance à votre sagesse intérieure et prêtez attention à vos rêves et à vos instincts.",
+      "meaning_reversed": "Inversée, elle évoque le fait d'ignorer son intuition, des sentiments réprimés, de la superficialité ou des secrets à révéler. Votre mental prend peut-être le pas sur votre savoir intérieur."
+    },
+    "TheLovers": {
+      "name": "Les Amoureux",
+      "meaning": "Amour, partenariats et choix. Cette carte représente l'union, l'harmonie et les décisions conscientes en accord avec vos valeurs et votre cœur.",
+      "meaning_reversed": "Inversée, elle évoque désaccord, mauvais choix, problèmes de couple ou valeurs en conflit. Vous êtes peut-être aux prises avec une décision importante."
+    },
+    "TheMagician": {
+      "name": "Le Magicien",
+      "meaning": "Pouvoir, habileté et ingéniosité. Concentrez votre intention et passez à l'action : vous avez les outils et les talents nécessaires pour atteindre vos objectifs.",
+      "meaning_reversed": "Inversé, il peut évoquer manipulation, potentiel inexploité, tromperie ou manque de volonté. Examinez vos motivations et retrouvez votre concentration."
+    },
+    "TheMoon": {
+      "name": "La Lune",
+      "meaning": "Intuition, illusion et subconscient. Explorez vos peurs cachées et l'incertitude, faites face à votre monde intérieur et faites confiance à votre instinct.",
+      "meaning_reversed": "Inversée, elle évoque la dissipation de la confusion, le dépassement de la peur, la remontée de contenus inconscients ou la révélation de secrets. Les illusions commencent à s'estomper."
+    },
+    "TheStar": {
+      "name": "L'Étoile",
+      "meaning": "Espoir, inspiration et renouveau. La guérison, la foi et le lien sont à portée de main ; restez optimiste et suivez vos rêves.",
+      "meaning_reversed": "Inversée, elle évoque désespoir, déception, manque d'inspiration ou découragement. Reconnectez-vous à votre espoir intérieur."
+    },
+    "TheSun": {
+      "name": "Le Soleil",
+      "meaning": "Joie, vitalité et succès. Accueillez la clarté et la positivité, célébrez vos réussites et laissez rayonner le bonheur.",
+      "meaning_reversed": "Inversé, il évoque tristesse passagère, manque d'enthousiasme, incertitude ou bonheur reporté. Cherchez la clarté en vous."
+    },
+    "TheTower": {
+      "name": "La Tour",
+      "meaning": "Changement soudain, bouleversement et révélation. Les anciennes structures peuvent s'effondrer pour que vous reconstruisiez sur des bases plus solides.",
+      "meaning_reversed": "Inversée, elle évoque la peur du changement, l'évitement d'une crise nécessaire ou le report de l'inévitable. L'énergie bloquée doit être libérée."
+    },
+    "TheWorld": {
+      "name": "Le Monde",
+      "meaning": "Accomplissement, épanouissement et unité. Un cycle se termine avec succès et les objectifs sont atteints ; célébrez ce que vous avez accompli.",
+      "meaning_reversed": "Inversé, il évoque un cycle inachevé, un accomplissement retardé ou la recherche d'une clôture qui n'est pas encore venue. Un dernier effort peut être nécessaire."
+    },
+    "ThreeOfCups": {
+      "name": "Trois de Coupes",
+      "meaning": "Célébration, amitié, communauté et collaboration réussie. Profitez de la compagnie des autres et fêtez les joies de la vie.",
+      "meaning_reversed": "Inversé, il peut évoquer excès, ragots, exclusion ou trop de fêtes. La joie est peut-être superficielle, ou vous vous sentez mis à l'écart."
+    },
+    "ThreeOfPentacles": {
+      "name": "Trois de Pentacles",
+      "meaning": "Travail d'équipe, reconnaissance des compétences et premier succès d'un projet. Vos talents sont vus et appréciés.",
+      "meaning_reversed": "Inversé, il peut évoquer mauvais travail d'équipe, désaccord, travail de mauvaise qualité ou manque de reconnaissance. La collaboration échoue."
+    },
+    "ThreeOfSwords": {
+      "name": "Trois d'Épées",
+      "meaning": "Chagrin, déception, perte et cœur brisé. Une blessure émotionnelle douloureuse est bien réelle, mais la guérison peut maintenant commencer.",
+      "meaning_reversed": "Inversé, il évoque le fait de lâcher le chagrin, de surmonter un cœur brisé ou de repousser une douleur nécessaire. Vous refusez peut-être de reconnaître votre blessure."
+    },
+    "ThreeOfWands": {
+      "name": "Trois de Bâtons",
+      "meaning": "Progrès, expansion et premiers résultats de vos efforts. Vous êtes sur la bonne voie ; faites confiance à votre vision et soyez patient.",
+      "meaning_reversed": "Inversé, il peut évoquer retards, obstacles à la croissance, revers commerciaux ou projets inachevés. Vos attentes étaient peut-être prématurées."
+    },
+    "TwoOfCups": {
+      "name": "Deux de Coupes",
+      "meaning": "Union, harmonie, attirance mutuelle et formation de partenariats amoureux ou professionnels. Deux personnes ou forces se rencontrent en équilibre.",
+      "meaning_reversed": "Inversé, il évoque une rupture, un désaccord dans une relation, une séparation ou la fin d'un partenariat. Le lien est tendu."
+    },
+    "TwoOfPentacles": {
+      "name": "Deux de Pentacles",
+      "meaning": "Équilibrer plusieurs responsabilités, souplesse et définition des priorités. Vous jonglez avec les ressources ; gardez votre équilibre.",
+      "meaning_reversed": "Inversé, il évoque déséquilibre financier, surcharge, confusion ou difficulté à fixer des priorités. Vous laissez peut-être tomber des choses."
+    },
+    "TwoOfSwords": {
+      "name": "Deux d'Épées",
+      "meaning": "Une impasse, l'évitement d'une décision et un esprit bloqué. Regardez les faits en face, retirez le bandeau et faites un choix.",
+      "meaning_reversed": "Inversé, il évoque la fin d'une impasse, la confrontation à la vérité ou le report d'une décision. Vous craignez peut-être les conséquences d'une action."
+    },
+    "TwoOfWands": {
+      "name": "Deux de Bâtons",
+      "meaning": "Planifier l'avenir et décider de votre prochaine étape. Vous avez déjà accompli quelque chose ; choisissez une direction et soyez audacieux.",
+      "meaning_reversed": "Inversé, il évoque peur de l'inconnu, projets reportés, mauvaise préparation ou recul devant un objectif ambitieux. Élargissez vos horizons."
+    },
+    "WheelofFortune": {
+      "name": "La Roue de Fortune",
+      "meaning": "Cycles, changement et destin. La vie a ses hauts et ses bas ; accueillez le changement et croyez que les circonstances peuvent tourner en votre faveur.",
+      "meaning_reversed": "Inversée, elle évoque malchance, résistance au changement, bouleversement inattendu ou refus d'apprendre du passé. Vous vous sentez peut-être impuissant face au destin."
+    }
+  }
+}

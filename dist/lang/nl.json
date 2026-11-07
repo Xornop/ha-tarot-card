@@ -14,7 +14,7 @@
     "title": "Titel",
     "subtitle": "Ondertitel",
     "label": "Label",
-    "lang": "Taal (en, nl Of Je Eigen Taalbestand)",
+    "lang": "Taal (Kies Er Een Of Typ Een Taalcode)",
     "icon": "Icoon (Leeg = Tarot-icoon)",
     "accent": "Accentkleur",
     "reversed_probability": "Kans Op Omgekeerde Kaart (%)",
@@ -26,8 +26,8 @@
     "show_label": "Label Tonen",
     "advanced": "Geavanceerd",
     "image_path": "Afbeeldingspad",
-    "themed": "Thema-stijl Gebruiken",
-    "themed_helper": "Haalt het paars/goude design weg en volgt je Home Assistant-thema."
+    "themed": "Eigen Thema",
+    "themed_helper": "Gebruikt het paars/goude design. Zet uit om het Home Assistant-thema te volgen."
   },
   "cards": {
     "AceOfCups": {

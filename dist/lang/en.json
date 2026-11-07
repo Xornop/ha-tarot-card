@@ -14,7 +14,7 @@
     "title": "Title",
     "subtitle": "Subtitle",
     "label": "Label",
-    "lang": "Language (en, nl Or Your Own Language File)",
+    "lang": "Language (Pick One Or Type A Language Code)",
     "icon": "Icon (Empty = Tarot Icon)",
     "accent": "Accent Colour",
     "reversed_probability": "Reversed Card Chance (%)",
@@ -26,8 +26,8 @@
     "show_label": "Show Label",
     "advanced": "Advanced",
     "image_path": "Image Path",
-    "themed": "Use Theme Style",
-    "themed_helper": "Removes the purple/gold design and follows your Home Assistant theme."
+    "themed": "Own Theme",
+    "themed_helper": "Uses the purple/gold design. Turn off to follow your Home Assistant theme."
   },
   "cards": {
     "AceOfCups": {

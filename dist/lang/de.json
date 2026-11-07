@@ -1,0 +1,424 @@
+{
+  "ui": {
+    "upright": "AUFRECHT",
+    "reversed": "UMGEKEHRT",
+    "meaning": "Bedeutung",
+    "close": "Schließen",
+    "title": "Ziehe eine Tarotkarte",
+    "badge_title": "Tarot",
+    "hint": "Tippe, um deine Karte zu ziehen",
+    "major_only": "Nur Große",
+    "minor_only": "Nur Kleine"
+  },
+  "editor": {
+    "title": "Titel",
+    "subtitle": "Untertitel",
+    "label": "Beschriftung",
+    "lang": "Sprache (Auswählen Oder Sprachcode Eingeben)",
+    "icon": "Symbol (Leer = Tarot-Symbol)",
+    "accent": "Akzentfarbe",
+    "reversed_probability": "Wahrscheinlichkeit Umgekehrter Karten (%)",
+    "major_arcana": "Große Arkana",
+    "minor_arcana": "Kleine Arkana",
+    "arcana_helper": "Wähle mindestens eine.",
+    "arcana_buttons": "Zusatztasten: Nur Große / Nur Kleine",
+    "arcana_buttons_helper": "Nur sichtbar, wenn große und kleine Arkana ausgewählt sind.",
+    "show_label": "Beschriftung Anzeigen",
+    "advanced": "Erweitert",
+    "image_path": "Bildpfad",
+    "themed": "Eigenes Design",
+    "themed_helper": "Verwendet das violett-goldene Design. Ausschalten, um dem Home-Assistant-Theme zu folgen."
+  },
+  "cards": {
+    "AceOfCups": {
+      "name": "Ass der Kelche",
+      "meaning": "Das Ass der Kelche bringt emotionale Fülle, neue Liebe, Mitgefühl und innere Freude. Es markiert den Beginn tiefer emotionaler Erfüllung oder einer neuen Beziehung.",
+      "meaning_reversed": "Umgekehrt weist es auf unterdrückte Gefühle, blockierte Kreativität, unerwiderte Liebe oder emotionale Überwältigung hin. Du fühlst dich vielleicht leer oder überflutet."
+    },
+    "AceOfPentacles": {
+      "name": "Ass der Pentakel",
+      "meaning": "Ein Neuanfang bei Finanzen, Karriere oder in der materiellen Welt. Eine Chance auf Stabilität, Wohlstand und ein materielles Geschenk zeichnet sich ab.",
+      "meaning_reversed": "Umgekehrt kann es verpasste Chancen, finanzielle Instabilität, schlechte Investitionen oder mangelnde Planung anzeigen. Das Geschenk verzögert sich oder geht verloren."
+    },
+    "AceOfSwords": {
+      "name": "Ass der Schwerter",
+      "meaning": "Ein Durchbruch, geistige Klarheit, intellektuelle Kraft und eine neue Idee. Du kannst die Verwirrung durchschneiden und die Wahrheit erkennen.",
+      "meaning_reversed": "Umgekehrt kann es Verwirrung, geistiges Chaos, Missbrauch des Intellekts oder Grausamkeit anzeigen. Die Wahrheit ist getrübt oder dein Vorgehen ist zu hart."
+    },
+    "AceOfWands": {
+      "name": "Ass der Stäbe",
+      "meaning": "Ein frischer Anfang voller Inspiration, Wachstum und einem Funken Kreativität. Mach den ersten Schritt zu einer neuen Idee, einem Projekt oder Vorhaben.",
+      "meaning_reversed": "Umgekehrt weist es auf Aufschieberei, fehlende Richtung, blockierte Kreativität oder verpasste Chancen hin. Deine Energie ist vielleicht niedrig oder zerstreut."
+    },
+    "Death": {
+      "name": "Der Tod",
+      "meaning": "Der Tod symbolisiert Wandlung, Abschlüsse und Neuanfänge. Eine Phase endet, damit eine andere beginnen kann; nimm den Wandel an und lass die Vergangenheit los.",
+      "meaning_reversed": "Umgekehrt weist der Tod auf Widerstand gegen Veränderung, Stillstand, Angst vor dem Unbekannten oder das Festhalten an einer ungesunden Situation hin."
+    },
+    "EightOfCups": {
+      "name": "Acht der Kelche",
+      "meaning": "Du wendest dich von etwas ab, das dich nicht mehr erfüllt. Du lässt das Vertraute zurück, auf der Suche nach tieferer emotionaler oder spiritueller Wahrheit.",
+      "meaning_reversed": "Umgekehrt weist sie auf Angst vor dem Aufbruch, Rückkehr in die Vergangenheit, Zögern oder das Festhalten an einer unerfüllten Situation hin."
+    },
+    "EightOfPentacles": {
+      "name": "Acht der Pentakel",
+      "meaning": "Hingabe, handwerkliches Können, Lernen und Liebe zum Detail. Konzentriere dich auf deine Fähigkeiten und strebe danach, deine Arbeit gut zu machen.",
+      "meaning_reversed": "Umgekehrt weist sie auf Perfektionismus, mangelnden Ehrgeiz, schlechte Arbeit oder zu starke Konzentration auf die Arbeit hin. Du bist vielleicht zu kritisch oder zu zögerlich."
+    },
+    "EightOfSwords": {
+      "name": "Acht der Schwerter",
+      "meaning": "Das Gefühl, durch Einschränkungen gefangen zu sein, von denen viele selbst auferlegt sind. Die Schwerter fesseln dich nicht; die Augenbinde kannst du selbst abnehmen.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, sich von Beschränkungen zu befreien, Befreiung und endlich einen Ausweg zu sehen. Du bist bereit, die Augenbinde abzunehmen."
+    },
+    "EightOfWands": {
+      "name": "Acht der Stäbe",
+      "meaning": "Tempo, Handeln, Bewegung und schnelle Nachrichten. Die Dinge entwickeln sich rasch; bereite dich auf schnelle Veränderungen vor.",
+      "meaning_reversed": "Umgekehrt weist sie auf Verzögerungen, Warten, Frustration oder verpasste Chancen hin. Energie ist blockiert oder wird chaotisch."
+    },
+    "FiveOfCups": {
+      "name": "Fünf der Kelche",
+      "meaning": "Verlust, Trauer und Bedauern sowie Mühe, den verbleibenden Segen zu sehen. Denk daran, die beiden Kelche zu betrachten, die noch stehen.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, die Trauer loszulassen, den Verlust zu akzeptieren, zu vergeben und erste Schritte zur Heilung zu gehen. Du beginnst, das Positive zu sehen."
+    },
+    "FiveOfPentacles": {
+      "name": "Fünf der Pentakel",
+      "meaning": "Verlust, Armut, Unsicherheit und das Gefühl, ausgeschlossen zu sein. Bitte um Hilfe: Unterstützung ist da, auch wenn du sie noch nicht siehst.",
+      "meaning_reversed": "Umgekehrt weist sie auf Erholung, das Annehmen von Hilfe, das Ende der Not oder das Finden von Arbeit oder einem Zuhause hin. Eine schwere Zeit geht vorüber."
+    },
+    "FiveOfSwords": {
+      "name": "Fünf der Schwerter",
+      "meaning": "Konflikt, Verlust, Siegen auf Kosten anderer oder Mobbing. Ein Sieg ist seinen Preis vielleicht nicht wert; leg den Stolz beiseite und suche Frieden.",
+      "meaning_reversed": "Umgekehrt weist sie auf einen unruhigen Waffenstillstand, Reue, den Wunsch nach Frieden oder die Weigerung hin, aus einer Niederlage zu lernen. Der Preis des Konflikts ist zu hoch."
+    },
+    "FiveOfWands": {
+      "name": "Fünf der Stäbe",
+      "meaning": "Wettbewerb, Meinungsverschiedenheiten und kleinere Konflikte. Die Energie ist hoch, aber unorganisiert; stell dich den Herausforderungen mit Bedacht.",
+      "meaning_reversed": "Umgekehrt weist sie auf Konfliktvermeidung, das Ignorieren von Meinungsverschiedenheiten oder das Beenden eines Kampfes hin, manchmal durch Nachgeben. Die Spannung kann untergründig weiterwirken."
+    },
+    "FourOfCups": {
+      "name": "Vier der Kelche",
+      "meaning": "Apathie, Langeweile, Unzufriedenheit und übersehene Chancen. Du bist vielleicht so auf das Fehlende fixiert, dass du das Angebotene nicht siehst.",
+      "meaning_reversed": "Umgekehrt weist sie auf eine neue Sichtweise, das Annehmen eines Angebots, das Ablegen der Apathie oder eine plötzliche Erkenntnis hin. Du bist bereit weiterzugehen."
+    },
+    "FourOfPentacles": {
+      "name": "Vier der Pentakel",
+      "meaning": "Besitzdenken, Kontrolle, Festhalten an Ressourcen und Angst vor Veränderung. Lass das Bedürfnis nach Kontrolle los, um echte Stabilität zu finden.",
+      "meaning_reversed": "Umgekehrt weist sie auf das Loslassen von Kontrolle, Teilen und Großzügigkeit hin, manchmal auch auf Verschwendung. Vielleicht fällt dir das Teilen leichter."
+    },
+    "FourOfSwords": {
+      "name": "Vier der Schwerter",
+      "meaning": "Ruhe, Erholung, Meditation und das Bedürfnis, dich zurückzuziehen. Nach Stress brauchst du eine Pause; gib dir Zeit zum Heilen.",
+      "meaning_reversed": "Umgekehrt weist sie auf Unruhe, Erschöpfung, unzureichende Erholung oder ein zu frühes Verlassen deines Rückzugsorts hin. Vielleicht zwingst du dich zum Handeln."
+    },
+    "FourOfWands": {
+      "name": "Vier der Stäbe",
+      "meaning": "Feier, Harmonie, Sicherheit und Heimkehr. Eine Karte der Stabilität, des Erfolgs und freudiger Meilensteine, etwa einer Hochzeit oder Einweihungsfeier.",
+      "meaning_reversed": "Umgekehrt weist sie auf Disharmonie, Unsicherheit zu Hause, ein instabiles Fundament oder fehlende Feierlichkeiten hin. Dein sicherer Hafen fühlt sich unruhig an."
+    },
+    "Judgement": {
+      "name": "Das Gericht",
+      "meaning": "Wiedergeburt, Erneuerung und ein Ruf zum Handeln. Reflektiere, vergib, triff wichtige Entscheidungen, lerne aus der Vergangenheit und beginne ein neues Kapitel.",
+      "meaning_reversed": "Umgekehrt weist das Gericht auf Selbstkritik, Selbstzweifel, das Aufschieben einer Entscheidung oder die Weigerung hin, aus Fehlern zu lernen. Vergib dir selbst und geh weiter."
+    },
+    "Justice": {
+      "name": "Die Gerechtigkeit",
+      "meaning": "Ehrlichkeit, Gleichgewicht und Wahrheit. Handle mit Integrität, wäge deine Möglichkeiten sorgfältig ab und akzeptiere die Folgen deiner Entscheidungen.",
+      "meaning_reversed": "Umgekehrt weist sie auf Ungerechtigkeit, Unehrlichkeit, rechtliche Probleme oder das Vermeiden von Verantwortung hin. Überdenke dein Handeln und sei wahrhaftig."
+    },
+    "KingOfCups": {
+      "name": "König der Kelche",
+      "meaning": "Emotionales Gleichgewicht, Selbstbeherrschung und Diplomatie. Führe andere mit Weisheit und bewahre die Fassung, während du mit deinen Gefühlen umgehst.",
+      "meaning_reversed": "Umgekehrt weist er auf Stimmungsschwankungen, emotionales Ungleichgewicht, unterdrückte Gefühle oder Manipulation hin. Deine Emotionen sind vielleicht aufgewühlt."
+    },
+    "KingOfPentacles": {
+      "name": "König der Pentakel",
+      "meaning": "Wohlstand, finanzielle Sicherheit, Unternehmergeist und Verlässlichkeit. Ein erfolgreicher, stabiler Anführer versteht es, Ressourcen zu verwalten.",
+      "meaning_reversed": "Umgekehrt weist er auf Korruption, Glücksspiel, Gier oder Machtmissbrauch hin. Dein finanzielles Imperium steht vielleicht auf wackligem Grund."
+    },
+    "KingOfSwords": {
+      "name": "König der Schwerter",
+      "meaning": "Intellektuelle Autorität, Klarheit und Wahrheit. Führe mit Logik und suche ein sachliches Verständnis der Tatsachen.",
+      "meaning_reversed": "Umgekehrt weist er auf Tyrannei, Missbrauch des Intellekts, Zynismus oder unethisches Verhalten hin. Dein Denken ist vielleicht voreingenommen oder herrisch."
+    },
+    "KingOfWands": {
+      "name": "König der Stäbe",
+      "meaning": "Führungsstärke, Vision, Unternehmergeist und Autorität. Übernimm die Führung und inspiriere andere mit deiner Leidenschaft und klaren Zukunftsvision.",
+      "meaning_reversed": "Umgekehrt weist er auf Tyrannei, Impulsivität, übertriebene Forderungen oder schlechte Führung hin. Du missbrauchst vielleicht deine Macht."
+    },
+    "KnightOfCups": {
+      "name": "Ritter der Kelche",
+      "meaning": "Ein charmanter Bote, der eine Einladung oder ein emotionales Angebot bringt. Romantik, Idealismus und das Folgen des Herzens sind zentrale Themen.",
+      "meaning_reversed": "Umgekehrt weist er auf fehlende Romantik, Enttäuschung, ein falsches Angebot oder Täuschung hin. Das Ideal ist vielleicht eine Illusion."
+    },
+    "KnightOfPentacles": {
+      "name": "Ritter der Pentakel",
+      "meaning": "Zuverlässig, fleißig und geduldig. Der beständigste, wenn auch langsamste der Ritter: Komm mit Hingabe stetig voran.",
+      "meaning_reversed": "Umgekehrt weist er auf Faulheit, Stillstand oder durch Langsamkeit oder Langeweile verpasste Chancen hin. Dir fehlt vielleicht der Antrieb, voranzukommen."
+    },
+    "KnightOfSwords": {
+      "name": "Ritter der Schwerter",
+      "meaning": "Mutig, ehrgeizig und vorwärtsstürmend. Diese Karte steht für schnelles Handeln, kann aber auch vor Unbesonnenheit warnen. Denk nach, bevor du handelst oder sprichst.",
+      "meaning_reversed": "Umgekehrt weist er auf Unbesonnenheit, Aggression, zu hohes Tempo oder eine plötzliche Verlangsamung hin. Deine Handlungen sind vielleicht schlecht durchdacht."
+    },
+    "KnightOfWands": {
+      "name": "Ritter der Stäbe",
+      "meaning": "Handeln, Abenteuer und rastlose Energie. Geh schnell und leidenschaftlich voran, achte aber darauf, wohin du gehst.",
+      "meaning_reversed": "Umgekehrt weist er auf Unbesonnenheit, Verzögerungen, Frustration oder die Unfähigkeit hin, einen Plan zu beenden. Du hastest vielleicht ohne Richtung."
+    },
+    "NineOfCups": {
+      "name": "Neun der Kelche",
+      "meaning": "Wunscherfüllung, Zufriedenheit und emotionale Erfüllung. Als Wunschkarte bekannt, deutet sie auf Zufriedenheit mit deinem Gefühlsleben hin.",
+      "meaning_reversed": "Umgekehrt kann sie auf Selbstgefälligkeit, Unzufriedenheit, nicht Erreichtes oder Übermaß hindeuten. Dein Wunsch hat sich noch nicht erfüllt."
+    },
+    "NineOfPentacles": {
+      "name": "Neun der Pentakel",
+      "meaning": "Unabhängigkeit, Kultiviertheit, Selbstversorgung und materieller Komfort. Du hast deinen Erfolg selbst geschaffen; nimm dir Zeit, ihn zu genießen.",
+      "meaning_reversed": "Umgekehrt weist sie auf Abhängigkeit, finanzielle Rückschläge, Schwierigkeiten beim Genießen des Erfolgs oder zu viel Fokus auf Äußerlichkeiten hin. Du bist vielleicht nicht wirklich unabhängig."
+    },
+    "NineOfSwords": {
+      "name": "Neun der Schwerter",
+      "meaning": "Angst, Sorgen, Albträume und Schlaflosigkeit. Seelische Qual kann schlimmer wirken als die Wirklichkeit; such Unterstützung und beruhige deinen Geist.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, Angst loszulassen, Sorgen zu lindern, Hilfe zu suchen oder auf ein tiefes Geheimnis. Du beginnst, dich zu erholen."
+    },
+    "NineOfWands": {
+      "name": "Neun der Stäbe",
+      "meaning": "Widerstandskraft, Entschlossenheit und die Nähe zur Ziellinie. Du bist müde, aber entschlossen; diese letzte Anstrengung kann dich durchbringen.",
+      "meaning_reversed": "Umgekehrt kann sie auf Paranoia, Angst, mangelnde Ausdauer oder Aufgeben im letzten Moment hindeuten. Du scheust vielleicht den letzten Schritt."
+    },
+    "PageOfCups": {
+      "name": "Bube der Kelche",
+      "meaning": "Ein Bote von Neuigkeiten, ein Neuanfang oder ein emotionales Angebot. Er steht für Sensibilität, Kreativität und das Aufkeimen neuer Gefühle.",
+      "meaning_reversed": "Umgekehrt kann er auf schlechte Nachrichten, kreative Blockaden, Unsicherheit oder emotionale Unreife hindeuten. Das Angebot ist vielleicht falsch oder wird zurückgezogen."
+    },
+    "PageOfPentacles": {
+      "name": "Bube der Pentakel",
+      "meaning": "Ein Student, finanzielle Nachrichten oder eine Gelegenheit, ein praktisches Projekt zu beginnen. Sei gründlich, neugierig und lernbereit.",
+      "meaning_reversed": "Umgekehrt kann er auf schlechte finanzielle Nachrichten, Faulheit, mangelnde Konzentration in Schule oder Beruf oder unrealistische Finanzpläne hindeuten. Du bist vielleicht unvorbereitet."
+    },
+    "PageOfSwords": {
+      "name": "Bube der Schwerter",
+      "meaning": "Wachsam, neugierig und geistig aktiv. Ein Bote von Neuigkeiten oder der Beginn einer geistigen Herausforderung; sei vorsichtig mit deinen Worten.",
+      "meaning_reversed": "Umgekehrt kann er auf Klatsch, mangelnde Konzentration, Missbrauch von Worten oder schlechte Planung hindeuten. Du sprichst vielleicht zu viel oder zu unbedacht."
+    },
+    "PageOfWands": {
+      "name": "Bube der Stäbe",
+      "meaning": "Begeisterung, Inspiration und der Beginn eines neuen Abenteuers. Eine Nachricht über ein kreatives Projekt oder eine Reise lädt dich ein, das Unbekannte anzunehmen.",
+      "meaning_reversed": "Umgekehrt kann er auf schlechte Nachrichten, kreative Blockaden, mangelnde Konzentration oder Verzögerungen bei einer wichtigen Nachricht hindeuten. Die Begeisterung ist vielleicht nur von kurzer Dauer."
+    },
+    "QueenOfCups": {
+      "name": "Königin der Kelche",
+      "meaning": "Mitgefühl, Intuition und emotionale Stabilität. Diese fürsorgliche Gestalt führt mit dem Herzen; höre auf deine Intuition und zeige Empathie.",
+      "meaning_reversed": "Umgekehrt kann sie auf emotionale Abhängigkeit, Unsicherheit, Launenhaftigkeit oder emotionale Manipulation hindeuten. Deine Intuition ist vielleicht getrübt."
+    },
+    "QueenOfPentacles": {
+      "name": "Königin der Pentakel",
+      "meaning": "Fürsorge, praktische Fülle und das Schaffen eines gemütlichen Zuhauses. Großzügig, bodenständig und fähig, für andere zu sorgen.",
+      "meaning_reversed": "Umgekehrt kann sie auf finanzielle Abhängigkeit, Besitzdenken, Vernachlässigung deiner selbst oder ein chaotisches Zuhause hindeuten. Deine Grundlagen fühlen sich vielleicht unsicher an."
+    },
+    "QueenOfSwords": {
+      "name": "Königin der Schwerter",
+      "meaning": "Unabhängigkeit, scharfer Verstand und Unparteilichkeit. Kommuniziere mit Logik und Klarheit, auch wenn du manchmal kühl wirkst.",
+      "meaning_reversed": "Umgekehrt kann sie auf emotionale Distanz, Grausamkeit, Voreingenommenheit oder den Einsatz von Logik zum Verletzen anderer hindeuten. Du bist vielleicht zu scharf oder zu distanziert."
+    },
+    "QueenOfWands": {
+      "name": "Königin der Stäbe",
+      "meaning": "Mut, Unabhängigkeit und soziales Selbstvertrauen. Eine energische, selbstbewusste Anführerin erweckt mit ihrem Charisma eine Vision zum Leben.",
+      "meaning_reversed": "Umgekehrt kann sie auf Dominanz, Eifersucht, Egoismus oder geringes Selbstvertrauen hindeuten. Deine Energie ist vielleicht unfokussiert oder überwältigend."
+    },
+    "SevenOfCups": {
+      "name": "Sieben der Kelche",
+      "meaning": "Fantasie, Entscheidungen und überwältigende Möglichkeiten. Du hast viele Träume, aber es fehlt dir an Fokus; wähle einen Kelch und richte deine Energie darauf.",
+      "meaning_reversed": "Umgekehrt weist sie auf Verwirrung, unklare Entscheidungen oder fehlende Richtung hin. Du hast vielleicht zu viele Optionen oder keine, die klar erscheint."
+    },
+    "SevenOfPentacles": {
+      "name": "Sieben der Pentakel",
+      "meaning": "Geduld, Warten auf Ergebnisse und die Bewertung einer Investition. Du bist fast am Ziel, aber es ist noch nicht Zeit zu ernten.",
+      "meaning_reversed": "Umgekehrt weist sie auf Ungeduld, Unsicherheit über Ergebnisse, eine schlechte Investition oder das zu frühe Aufgeben eines Projekts hin. Gib ihm Zeit."
+    },
+    "SevenOfSwords": {
+      "name": "Sieben der Schwerter",
+      "meaning": "Heimlichkeit, Täuschung, der Versuch, ungeschoren davonzukommen, oder das Nehmen einer Abkürzung. Sei ehrlich zu dir selbst und zu anderen.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, eine Täuschung zuzugeben, ein Geheimnis zu enthüllen oder die Folgen von Unehrlichkeit zu tragen. Lerne aus deinen Fehlern."
+    },
+    "SevenOfWands": {
+      "name": "Sieben der Stäbe",
+      "meaning": "Verteidigung, Mut und Standhaftigkeit. Du wirst herausgefordert, hast aber eine starke Position. Setz dich für dich ein.",
+      "meaning_reversed": "Umgekehrt weist sie auf Aufgeben, Überforderung, Feigheit oder das Vermeiden von Verantwortung hin. Deine Position ist vielleicht unsicher geworden."
+    },
+    "SixOfCups": {
+      "name": "Sechs der Kelche",
+      "meaning": "Nostalgie, Erinnerungen an die Vergangenheit, Kindheit und Unschuld. Jemand aus deiner Vergangenheit kehrt vielleicht zurück, oder du findest zu deinem inneren Kind zurück.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, in der Vergangenheit zu leben, sich ungesund an Erinnerungen zu klammern oder sich auf die Zukunft konzentrieren zu müssen. Die Vergangenheit hält dich zurück."
+    },
+    "SixOfPentacles": {
+      "name": "Sechs der Pentakel",
+      "meaning": "Geben und Nehmen, Teilen, Wohltätigkeit und finanzielles Gleichgewicht. Sei großzügig, sowohl als Gebender als auch als Empfangender.",
+      "meaning_reversed": "Umgekehrt weist sie auf ein Ungleichgewicht zwischen Geben und Nehmen, Egoismus, Schulden oder gebrochene Versprechen hin. Ressourcen werden ungerecht verteilt."
+    },
+    "SixOfSwords": {
+      "name": "Sechs der Schwerter",
+      "meaning": "Übergang, Abwendung von Schwierigkeiten, Reise und Aufbruch zu besseren Zeiten. Du lässt eine schwierige Vergangenheit hinter dir.",
+      "meaning_reversed": "Umgekehrt weist sie auf Stillstand, Rückkehr in die Vergangenheit oder die Unfähigkeit hin, Problemen zu entkommen. Die Überfahrt fällt dir vielleicht schwer."
+    },
+    "SixOfWands": {
+      "name": "Sechs der Stäbe",
+      "meaning": "Sieg, öffentliche Anerkennung, Erfolg und Selbstvertrauen. Du hast eine Herausforderung gemeistert und wirst gewürdigt; genieße den Moment.",
+      "meaning_reversed": "Umgekehrt kann sie auf verzögerten Erfolg, falsche Hoffnung, verlorenes Selbstvertrauen oder ausbleibende erwartete Anerkennung hindeuten. Der Sieg fühlt sich vielleicht hohl an."
+    },
+    "Strength": {
+      "name": "Die Kraft",
+      "meaning": "Mut, innere Stärke und Widerstandskraft. Begegne Herausforderungen mit Geduld und Mitgefühl, beherrsche deine Impulse und stelle dich deinen Ängsten mit Anmut.",
+      "meaning_reversed": "Umgekehrt kann sie auf Schwäche, Unsicherheit, Angst oder mangelnde Selbstbeherrschung hindeuten. Du musst deinen inneren Mut wiederentdecken."
+    },
+    "Temperance": {
+      "name": "Die Mäßigkeit",
+      "meaning": "Gleichgewicht, Harmonie und Mäßigung. Sei geduldig, finde Kompromisse und führe die verschiedenen Teile deines Lebens zusammen, um Frieden zu schaffen.",
+      "meaning_reversed": "Umgekehrt weist sie auf Ungleichgewicht, Übermaß, Zwietracht oder das Zu-weit-Gehen in eine Richtung hin. Finde einen Mittelweg."
+    },
+    "TenOfCups": {
+      "name": "Zehn der Kelche",
+      "meaning": "Dauerhafte Harmonie, emotionale Erfüllung und Familienglück. Sie steht für ein Happy End und tiefen inneren Frieden.",
+      "meaning_reversed": "Umgekehrt weist sie auf zerbrochene Familienharmonie, Streit, Konflikte zu Hause oder die Jagd nach der Illusion perfekten Glücks hin. Der Frieden wurde gestört."
+    },
+    "TenOfPentacles": {
+      "name": "Zehn der Pentakel",
+      "meaning": "Dauerhafter Wohlstand, finanzielle Sicherheit und Erbe. Familie, Gemeinschaft und ein stabiles Fundament für die Zukunft sind zentrale Themen.",
+      "meaning_reversed": "Umgekehrt weist sie auf finanzielle Unsicherheit, Familienstreit, den Bruch mit Traditionen oder eine instabile Zukunft hin. Dein Sicherheitsgefühl schwindet vielleicht."
+    },
+    "TenOfSwords": {
+      "name": "Zehn der Schwerter",
+      "meaning": "Ein schmerzhaftes Ende, eine Krise oder der tiefste Punkt, aber auch das Versprechen eines Neuanfangs. Das Schlimmste ist vorbei und die Erholung kann beginnen.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, ein Ende zu vermeiden, eine Krise aufzuschieben oder sich von einem Tiefpunkt zu erholen. Du fürchtest vielleicht, das Schlimmste stehe noch bevor."
+    },
+    "TenOfWands": {
+      "name": "Zehn der Stäbe",
+      "meaning": "Schwere Lasten, Verantwortung und die Notwendigkeit, deine Last zu erleichtern. Du hast zu viel übernommen; delegiere Aufgaben oder setze Grenzen.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, Lasten loszulassen, auf Erschöpfung oder darauf, dass dir das Tragen von Verantwortung schwerfällt. Du bist vielleicht müde, alles zu tragen."
+    },
+    "TheChariot": {
+      "name": "Der Wagen",
+      "meaning": "Willenskraft, Entschlossenheit und Kontrolle. Erreiche Erfolg durch fokussierte Anstrengung, Ausdauer und Vertrauen in die Überwindung von Hindernissen.",
+      "meaning_reversed": "Umgekehrt weist er auf mangelnde Kontrolle oder Richtung, Niederlage oder vom Kurs abkommende Ziele hin. Übernimm wieder die Zügel oder überdenke deine Ziele."
+    },
+    "TheDevil": {
+      "name": "Der Teufel",
+      "meaning": "Versuchung, Materialismus und Gebundenheit. Stell dich negativen Mustern, Süchten und deinem Schatten, um dich von einschränkenden Glaubenssätzen zu befreien.",
+      "meaning_reversed": "Umgekehrt weist er darauf hin, Ketten zu sprengen, einer Sucht zu entkommen oder sich von einschränkenden Glaubenssätzen zu befreien. Du beginnst, deine Schattenseite zu meistern."
+    },
+    "TheEmperor": {
+      "name": "Der Herrscher",
+      "meaning": "Autorität, Struktur und Kontrolle. Übernimm die Führung, setze klare Grenzen und baue ein solides Fundament für deine Ziele.",
+      "meaning_reversed": "Umgekehrt kann er auf Dominanz, Starrheit, Machtmissbrauch oder fehlende Struktur hindeuten. Lockere deinen Griff oder schaffe mehr Disziplin."
+    },
+    "TheEmpress": {
+      "name": "Die Herrscherin",
+      "meaning": "Fülle, Fruchtbarkeit und Fürsorge. Verbinde dich mit Kreativität, Sinnlichkeit und der Schönheit der Natur; fördere Wachstum in deinem Leben.",
+      "meaning_reversed": "Umgekehrt kann sie auf Unsicherheit, Überbehütung, blockierte Kreativität oder Vernachlässigung der Selbstfürsorge hindeuten. Auch materielle Sorgen können aufkommen."
+    },
+    "TheFool": {
+      "name": "Der Narr",
+      "meaning": "Neuanfänge, Spontaneität und ein Sprung ins Vertrauen. Nimm Abenteuer und Ungewissheit mit offenem Geist an und vertraue deinem Instinkt.",
+      "meaning_reversed": "Umgekehrt weist er auf Leichtsinn, unüberlegtes Handeln, fehlende Planung oder das Vermeiden von Verantwortung hin. Bedenke die Lage, bevor du springst."
+    },
+    "TheHangedMan": {
+      "name": "Der Gehängte",
+      "meaning": "Hingabe, Opfer und ein Perspektivwechsel. Lass die Kontrolle los, halte inne und bleibe offen für neue Einsichten.",
+      "meaning_reversed": "Umgekehrt weist er auf Unwillen zu Opfern, stagnierende Energie, verzögerte Entscheidungen oder die Weigerung hin, eine nötige Pause einzulegen."
+    },
+    "TheHermit": {
+      "name": "Der Eremit",
+      "meaning": "Selbstbetrachtung, Einsamkeit und Selbsterkenntnis. Ziehe dich vom Lärm der Welt zurück, um innere Weisheit und spirituelles Wachstum zu suchen.",
+      "meaning_reversed": "Umgekehrt weist er auf übermäßige Isolation, Einsamkeit, Rückzug von anderen oder die Weigerung hin, um Hilfe zu bitten. Finde ein Gleichgewicht zwischen Alleinsein und Verbundenheit."
+    },
+    "TheHierophant": {
+      "name": "Der Hierophant",
+      "meaning": "Tradition, Anpassung und spirituelle Führung. Suche Weisheit in etablierten Quellen und bedenke konventionelle Wege und Institutionen.",
+      "meaning_reversed": "Umgekehrt weist er auf Nonkonformismus, das Infragestellen von Traditionen oder persönliche Überzeugungen über Regeln hin. Finde deine eigene Wahrheit."
+    },
+    "TheHighPriestess": {
+      "name": "Die Hohepriesterin",
+      "meaning": "Intuition, Geheimnis und verborgenes Wissen. Vertraue deiner inneren Weisheit und achte auf deine Träume und Instinkte.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, die Intuition zu ignorieren, auf unterdrückte Gefühle, Oberflächlichkeit oder Geheimnisse, die ans Licht müssen. Dein Verstand überlagert vielleicht dein inneres Wissen."
+    },
+    "TheLovers": {
+      "name": "Die Liebenden",
+      "meaning": "Liebe, Partnerschaften und Entscheidungen. Diese Karte steht für Einheit, Harmonie und bewusste Entscheidungen im Einklang mit deinen Werten und deinem Herzen.",
+      "meaning_reversed": "Umgekehrt weist sie auf Disharmonie, schlechte Entscheidungen, Beziehungsprobleme oder widersprüchliche Werte hin. Du ringst vielleicht mit einer wichtigen Entscheidung."
+    },
+    "TheMagician": {
+      "name": "Der Magier",
+      "meaning": "Macht, Geschick und Findigkeit. Richte deine Absicht aus und handle: Du hast die Werkzeuge und Talente, die du brauchst, um deine Ziele zu erreichen.",
+      "meaning_reversed": "Umgekehrt kann er auf Manipulation, ungenutztes Potenzial, Täuschung oder mangelnde Willenskraft hindeuten. Prüfe deine Motive und finde deinen Fokus wieder."
+    },
+    "TheMoon": {
+      "name": "Der Mond",
+      "meaning": "Intuition, Illusion und das Unterbewusstsein. Erkunde verborgene Ängste und Ungewissheit, stelle dich deiner Innenwelt und vertraue deinem Instinkt.",
+      "meaning_reversed": "Umgekehrt weist er darauf hin, dass sich Verwirrung lichtet, Angst überwunden wird, Unterbewusstes auftaucht oder Geheimnisse enthüllt werden. Illusionen beginnen zu verblassen."
+    },
+    "TheStar": {
+      "name": "Der Stern",
+      "meaning": "Hoffnung, Inspiration und Erneuerung. Heilung, Glaube und Verbundenheit sind nah; bleibe optimistisch und folge deinen Träumen.",
+      "meaning_reversed": "Umgekehrt weist er auf Verzweiflung, Enttäuschung, mangelnde Inspiration oder Mutlosigkeit hin. Verbinde dich wieder mit deiner inneren Hoffnung."
+    },
+    "TheSun": {
+      "name": "Die Sonne",
+      "meaning": "Freude, Lebenskraft und Erfolg. Nimm Klarheit und Zuversicht an, feiere deine Erfolge und lass das Glück strahlen.",
+      "meaning_reversed": "Umgekehrt weist sie auf vorübergehende Traurigkeit, mangelnde Begeisterung, Ungewissheit oder aufgeschobenes Glück hin. Suche Klarheit in deinem Inneren."
+    },
+    "TheTower": {
+      "name": "Der Turm",
+      "meaning": "Plötzlicher Wandel, Umbruch und Offenbarung. Alte Strukturen können einstürzen, damit du auf einem stärkeren Fundament neu aufbauen kannst.",
+      "meaning_reversed": "Umgekehrt weist er auf Angst vor Veränderung, das Vermeiden einer notwendigen Krise oder das Hinauszögern des Unvermeidlichen hin. Blockierte Energie muss freigesetzt werden."
+    },
+    "TheWorld": {
+      "name": "Die Welt",
+      "meaning": "Vollendung, Erfüllung und Einheit. Ein Zyklus endet erfolgreich und Ziele sind erreicht; feiere, was du geschafft hast.",
+      "meaning_reversed": "Umgekehrt weist sie auf einen unvollendeten Zyklus, verzögerte Vollendung oder die Suche nach einem noch nicht eingetretenen Abschluss hin. Vielleicht ist eine letzte Anstrengung nötig."
+    },
+    "ThreeOfCups": {
+      "name": "Drei der Kelche",
+      "meaning": "Feier, Freundschaft, Gemeinschaft und erfolgreiche Zusammenarbeit. Genieße die Gesellschaft anderer und feiere die Freuden des Lebens.",
+      "meaning_reversed": "Umgekehrt kann sie auf Übermaß, Klatsch, Ausgrenzung oder zu viel Feiern hindeuten. Die Freude ist vielleicht oberflächlich, oder du fühlst dich ausgeschlossen."
+    },
+    "ThreeOfPentacles": {
+      "name": "Drei der Pentakel",
+      "meaning": "Teamarbeit, Anerkennung von Fähigkeiten und der erste Erfolg eines Projekts. Deine Talente werden gesehen und geschätzt.",
+      "meaning_reversed": "Umgekehrt kann sie auf schlechte Teamarbeit, Uneinigkeit, minderwertige Arbeit oder fehlende Anerkennung hindeuten. Die Zusammenarbeit scheitert."
+    },
+    "ThreeOfSwords": {
+      "name": "Drei der Schwerter",
+      "meaning": "Trauer, Enttäuschung, Verlust und Herzschmerz. Eine schmerzhafte seelische Wunde ist real, doch die Heilung kann nun beginnen.",
+      "meaning_reversed": "Umgekehrt weist sie darauf hin, Trauer loszulassen, Herzschmerz zu überwinden oder notwendigen Schmerz aufzuschieben. Du weigerst dich vielleicht, deine Verletzung anzuerkennen."
+    },
+    "ThreeOfWands": {
+      "name": "Drei der Stäbe",
+      "meaning": "Fortschritt, Ausdehnung und die ersten Ergebnisse deiner Bemühungen. Du bist auf dem richtigen Weg; vertraue deiner Vision und sei geduldig.",
+      "meaning_reversed": "Umgekehrt kann sie auf Verzögerungen, Wachstumshindernisse, geschäftliche Rückschläge oder unfertige Pläne hindeuten. Deine Erwartungen waren vielleicht verfrüht."
+    },
+    "TwoOfCups": {
+      "name": "Zwei der Kelche",
+      "meaning": "Einheit, Harmonie, gegenseitige Anziehung und das Entstehen romantischer oder geschäftlicher Partnerschaften. Zwei Menschen oder Kräfte treffen sich im Gleichgewicht.",
+      "meaning_reversed": "Umgekehrt weist sie auf eine Trennung, Disharmonie in einer Beziehung oder das Ende einer Partnerschaft hin. Die Verbindung ist angespannt."
+    },
+    "TwoOfPentacles": {
+      "name": "Zwei der Pentakel",
+      "meaning": "Das Ausbalancieren mehrerer Verantwortlichkeiten, Flexibilität und das Setzen von Prioritäten. Du jonglierst mit Ressourcen; halte das Gleichgewicht.",
+      "meaning_reversed": "Umgekehrt weist sie auf finanzielles Ungleichgewicht, Überlastung, Verwirrung oder Schwierigkeiten beim Setzen von Prioritäten hin. Dir entgleitet vielleicht etwas."
+    },
+    "TwoOfSwords": {
+      "name": "Zwei der Schwerter",
+      "meaning": "Eine Pattsituation, das Vermeiden einer Entscheidung und ein blockierter Geist. Stell dich den Tatsachen, nimm die Augenbinde ab und entscheide dich.",
+      "meaning_reversed": "Umgekehrt weist sie auf das Ende einer Pattsituation, das Anerkennen der Wahrheit oder das Aufschieben einer Entscheidung hin. Du fürchtest vielleicht die Folgen des Handelns."
+    },
+    "TwoOfWands": {
+      "name": "Zwei der Stäbe",
+      "meaning": "Zukunftsplanung und die Entscheidung über deinen nächsten Schritt. Du hast schon etwas erreicht; wähle eine Richtung und sei mutig.",
+      "meaning_reversed": "Umgekehrt weist sie auf Angst vor dem Unbekannten, aufgeschobene Pläne, schlechte Vorbereitung oder den Rückzug von einem ehrgeizigen Ziel hin. Erweitere deinen Horizont."
+    },
+    "WheelofFortune": {
+      "name": "Das Rad des Schicksals",
+      "meaning": "Zyklen, Wandel und Schicksal. Das Leben hat Höhen und Tiefen; nimm den Wandel an und vertraue darauf, dass sich die Umstände zu deinen Gunsten wenden können.",
+      "meaning_reversed": "Umgekehrt weist es auf Pech, Widerstand gegen Veränderung, unerwartete Störungen oder die Weigerung hin, aus der Vergangenheit zu lernen. Du fühlst dich vielleicht machtlos gegenüber dem Schicksal."
+    }
+  }
+}

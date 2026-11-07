@@ -1,0 +1,424 @@
+{
+  "ui": {
+    "upright": "DRITTA",
+    "reversed": "ROVESCIATA",
+    "meaning": "Significato",
+    "close": "Chiudi",
+    "title": "Pesca una carta dei tarocchi",
+    "badge_title": "Tarocchi",
+    "hint": "Tocca per pescare la tua carta",
+    "major_only": "Solo Maggiori",
+    "minor_only": "Solo Minori"
+  },
+  "editor": {
+    "title": "Titolo",
+    "subtitle": "Sottotitolo",
+    "label": "Etichetta",
+    "lang": "Lingua (Scegline Una O Digita Un Codice)",
+    "icon": "Icona (Vuoto = Icona Tarocchi)",
+    "accent": "Colore Di Accento",
+    "reversed_probability": "Probabilità Di Carta Rovesciata (%)",
+    "major_arcana": "Arcani Maggiori",
+    "minor_arcana": "Arcani Minori",
+    "arcana_helper": "Scegline almeno uno.",
+    "arcana_buttons": "Pulsanti Extra: Solo Maggiori / Solo Minori",
+    "arcana_buttons_helper": "Visibili solo quando sono selezionati arcani maggiori e minori.",
+    "show_label": "Mostra Etichetta",
+    "advanced": "Avanzate",
+    "image_path": "Percorso Immagini",
+    "themed": "Tema Proprio",
+    "themed_helper": "Usa il design viola/oro. Disattiva per seguire il tema di Home Assistant."
+  },
+  "cards": {
+    "AceOfCups": {
+      "name": "Asso di Coppe",
+      "meaning": "L'Asso di Coppe porta abbondanza emotiva, nuovo amore, compassione e gioia interiore. Segna l'inizio di una profonda realizzazione emotiva o di una nuova relazione.",
+      "meaning_reversed": "Rovesciato, indica emozioni represse, creatività bloccata, amore non corrisposto o sopraffazione emotiva. Potresti sentirti vuoto o travolto."
+    },
+    "AceOfPentacles": {
+      "name": "Asso di Pentacoli",
+      "meaning": "Un nuovo inizio nelle finanze, nella carriera o nel mondo materiale. Si profila un'opportunità di stabilità, prosperità e un dono materiale.",
+      "meaning_reversed": "Rovesciato, può indicare occasioni mancate, instabilità finanziaria, cattivi investimenti o mancanza di pianificazione. Il dono è ritardato o perso."
+    },
+    "AceOfSwords": {
+      "name": "Asso di Spade",
+      "meaning": "Una svolta, chiarezza mentale, potere intellettuale e una nuova idea. Puoi attraversare la confusione e vedere la verità.",
+      "meaning_reversed": "Rovesciato, può indicare confusione, caos mentale, uso improprio dell'intelletto o crudeltà. La verità è offuscata o il tuo approccio è troppo duro."
+    },
+    "AceOfWands": {
+      "name": "Asso di Bastoni",
+      "meaning": "Un nuovo inizio pieno di ispirazione, crescita e un lampo di creatività. Fai il primo passo verso una nuova idea, un progetto o un'impresa.",
+      "meaning_reversed": "Rovesciato, indica procrastinazione, mancanza di direzione, creatività bloccata o occasioni mancate. La tua energia può essere bassa o dispersa."
+    },
+    "Death": {
+      "name": "La Morte",
+      "meaning": "La Morte simboleggia trasformazione, fine e nuovi inizi. Una fase finisce perché un'altra possa iniziare; accogli il cambiamento e lascia andare il passato.",
+      "meaning_reversed": "Rovesciata, indica resistenza al cambiamento, stagnazione, paura dell'ignoto o attaccamento a una situazione malsana."
+    },
+    "EightOfCups": {
+      "name": "Otto di Coppe",
+      "meaning": "Allontanarsi da qualcosa che non ti appaga più. Lasci il familiare alla ricerca di una verità emotiva o spirituale più profonda.",
+      "meaning_reversed": "Rovesciato, indica paura di andarsene, ritorno al passato, esitazione o attaccamento a una situazione insoddisfacente."
+    },
+    "EightOfPentacles": {
+      "name": "Otto di Pentacoli",
+      "meaning": "Dedizione, maestria, apprendimento e cura dei dettagli. Concentrati sulle tue abilità e impegnati a fare bene il tuo lavoro.",
+      "meaning_reversed": "Rovesciato, indica perfezionismo, mancanza di ambizione, lavoro scadente o eccessiva concentrazione sul lavoro. Potresti essere troppo critico o restio a provare."
+    },
+    "EightOfSwords": {
+      "name": "Otto di Spade",
+      "meaning": "Sentirsi intrappolati da restrizioni, molte delle quali autoimposte. Le spade non ti legano; puoi toglierti la benda da solo.",
+      "meaning_reversed": "Rovesciato, indica liberarsi dalle limitazioni, liberazione e vedere finalmente una via d'uscita. Sei pronto a toglierti la benda."
+    },
+    "EightOfWands": {
+      "name": "Otto di Bastoni",
+      "meaning": "Velocità, azione, movimento e notizie rapide. Le cose si muovono in fretta; preparati a cambiamenti e sviluppi rapidi.",
+      "meaning_reversed": "Rovesciato, indica ritardi, attesa, frustrazione o occasioni mancate. L'energia è bloccata o sta diventando caotica."
+    },
+    "FiveOfCups": {
+      "name": "Cinque di Coppe",
+      "meaning": "Perdita, lutto e rimpianto, oltre alla difficoltà di vedere le benedizioni rimaste. Ricorda di guardare le due coppe ancora in piedi.",
+      "meaning_reversed": "Rovesciato, indica lasciar andare il lutto, accettare la perdita, perdonare e muovere i primi passi verso la guarigione. Inizi a vedere il lato positivo."
+    },
+    "FiveOfPentacles": {
+      "name": "Cinque di Pentacoli",
+      "meaning": "Perdita, povertà, insicurezza e sensazione di essere escluso. Chiedi aiuto: il sostegno c'è, anche se non lo vedi ancora.",
+      "meaning_reversed": "Rovesciato, indica ripresa, accettare aiuto, la fine delle difficoltà o il ritrovare lavoro o una casa. Un periodo difficile sta passando."
+    },
+    "FiveOfSwords": {
+      "name": "Cinque di Spade",
+      "meaning": "Conflitto, perdita, vincere a spese altrui o prepotenza. Una vittoria può non valere il suo prezzo; metti da parte l'orgoglio e cerca la pace.",
+      "meaning_reversed": "Rovesciato, indica una tregua inquieta, rimorso, desiderio di pace o rifiuto di imparare dalla sconfitta. Il costo del conflitto è troppo alto."
+    },
+    "FiveOfWands": {
+      "name": "Cinque di Bastoni",
+      "meaning": "Competizione, disaccordi e piccoli conflitti. L'energia è alta ma disorganizzata; affronta le sfide restando riflessivo.",
+      "meaning_reversed": "Rovesciato, indica evitare i conflitti, ignorare i disaccordi o porre fine a una lotta, a volte cedendo. La tensione può andare sottotraccia."
+    },
+    "FourOfCups": {
+      "name": "Quattro di Coppe",
+      "meaning": "Apatia, noia, insoddisfazione e occasioni trascurate. Potresti essere così concentrato su ciò che manca da non vedere ciò che ti viene offerto.",
+      "meaning_reversed": "Rovesciato, indica una nuova prospettiva, accettare un'offerta, lasciare l'apatia o una realizzazione improvvisa. Sei pronto ad andare avanti."
+    },
+    "FourOfPentacles": {
+      "name": "Quattro di Pentacoli",
+      "meaning": "Possessività, controllo, attaccamento alle risorse e paura del cambiamento. Lascia andare il bisogno di controllo per trovare una stabilità autentica.",
+      "meaning_reversed": "Rovesciato, indica lasciar andare il controllo, condividere le risorse e generosità, o a volte spreco. Potresti avere meno paura di condividere."
+    },
+    "FourOfSwords": {
+      "name": "Quattro di Spade",
+      "meaning": "Riposo, recupero, meditazione e bisogno di ritirarsi. Hai bisogno di una pausa dopo lo stress; concediti il tempo di guarire.",
+      "meaning_reversed": "Rovesciato, indica irrequietezza, esaurimento, recupero insufficiente o uscire troppo presto dal tuo rifugio. Potresti forzarti ad agire."
+    },
+    "FourOfWands": {
+      "name": "Quattro di Bastoni",
+      "meaning": "Celebrazione, armonia, sicurezza e ritorno a casa. Una carta di stabilità, successo e traguardi felici, come un matrimonio o una festa di inaugurazione della casa.",
+      "meaning_reversed": "Rovesciato, indica disarmonia, insicurezza in casa, fondamenta instabili o mancanza di festeggiamenti. Il tuo porto sicuro sembra instabile."
+    },
+    "Judgement": {
+      "name": "Il Giudizio",
+      "meaning": "Rinascita, rinnovamento e chiamata all'azione. Rifletti, perdona, prendi decisioni importanti, impara dal passato e abbraccia un nuovo capitolo.",
+      "meaning_reversed": "Rovesciato, indica autocritica, dubbio su di sé, rimandare una decisione o rifiutarsi di imparare dagli errori passati. Perdonati e vai avanti."
+    },
+    "Justice": {
+      "name": "La Giustizia",
+      "meaning": "Onestà, equilibrio e verità. Agisci con integrità, valuta con cura le tue opzioni e accetta le conseguenze delle tue decisioni.",
+      "meaning_reversed": "Rovesciata, indica ingiustizia, disonestà, guai legali o fuga dalle responsabilità. Riconsidera le tue azioni e sii sincero."
+    },
+    "KingOfCups": {
+      "name": "Re di Coppe",
+      "meaning": "Equilibrio emotivo, autocontrollo e diplomazia. Guida gli altri con saggezza e mantieni la calma mentre gestisci i tuoi sentimenti.",
+      "meaning_reversed": "Rovesciato, indica sbalzi d'umore, squilibrio emotivo, sentimenti repressi o manipolazione. Le tue emozioni possono essere turbolente."
+    },
+    "KingOfPentacles": {
+      "name": "Re di Pentacoli",
+      "meaning": "Prosperità, sicurezza finanziaria, spirito imprenditoriale e affidabilità. Un leader di successo e stabile sa gestire le risorse.",
+      "meaning_reversed": "Rovesciato, indica corruzione, gioco d'azzardo, avidità o abuso di potere. Il tuo impero finanziario può poggiare su basi fragili."
+    },
+    "KingOfSwords": {
+      "name": "Re di Spade",
+      "meaning": "Autorità intellettuale, chiarezza e verità. Usa la logica per guidare e cerca una comprensione oggettiva dei fatti.",
+      "meaning_reversed": "Rovesciato, indica tirannia, uso improprio dell'intelletto, cinismo o comportamento non etico. Il tuo ragionamento può essere di parte o dispotico."
+    },
+    "KingOfWands": {
+      "name": "Re di Bastoni",
+      "meaning": "Leadership, visione, spirito imprenditoriale e autorità. Prendi il comando e ispira gli altri con la tua passione e una chiara visione del futuro.",
+      "meaning_reversed": "Rovesciato, indica tirannia, impulsività, richieste eccessive o cattiva leadership. Potresti abusare del tuo potere."
+    },
+    "KnightOfCups": {
+      "name": "Cavaliere di Coppe",
+      "meaning": "Un messaggero affascinante che porta un invito o un'offerta emotiva. Romanticismo, idealismo e seguire il cuore sono i temi centrali.",
+      "meaning_reversed": "Rovesciato, indica mancanza di romanticismo, delusione, un'offerta falsa o inganno. L'ideale può essere un'illusione."
+    },
+    "KnightOfPentacles": {
+      "name": "Cavaliere di Pentacoli",
+      "meaning": "Affidabile, laborioso e paziente. Il più costante, anche se il più lento dei Cavalieri: avanza con costanza e dedizione.",
+      "meaning_reversed": "Rovesciato, indica pigrizia, stagnazione o occasioni mancate per lentezza o noia. Potrebbe mancarti la spinta per andare avanti."
+    },
+    "KnightOfSwords": {
+      "name": "Cavaliere di Spade",
+      "meaning": "Coraggioso, ambizioso e lanciato in avanti. Questa carta rappresenta l'azione rapida, ma può mettere in guardia dall'avventatezza. Pensa prima di agire o parlare.",
+      "meaning_reversed": "Rovesciato, indica avventatezza, aggressività, troppa fretta o un improvviso rallentamento. Le tue azioni possono essere poco ponderate."
+    },
+    "KnightOfWands": {
+      "name": "Cavaliere di Bastoni",
+      "meaning": "Azione, avventura ed energia inquieta. Avanza in fretta e con passione, ma fai attenzione a dove stai andando.",
+      "meaning_reversed": "Rovesciato, indica avventatezza, ritardi, frustrazione o incapacità di portare a termine un piano. Potresti avere fretta senza una direzione."
+    },
+    "NineOfCups": {
+      "name": "Nove di Coppe",
+      "meaning": "Realizzazione dei desideri, appagamento e soddisfazione emotiva. Nota come la carta del desiderio, suggerisce soddisfazione per la tua vita emotiva.",
+      "meaning_reversed": "Rovesciato, può indicare autocompiacimento, insoddisfazione, non ottenere ciò che vuoi o eccesso. Il tuo desiderio non si è ancora avverato."
+    },
+    "NineOfPentacles": {
+      "name": "Nove di Pentacoli",
+      "meaning": "Indipendenza, raffinatezza, autosufficienza e comfort materiale. Hai creato il tuo successo; prenditi il tempo per godertelo.",
+      "meaning_reversed": "Rovesciato, indica dipendenza, battute d'arresto finanziarie, difficoltà a godere del successo o eccessiva attenzione alle apparenze. Potresti non essere davvero indipendente."
+    },
+    "NineOfSwords": {
+      "name": "Nove di Spade",
+      "meaning": "Ansia, preoccupazione, incubi e insonnia. L'angoscia mentale può sembrare peggiore della realtà; cerca sostegno e calma la mente.",
+      "meaning_reversed": "Rovesciato, indica lasciar andare la paura, alleviare le preoccupazioni, cercare aiuto o un segreto profondo. Inizi a riprenderti."
+    },
+    "NineOfWands": {
+      "name": "Nove di Bastoni",
+      "meaning": "Resilienza, determinazione e vicinanza al traguardo. Sei stanco ma determinato; quello sforzo finale può portarti fino in fondo.",
+      "meaning_reversed": "Rovesciato, può indicare paranoia, paura, mancanza di resistenza o rinuncia all'ultimo momento. Potresti temere di fare l'ultimo passo."
+    },
+    "PageOfCups": {
+      "name": "Fante di Coppe",
+      "meaning": "Un messaggero di notizie, un nuovo inizio o un'offerta emotiva. Rappresenta sensibilità, creatività e il sorgere di nuovi sentimenti.",
+      "meaning_reversed": "Rovesciato, può indicare cattive notizie, blocchi creativi, insicurezza o immaturità emotiva. L'offerta può essere falsa o ritirata."
+    },
+    "PageOfPentacles": {
+      "name": "Fante di Pentacoli",
+      "meaning": "Uno studente, notizie finanziarie o un'occasione per iniziare un progetto pratico. Sii accurato, curioso e disposto a imparare.",
+      "meaning_reversed": "Rovesciato, può indicare cattive notizie finanziarie, pigrizia, mancanza di concentrazione a scuola o al lavoro, o piani finanziari irrealistici. Potresti essere impreparato."
+    },
+    "PageOfSwords": {
+      "name": "Fante di Spade",
+      "meaning": "Vigile, curioso e intellettualmente attivo. Un messaggero di notizie o l'inizio di una sfida mentale; fai attenzione alle tue parole.",
+      "meaning_reversed": "Rovesciato, può indicare pettegolezzi, mancanza di concentrazione, uso improprio delle parole o cattiva pianificazione. Potresti parlare troppo o con troppa leggerezza."
+    },
+    "PageOfWands": {
+      "name": "Fante di Bastoni",
+      "meaning": "Entusiasmo, ispirazione e inizio di una nuova avventura. Un messaggio su un progetto creativo o un viaggio ti invita ad abbracciare l'ignoto.",
+      "meaning_reversed": "Rovesciato, può indicare cattive notizie, blocchi creativi, mancanza di concentrazione o ritardi in un messaggio importante. L'entusiasmo può essere di breve durata."
+    },
+    "QueenOfCups": {
+      "name": "Regina di Coppe",
+      "meaning": "Compassione, intuizione e stabilità emotiva. Questa figura premurosa guida con il cuore; ascolta la tua intuizione e mostra empatia.",
+      "meaning_reversed": "Rovesciata, può indicare dipendenza emotiva, insicurezza, instabilità o manipolazione emotiva. La tua intuizione può essere offuscata."
+    },
+    "QueenOfPentacles": {
+      "name": "Regina di Pentacoli",
+      "meaning": "Cura, abbondanza concreta e creazione di una casa accogliente. Generosa, con i piedi per terra e capace di prendersi cura degli altri.",
+      "meaning_reversed": "Rovesciata, può indicare dipendenza finanziaria, possessività, trascuratezza di sé o una casa caotica. Le tue fondamenta possono sembrare insicure."
+    },
+    "QueenOfSwords": {
+      "name": "Regina di Spade",
+      "meaning": "Indipendenza, acume e imparzialità. Comunica con logica e chiarezza, anche se a volte puoi sembrare fredda.",
+      "meaning_reversed": "Rovesciata, può indicare distanza emotiva, crudeltà, parzialità o uso della logica per ferire gli altri. Potresti essere troppo tagliente o distaccata."
+    },
+    "QueenOfWands": {
+      "name": "Regina di Bastoni",
+      "meaning": "Coraggio, indipendenza e sicurezza sociale. Una leader energica e sicura di sé usa il suo carisma per dare vita a una visione.",
+      "meaning_reversed": "Rovesciata, può indicare dominio, gelosia, egoismo o scarsa autostima. La tua energia può essere dispersiva o travolgente."
+    },
+    "SevenOfCups": {
+      "name": "Sette di Coppe",
+      "meaning": "Immaginazione, scelte e possibilità travolgenti. Hai molti sogni ma ti manca concentrazione; scegli una coppa e dirigi la tua energia verso di essa.",
+      "meaning_reversed": "Rovesciato, indica confusione, scelte poco chiare o mancanza di direzione. Potresti avere troppe opzioni, o nessuna che sembri chiara."
+    },
+    "SevenOfPentacles": {
+      "name": "Sette di Pentacoli",
+      "meaning": "Pazienza, attesa dei risultati e valutazione di un investimento. Sei quasi arrivato, ma non è ancora tempo di raccogliere.",
+      "meaning_reversed": "Rovesciato, indica impazienza, incertezza sui risultati, un cattivo investimento o abbandono prematuro di un progetto. Dagli tempo."
+    },
+    "SevenOfSwords": {
+      "name": "Sette di Spade",
+      "meaning": "Segretezza, inganno, tentativo di farla franca o scorciatoia. Sii onesto con te stesso e con gli altri.",
+      "meaning_reversed": "Rovesciato, indica ammettere un inganno, rivelare un segreto o accettare le conseguenze della disonestà. Impara dai tuoi errori."
+    },
+    "SevenOfWands": {
+      "name": "Sette di Bastoni",
+      "meaning": "Difesa, coraggio e tenere la posizione. Sei messo alla prova, ma hai una posizione solida. Difenditi.",
+      "meaning_reversed": "Rovesciato, indica rinuncia, sentirsi sopraffatti, codardia o fuga dalle responsabilità. La tua posizione può essere diventata incerta."
+    },
+    "SixOfCups": {
+      "name": "Sei di Coppe",
+      "meaning": "Nostalgia, ricordi del passato, infanzia e innocenza. Qualcuno del tuo passato può tornare, o puoi riconnetterti con il tuo bambino interiore.",
+      "meaning_reversed": "Rovesciato, indica vivere nel passato, attaccamento malsano ai ricordi o necessità di concentrarsi sul futuro. Il passato ti trattiene."
+    },
+    "SixOfPentacles": {
+      "name": "Sei di Pentacoli",
+      "meaning": "Dare e ricevere, condivisione, carità ed equilibrio finanziario. Sii generoso sia nel dare sia nel ricevere.",
+      "meaning_reversed": "Rovesciato, indica squilibrio tra dare e ricevere, egoismo, debiti o promesse infrante. Le risorse vengono distribuite in modo ingiusto."
+    },
+    "SixOfSwords": {
+      "name": "Sei di Spade",
+      "meaning": "Transizione, allontanamento dai guai, viaggio e direzione verso tempi migliori. Stai lasciando alle spalle un passato difficile.",
+      "meaning_reversed": "Rovesciato, indica stagnazione, ritorno al passato o incapacità di sfuggire ai problemi. La traversata può essere faticosa."
+    },
+    "SixOfWands": {
+      "name": "Sei di Bastoni",
+      "meaning": "Vittoria, riconoscimento pubblico, successo e fiducia. Hai superato una sfida e vieni riconosciuto; goditi il momento.",
+      "meaning_reversed": "Rovesciato, può indicare successo ritardato, false speranze, perdita di fiducia o mancato riconoscimento atteso. La vittoria può sembrare vuota."
+    },
+    "Strength": {
+      "name": "La Forza",
+      "meaning": "Coraggio, forza interiore e resilienza. Affronta le sfide con pazienza e compassione, padroneggia i tuoi impulsi e fronteggia le paure con grazia.",
+      "meaning_reversed": "Rovesciata, può indicare debolezza, insicurezza, paura o mancanza di autocontrollo. Devi riscoprire il tuo coraggio interiore."
+    },
+    "Temperance": {
+      "name": "La Temperanza",
+      "meaning": "Equilibrio, armonia e moderazione. Sii paziente, trova compromessi e unisci le diverse parti della tua vita per creare pace.",
+      "meaning_reversed": "Rovesciata, indica squilibrio, eccesso, discordia o spingersi troppo in una direzione. Trova una via di mezzo."
+    },
+    "TenOfCups": {
+      "name": "Dieci di Coppe",
+      "meaning": "Armonia duratura, realizzazione emotiva e felicità familiare. Rappresenta un lieto fine e una profonda pace emotiva.",
+      "meaning_reversed": "Rovesciato, indica armonia familiare spezzata, litigi, conflitti in casa o inseguimento di un'illusione di felicità perfetta. La pace è stata turbata."
+    },
+    "TenOfPentacles": {
+      "name": "Dieci di Pentacoli",
+      "meaning": "Ricchezza duratura, sicurezza finanziaria ed eredità. Famiglia, comunità e una base stabile per il futuro sono i temi centrali.",
+      "meaning_reversed": "Rovesciato, indica insicurezza finanziaria, dispute familiari, rottura con la tradizione o futuro instabile. Il tuo senso di sicurezza può affievolirsi."
+    },
+    "TenOfSwords": {
+      "name": "Dieci di Spade",
+      "meaning": "Una fine dolorosa, una crisi o il punto più basso, ma anche la promessa di un nuovo inizio. Il peggio è passato e la ripresa può cominciare.",
+      "meaning_reversed": "Rovesciato, indica evitare una fine, rimandare una crisi o riprendersi da un punto basso. Potresti temere che il peggio debba ancora venire."
+    },
+    "TenOfWands": {
+      "name": "Dieci di Bastoni",
+      "meaning": "Pesi gravosi, responsabilità e bisogno di alleggerire il carico. Ti sei assunto troppo; delega compiti o poni dei limiti.",
+      "meaning_reversed": "Rovesciato, indica liberarsi dei pesi, esaurimento o fatica nel sostenere le responsabilità. Potresti essere stanco di portare tutto."
+    },
+    "TheChariot": {
+      "name": "Il Carro",
+      "meaning": "Forza di volontà, determinazione e controllo. Ottieni successo con impegno mirato, perseveranza e fiducia nel superare gli ostacoli.",
+      "meaning_reversed": "Rovesciato, indica mancanza di controllo o direzione, sconfitta o ambizioni che deviano. Riprendi le redini o riconsidera i tuoi obiettivi."
+    },
+    "TheDevil": {
+      "name": "Il Diavolo",
+      "meaning": "Tentazione, materialismo e schiavitù. Affronta schemi negativi, dipendenze e la tua ombra per liberarti dalle convinzioni limitanti.",
+      "meaning_reversed": "Rovesciato, indica spezzare le catene, sfuggire a una dipendenza o liberarsi dalle convinzioni limitanti. Inizi a dominare il tuo lato oscuro."
+    },
+    "TheEmperor": {
+      "name": "L'Imperatore",
+      "meaning": "Autorità, struttura e controllo. Prendi il comando, stabilisci confini chiari e costruisci solide fondamenta per i tuoi obiettivi.",
+      "meaning_reversed": "Rovesciato, può indicare dominio, rigidità, abuso di potere o mancanza di struttura. Allenta la presa o crea più disciplina."
+    },
+    "TheEmpress": {
+      "name": "L'Imperatrice",
+      "meaning": "Abbondanza, fertilità e cura. Connettiti con la creatività, la sensualità e la bellezza della natura; coltiva la crescita nella tua vita.",
+      "meaning_reversed": "Rovesciata, può indicare insicurezza, iperprotezione, creatività bloccata o trascuratezza di sé. Possono emergere anche preoccupazioni materiali."
+    },
+    "TheFool": {
+      "name": "Il Matto",
+      "meaning": "Nuovi inizi, spontaneità e salto nel vuoto. Abbraccia l'avventura e l'incertezza con mente aperta e fidati del tuo istinto.",
+      "meaning_reversed": "Rovesciato, indica avventatezza, azioni sconsiderate, mancanza di pianificazione o fuga dalle responsabilità. Valuta la situazione prima di saltare."
+    },
+    "TheHangedMan": {
+      "name": "L'Appeso",
+      "meaning": "Resa, sacrificio e cambio di prospettiva. Lascia andare il controllo, fermati e resta aperto a nuove intuizioni.",
+      "meaning_reversed": "Rovesciato, indica riluttanza a fare sacrifici, energia stagnante, decisioni ritardate o rifiuto di una pausa necessaria."
+    },
+    "TheHermit": {
+      "name": "L'Eremita",
+      "meaning": "Introspezione, solitudine e scoperta di sé. Allontanati dal rumore del mondo per cercare la saggezza interiore e la crescita spirituale.",
+      "meaning_reversed": "Rovesciato, indica isolamento eccessivo, solitudine, ritiro dagli altri o rifiuto di chiedere aiuto. Trova un equilibrio tra solitudine e connessione."
+    },
+    "TheHierophant": {
+      "name": "Il Papa",
+      "meaning": "Tradizione, conformità e guida spirituale. Cerca saggezza nelle fonti consolidate e considera percorsi e istituzioni convenzionali.",
+      "meaning_reversed": "Rovesciato, indica anticonformismo, sfida alla tradizione o scelta di convinzioni personali al posto delle regole. Trova la tua verità."
+    },
+    "TheHighPriestess": {
+      "name": "La Papessa",
+      "meaning": "Intuizione, mistero e conoscenza nascosta. Fidati della tua saggezza interiore e presta attenzione ai tuoi sogni e istinti.",
+      "meaning_reversed": "Rovesciata, indica ignorare l'intuizione, sentimenti repressi, superficialità o segreti che devono essere rivelati. La tua mente può prevalere sulla conoscenza interiore."
+    },
+    "TheLovers": {
+      "name": "Gli Amanti",
+      "meaning": "Amore, relazioni e scelte. Questa carta rappresenta unione, armonia e decisioni consapevoli in linea con i tuoi valori e il tuo cuore.",
+      "meaning_reversed": "Rovesciata, indica disarmonia, scelte sbagliate, problemi di coppia o valori in conflitto. Potresti lottare con una decisione importante."
+    },
+    "TheMagician": {
+      "name": "Il Mago",
+      "meaning": "Potere, abilità e intraprendenza. Concentra la tua intenzione e agisci: hai gli strumenti e i talenti necessari per raggiungere i tuoi obiettivi.",
+      "meaning_reversed": "Rovesciato, può indicare manipolazione, potenziale inespresso, inganno o mancanza di forza di volontà. Esamina le tue motivazioni e ritrova la concentrazione."
+    },
+    "TheMoon": {
+      "name": "La Luna",
+      "meaning": "Intuizione, illusione e subconscio. Esplora paure nascoste e incertezza, affronta il tuo mondo interiore e fidati del tuo istinto.",
+      "meaning_reversed": "Rovesciata, indica confusione che si dissolve, paura superata, contenuti subconsci che emergono o segreti che vengono rivelati. Le illusioni iniziano a svanire."
+    },
+    "TheStar": {
+      "name": "La Stella",
+      "meaning": "Speranza, ispirazione e rinnovamento. Guarigione, fede e connessione sono a portata di mano; resta ottimista e segui i tuoi sogni.",
+      "meaning_reversed": "Rovesciata, indica disperazione, delusione, mancanza di ispirazione o scoraggiamento. Riconnettiti con la tua speranza interiore."
+    },
+    "TheSun": {
+      "name": "Il Sole",
+      "meaning": "Gioia, vitalità e successo. Abbraccia la chiarezza e la positività, celebra i tuoi traguardi e lascia brillare la felicità.",
+      "meaning_reversed": "Rovesciato, indica tristezza passeggera, mancanza di entusiasmo, incertezza o felicità rimandata. Cerca la chiarezza dentro di te."
+    },
+    "TheTower": {
+      "name": "La Torre",
+      "meaning": "Cambiamento improvviso, sconvolgimento e rivelazione. Le vecchie strutture possono crollare perché tu possa ricostruire su basi più solide.",
+      "meaning_reversed": "Rovesciata, indica paura del cambiamento, evitare una crisi necessaria o rimandare l'inevitabile. L'energia bloccata deve essere liberata."
+    },
+    "TheWorld": {
+      "name": "Il Mondo",
+      "meaning": "Completamento, realizzazione e unità. Un ciclo si chiude con successo e gli obiettivi sono raggiunti; celebra ciò che hai ottenuto.",
+      "meaning_reversed": "Rovesciato, indica un ciclo incompiuto, un completamento ritardato o la ricerca di una chiusura che non è ancora arrivata. Può servire un ultimo sforzo."
+    },
+    "ThreeOfCups": {
+      "name": "Tre di Coppe",
+      "meaning": "Celebrazione, amicizia, comunità e collaborazione riuscita. Goditi la compagnia degli altri e festeggia le gioie della vita.",
+      "meaning_reversed": "Rovesciato, può indicare eccesso, pettegolezzi, esclusione o troppe feste. La gioia può essere superficiale, o puoi sentirti escluso."
+    },
+    "ThreeOfPentacles": {
+      "name": "Tre di Pentacoli",
+      "meaning": "Lavoro di squadra, riconoscimento delle abilità e primo successo di un progetto. I tuoi talenti vengono visti e apprezzati.",
+      "meaning_reversed": "Rovesciato, può indicare cattivo lavoro di squadra, disaccordo, lavoro di bassa qualità o mancanza di riconoscimento. La collaborazione sta fallendo."
+    },
+    "ThreeOfSwords": {
+      "name": "Tre di Spade",
+      "meaning": "Dolore, delusione, perdita e cuore spezzato. Una dolorosa ferita emotiva è reale, ma ora la guarigione può iniziare.",
+      "meaning_reversed": "Rovesciato, indica lasciar andare il dolore, superare un cuore spezzato o rimandare una sofferenza necessaria. Potresti rifiutarti di riconoscere la tua ferita."
+    },
+    "ThreeOfWands": {
+      "name": "Tre di Bastoni",
+      "meaning": "Progresso, espansione e i primi risultati dei tuoi sforzi. Sei sulla strada giusta; fidati della tua visione e sii paziente.",
+      "meaning_reversed": "Rovesciato, può indicare ritardi, ostacoli alla crescita, battute d'arresto negli affari o piani incompiuti. Le tue aspettative possono essere state premature."
+    },
+    "TwoOfCups": {
+      "name": "Due di Coppe",
+      "meaning": "Unione, armonia, attrazione reciproca e nascita di legami romantici o d'affari. Due persone o forze si incontrano in equilibrio.",
+      "meaning_reversed": "Rovesciato, indica una rottura, disarmonia in una relazione, separazione o la fine di una collaborazione. Il legame è teso."
+    },
+    "TwoOfPentacles": {
+      "name": "Due di Pentacoli",
+      "meaning": "Bilanciare più responsabilità, flessibilità e definizione delle priorità. Stai destreggiandoti con le risorse; mantieni l'equilibrio.",
+      "meaning_reversed": "Rovesciato, indica squilibrio finanziario, sovraccarico, confusione o difficoltà a stabilire priorità. Potresti lasciarti sfuggire qualcosa."
+    },
+    "TwoOfSwords": {
+      "name": "Due di Spade",
+      "meaning": "Una situazione di stallo, evitare una decisione e una mente bloccata. Affronta i fatti, togli la benda e fai una scelta.",
+      "meaning_reversed": "Rovesciato, indica la fine di uno stallo, affrontare la verità o rimandare una decisione. Potresti temere le conseguenze dell'agire."
+    },
+    "TwoOfWands": {
+      "name": "Due di Bastoni",
+      "meaning": "Pianificare il futuro e decidere il prossimo passo. Hai già ottenuto qualcosa; scegli una direzione e sii audace.",
+      "meaning_reversed": "Rovesciato, indica paura dell'ignoto, piani rimandati, scarsa preparazione o ritirata da un obiettivo ambizioso. Allarga i tuoi orizzonti."
+    },
+    "WheelofFortune": {
+      "name": "La Ruota della Fortuna",
+      "meaning": "Cicli, cambiamento e destino. La vita ha alti e bassi; abbraccia il cambiamento e confida che le circostanze possano volgersi a tuo favore.",
+      "meaning_reversed": "Rovesciata, indica sfortuna, resistenza al cambiamento, sconvolgimenti inattesi o incapacità di imparare dal passato. Potresti sentirti impotente di fronte al destino."
+    }
+  }
+}

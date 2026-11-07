@@ -1,0 +1,424 @@
+{
+  "ui": {
+    "upright": "NORMAL",
+    "reversed": "INVERTIDA",
+    "meaning": "Significado",
+    "close": "Fechar",
+    "title": "Tire uma carta de tarô",
+    "badge_title": "Tarô",
+    "hint": "Toque para tirar sua carta",
+    "major_only": "Só Maiores",
+    "minor_only": "Só Menores"
+  },
+  "editor": {
+    "title": "Título",
+    "subtitle": "Subtítulo",
+    "label": "Rótulo",
+    "lang": "Idioma (Escolha Um Ou Digite Um Código)",
+    "icon": "Ícone (Vazio = Ícone Tarô)",
+    "accent": "Cor De Destaque",
+    "reversed_probability": "Chance De Carta Invertida (%)",
+    "major_arcana": "Arcanos Maiores",
+    "minor_arcana": "Arcanos Menores",
+    "arcana_helper": "Escolha pelo menos um.",
+    "arcana_buttons": "Botões Extras: Só Maiores / Só Menores",
+    "arcana_buttons_helper": "Só aparecem quando arcanos maiores e menores estão selecionados.",
+    "show_label": "Mostrar Rótulo",
+    "advanced": "Avançado",
+    "image_path": "Caminho Das Imagens",
+    "themed": "Tema Próprio",
+    "themed_helper": "Usa o design roxo/dourado. Desative para seguir o tema do Home Assistant."
+  },
+  "cards": {
+    "AceOfCups": {
+      "name": "Ás de Copas",
+      "meaning": "O Ás de Copas traz abundância emocional, novo amor, compaixão e alegria interior. Marca o início de uma profunda realização emocional ou de um novo relacionamento.",
+      "meaning_reversed": "Invertido, aponta para emoções reprimidas, criatividade bloqueada, amor não correspondido ou sobrecarga emocional. Você pode se sentir vazio ou inundado."
+    },
+    "AceOfPentacles": {
+      "name": "Ás de Pentáculos",
+      "meaning": "Um novo começo nas finanças, na carreira ou no mundo material. Surge uma oportunidade de estabilidade, prosperidade e um presente material.",
+      "meaning_reversed": "Invertido, pode indicar oportunidades perdidas, instabilidade financeira, maus investimentos ou falta de planejamento. O presente é adiado ou perdido."
+    },
+    "AceOfSwords": {
+      "name": "Ás de Espadas",
+      "meaning": "Um avanço, clareza mental, poder intelectual e uma nova ideia. Você consegue atravessar a confusão e ver a verdade.",
+      "meaning_reversed": "Invertido, pode indicar confusão, caos mental, mau uso do intelecto ou crueldade. A verdade está turva ou sua abordagem é dura demais."
+    },
+    "AceOfWands": {
+      "name": "Ás de Paus",
+      "meaning": "Um novo começo cheio de inspiração, crescimento e uma faísca de criatividade. Dê o primeiro passo rumo a uma nova ideia, projeto ou empreendimento.",
+      "meaning_reversed": "Invertido, aponta para procrastinação, falta de direção, criatividade bloqueada ou oportunidades perdidas. Sua energia pode estar baixa ou dispersa."
+    },
+    "Death": {
+      "name": "A Morte",
+      "meaning": "A Morte simboliza transformação, finais e novos começos. Uma fase termina para que outra possa começar; abrace a mudança e solte o passado.",
+      "meaning_reversed": "Invertida, aponta para resistência à mudança, estagnação, medo do desconhecido ou apego a uma situação pouco saudável."
+    },
+    "EightOfCups": {
+      "name": "Oito de Copas",
+      "meaning": "Afastar-se de algo que já não o realiza. Você deixa o familiar em busca de uma verdade emocional ou espiritual mais profunda.",
+      "meaning_reversed": "Invertido, aponta para medo de partir, volta ao passado, hesitação ou apego a uma situação insatisfatória."
+    },
+    "EightOfPentacles": {
+      "name": "Oito de Pentáculos",
+      "meaning": "Dedicação, maestria, aprendizado e atenção aos detalhes. Concentre-se nas suas habilidades e esforce-se para fazer bem o seu trabalho.",
+      "meaning_reversed": "Invertido, aponta para perfeccionismo, falta de ambição, trabalho mal feito ou foco excessivo no trabalho. Você pode estar sendo crítico demais ou relutante em tentar."
+    },
+    "EightOfSwords": {
+      "name": "Oito de Espadas",
+      "meaning": "Sentir-se preso por restrições, muitas delas autoimpostas. As espadas não o prendem; você mesmo pode tirar a venda.",
+      "meaning_reversed": "Invertido, aponta para libertar-se das limitações, libertação e enfim enxergar uma saída. Você está pronto para tirar a venda."
+    },
+    "EightOfWands": {
+      "name": "Oito de Paus",
+      "meaning": "Velocidade, ação, movimento e notícias rápidas. As coisas andam depressa; prepare-se para mudanças e acontecimentos rápidos.",
+      "meaning_reversed": "Invertido, aponta para atrasos, espera, frustração ou oportunidades perdidas. A energia está bloqueada ou se tornando caótica."
+    },
+    "FiveOfCups": {
+      "name": "Cinco de Copas",
+      "meaning": "Perda, luto e arrependimento, além de dificuldade em ver as bênçãos que restam. Lembre-se de olhar para as duas copas que ainda estão em pé.",
+      "meaning_reversed": "Invertido, aponta para soltar o luto, aceitar a perda, perdoar e dar os primeiros passos rumo à cura. Você começa a ver o lado positivo."
+    },
+    "FiveOfPentacles": {
+      "name": "Cinco de Pentáculos",
+      "meaning": "Perda, pobreza, insegurança e sensação de estar excluído. Peça ajuda: há apoio disponível, mesmo que você ainda não o veja.",
+      "meaning_reversed": "Invertido, aponta para recuperação, aceitar ajuda, o fim das dificuldades ou encontrar trabalho ou um lar novamente. Um período difícil está passando."
+    },
+    "FiveOfSwords": {
+      "name": "Cinco de Espadas",
+      "meaning": "Conflito, perda, vencer à custa de outros ou intimidação. Uma vitória pode não valer o preço; deixe o orgulho de lado e busque a paz.",
+      "meaning_reversed": "Invertido, aponta para uma trégua desconfortável, remorso, desejo de paz ou recusa em aprender com a derrota. O custo do conflito é alto demais."
+    },
+    "FiveOfWands": {
+      "name": "Cinco de Paus",
+      "meaning": "Competição, desentendimentos e conflitos menores. A energia está alta, mas desorganizada; enfrente os desafios com ponderação.",
+      "meaning_reversed": "Invertido, aponta para evitar conflitos, ignorar desentendimentos ou encerrar uma luta, às vezes cedendo. A tensão pode ficar submersa."
+    },
+    "FourOfCups": {
+      "name": "Quatro de Copas",
+      "meaning": "Apatia, tédio, insatisfação e oportunidades ignoradas. Você pode estar tão focado no que falta que não vê o que lhe é oferecido.",
+      "meaning_reversed": "Invertido, aponta para uma nova perspectiva, aceitar uma oferta, deixar a apatia ou uma percepção repentina. Você está pronto para seguir em frente."
+    },
+    "FourOfPentacles": {
+      "name": "Quatro de Pentáculos",
+      "meaning": "Possessividade, controle, apego a recursos e medo da mudança. Solte a necessidade de controle para encontrar estabilidade genuína.",
+      "meaning_reversed": "Invertido, aponta para soltar o controle, compartilhar recursos e generosidade, ou às vezes desperdício. Você pode ter menos medo de compartilhar."
+    },
+    "FourOfSwords": {
+      "name": "Quatro de Espadas",
+      "meaning": "Descanso, recuperação, meditação e necessidade de se recolher. Você precisa de uma pausa após o estresse; dê-se tempo para curar.",
+      "meaning_reversed": "Invertido, aponta para inquietação, esgotamento, recuperação insuficiente ou sair do seu refúgio cedo demais. Você pode estar se forçando a agir."
+    },
+    "FourOfWands": {
+      "name": "Quatro de Paus",
+      "meaning": "Celebração, harmonia, segurança e volta para casa. Uma carta de estabilidade, sucesso e marcos felizes, como um casamento ou uma inauguração de casa.",
+      "meaning_reversed": "Invertido, aponta para desarmonia, insegurança em casa, base instável ou falta de celebração. Seu refúgio parece desestabilizado."
+    },
+    "Judgement": {
+      "name": "O Julgamento",
+      "meaning": "Renascimento, renovação e chamado à ação. Reflita, perdoe, tome decisões importantes, aprenda com o passado e abrace um novo capítulo.",
+      "meaning_reversed": "Invertido, aponta para autocrítica, dúvida de si mesmo, adiar uma decisão ou recusar-se a aprender com erros passados. Perdoe-se e siga em frente."
+    },
+    "Justice": {
+      "name": "A Justiça",
+      "meaning": "Honestidade, equilíbrio e verdade. Aja com integridade, pondere bem suas opções e aceite as consequências de suas decisões.",
+      "meaning_reversed": "Invertida, aponta para injustiça, desonestidade, problemas legais ou fuga de responsabilidades. Reconsidere seus atos e seja sincero."
+    },
+    "KingOfCups": {
+      "name": "Rei de Copas",
+      "meaning": "Equilíbrio emocional, autocontrole e diplomacia. Conduza os outros com sabedoria e mantenha a compostura ao lidar com seus sentimentos.",
+      "meaning_reversed": "Invertido, aponta para oscilações de humor, desequilíbrio emocional, sentimentos reprimidos ou manipulação. Suas emoções podem estar turbulentas."
+    },
+    "KingOfPentacles": {
+      "name": "Rei de Pentáculos",
+      "meaning": "Prosperidade, segurança financeira, espírito empreendedor e confiabilidade. Um líder bem-sucedido e estável sabe administrar recursos.",
+      "meaning_reversed": "Invertido, aponta para corrupção, jogo, ganância ou abuso de poder. Seu império financeiro pode estar construído em terreno instável."
+    },
+    "KingOfSwords": {
+      "name": "Rei de Espadas",
+      "meaning": "Autoridade intelectual, clareza e verdade. Use a lógica para liderar e busque uma compreensão objetiva dos fatos.",
+      "meaning_reversed": "Invertido, aponta para tirania, mau uso do intelecto, cinismo ou conduta antiética. Seu raciocínio pode ser tendencioso ou dominador."
+    },
+    "KingOfWands": {
+      "name": "Rei de Paus",
+      "meaning": "Liderança, visão, espírito empreendedor e autoridade. Assuma o comando e inspire os outros com sua paixão e visão clara do futuro.",
+      "meaning_reversed": "Invertido, aponta para tirania, impulsividade, exigências excessivas ou má liderança. Você pode estar abusando do seu poder."
+    },
+    "KnightOfCups": {
+      "name": "Cavaleiro de Copas",
+      "meaning": "Um mensageiro encantador que traz um convite ou uma oferta emocional. Romance, idealismo e seguir o coração são os temas centrais.",
+      "meaning_reversed": "Invertido, aponta para falta de romantismo, decepção, uma oferta falsa ou engano. O ideal pode ser uma ilusão."
+    },
+    "KnightOfPentacles": {
+      "name": "Cavaleiro de Pentáculos",
+      "meaning": "Confiável, trabalhador e paciente. O mais constante, embora o mais lento dos Cavaleiros: avance com firmeza e dedicação.",
+      "meaning_reversed": "Invertido, aponta para preguiça, estagnação ou oportunidades perdidas por lentidão ou tédio. Pode faltar-lhe impulso para avançar."
+    },
+    "KnightOfSwords": {
+      "name": "Cavaleiro de Espadas",
+      "meaning": "Corajoso, ambicioso e avançando impetuosamente. Esta carta representa ação rápida, mas pode alertar contra a imprudência. Pense antes de agir ou falar.",
+      "meaning_reversed": "Invertido, aponta para imprudência, agressividade, pressa demais ou uma desaceleração repentina. Suas ações podem estar mal pensadas."
+    },
+    "KnightOfWands": {
+      "name": "Cavaleiro de Paus",
+      "meaning": "Ação, aventura e energia inquieta. Avance rápido e com paixão, mas preste atenção para onde está indo.",
+      "meaning_reversed": "Invertido, aponta para imprudência, atrasos, frustração ou incapacidade de concluir um plano. Você pode estar se apressando sem direção."
+    },
+    "NineOfCups": {
+      "name": "Nove de Copas",
+      "meaning": "Realização de desejos, contentamento e satisfação emocional. Conhecida como a carta do desejo, sugere satisfação com sua vida emocional.",
+      "meaning_reversed": "Invertido, pode apontar para presunção, insatisfação, não conseguir o que deseja ou excesso. Seu desejo ainda não foi realizado."
+    },
+    "NineOfPentacles": {
+      "name": "Nove de Pentáculos",
+      "meaning": "Independência, requinte, autossuficiência e conforto material. Você criou seu próprio sucesso; reserve tempo para aproveitá-lo.",
+      "meaning_reversed": "Invertido, aponta para dependência, reveses financeiros, dificuldade em desfrutar do sucesso ou foco excessivo em aparências. Você pode não ser realmente independente."
+    },
+    "NineOfSwords": {
+      "name": "Nove de Espadas",
+      "meaning": "Ansiedade, preocupação, pesadelos e insônia. A angústia mental pode parecer pior que a realidade; busque apoio e acalme sua mente.",
+      "meaning_reversed": "Invertido, aponta para soltar o medo, aliviar preocupações, buscar ajuda ou um segredo profundo. Você começa a se recuperar."
+    },
+    "NineOfWands": {
+      "name": "Nove de Paus",
+      "meaning": "Resiliência, determinação e proximidade da linha de chegada. Você está cansado, mas determinado; esse último esforço pode levá-lo até o fim.",
+      "meaning_reversed": "Invertido, pode apontar para paranoia, medo, falta de resistência ou desistir no último momento. Você pode ter medo de dar o passo final."
+    },
+    "PageOfCups": {
+      "name": "Valete de Copas",
+      "meaning": "Um mensageiro de notícias, um novo começo ou uma oferta emocional. Representa sensibilidade, criatividade e o surgimento de novos sentimentos.",
+      "meaning_reversed": "Invertido, pode apontar para más notícias, bloqueios criativos, insegurança ou imaturidade emocional. A oferta pode ser falsa ou retirada."
+    },
+    "PageOfPentacles": {
+      "name": "Valete de Pentáculos",
+      "meaning": "Um estudante, notícias financeiras ou uma oportunidade de começar um projeto prático. Seja minucioso, curioso e disposto a aprender.",
+      "meaning_reversed": "Invertido, pode apontar para más notícias financeiras, preguiça, falta de foco nos estudos ou no trabalho, ou planos financeiros irreais. Você pode estar despreparado."
+    },
+    "PageOfSwords": {
+      "name": "Valete de Espadas",
+      "meaning": "Alerta, curioso e intelectualmente ativo. Um mensageiro de notícias ou o início de um desafio mental; cuidado com suas palavras.",
+      "meaning_reversed": "Invertido, pode apontar para fofoca, falta de foco, mau uso das palavras ou mau planejamento. Você pode estar falando demais ou sem cuidado."
+    },
+    "PageOfWands": {
+      "name": "Valete de Paus",
+      "meaning": "Entusiasmo, inspiração e o início de uma nova aventura. Uma mensagem sobre um projeto criativo ou uma viagem convida você a abraçar o desconhecido.",
+      "meaning_reversed": "Invertido, pode apontar para más notícias, bloqueios criativos, falta de foco ou atrasos em uma mensagem importante. O entusiasmo pode ser passageiro."
+    },
+    "QueenOfCups": {
+      "name": "Rainha de Copas",
+      "meaning": "Compaixão, intuição e estabilidade emocional. Esta figura acolhedora lidera com o coração; ouça sua intuição e demonstre empatia.",
+      "meaning_reversed": "Invertida, pode apontar para dependência emocional, insegurança, instabilidade ou manipulação emocional. Sua intuição pode estar nublada."
+    },
+    "QueenOfPentacles": {
+      "name": "Rainha de Pentáculos",
+      "meaning": "Cuidado, abundância prática e criação de um lar confortável. Generosa, com os pés no chão e capaz de cuidar dos outros.",
+      "meaning_reversed": "Invertida, pode apontar para dependência financeira, possessividade, negligência consigo mesma ou um lar caótico. Seus alicerces podem parecer inseguros."
+    },
+    "QueenOfSwords": {
+      "name": "Rainha de Espadas",
+      "meaning": "Independência, mente afiada e imparcialidade. Comunique-se com lógica e clareza, embora às vezes possa parecer fria.",
+      "meaning_reversed": "Invertida, pode apontar para distância emocional, crueldade, parcialidade ou uso da lógica para ferir os outros. Você pode ser afiada ou distante demais."
+    },
+    "QueenOfWands": {
+      "name": "Rainha de Paus",
+      "meaning": "Coragem, independência e confiança social. Uma líder enérgica e segura usa seu carisma para dar vida a uma visão.",
+      "meaning_reversed": "Invertida, pode apontar para dominação, ciúme, egoísmo ou baixa autoconfiança. Sua energia pode estar desfocada ou avassaladora."
+    },
+    "SevenOfCups": {
+      "name": "Sete de Copas",
+      "meaning": "Imaginação, escolhas e possibilidades avassaladoras. Você tem muitos sonhos, mas falta foco; escolha uma copa e direcione sua energia para ela.",
+      "meaning_reversed": "Invertido, aponta para confusão, escolhas pouco claras ou falta de direção. Você pode ter opções demais, ou nenhuma que pareça clara."
+    },
+    "SevenOfPentacles": {
+      "name": "Sete de Pentáculos",
+      "meaning": "Paciência, espera por resultados e avaliação de um investimento. Você está quase lá, mas ainda não é hora de colher.",
+      "meaning_reversed": "Invertido, aponta para impaciência, incerteza sobre resultados, um mau investimento ou abandonar um projeto cedo demais. Dê tempo ao tempo."
+    },
+    "SevenOfSwords": {
+      "name": "Sete de Espadas",
+      "meaning": "Segredo, engano, tentar escapar impune ou pegar um atalho. Seja honesto consigo mesmo e com os outros.",
+      "meaning_reversed": "Invertido, aponta para admitir um engano, revelar um segredo ou aceitar as consequências da desonestidade. Aprenda com seus erros."
+    },
+    "SevenOfWands": {
+      "name": "Sete de Paus",
+      "meaning": "Defesa, coragem e firmeza. Você está sendo desafiado, mas mantém uma posição forte. Defenda-se.",
+      "meaning_reversed": "Invertido, aponta para desistência, sensação de sobrecarga, covardia ou fuga de responsabilidades. Sua posição pode ter se tornado incerta."
+    },
+    "SixOfCups": {
+      "name": "Seis de Copas",
+      "meaning": "Nostalgia, lembranças do passado, infância e inocência. Alguém do seu passado pode voltar, ou você pode se reconectar com sua criança interior.",
+      "meaning_reversed": "Invertido, aponta para viver no passado, apego pouco saudável a lembranças ou a necessidade de focar no futuro. O passado está lhe segurando."
+    },
+    "SixOfPentacles": {
+      "name": "Seis de Pentáculos",
+      "meaning": "Dar e receber, partilha, caridade e equilíbrio financeiro. Seja generoso tanto ao dar quanto ao receber.",
+      "meaning_reversed": "Invertido, aponta para desequilíbrio entre dar e receber, egoísmo, dívidas ou promessas quebradas. Os recursos estão sendo distribuídos de forma injusta."
+    },
+    "SixOfSwords": {
+      "name": "Seis de Espadas",
+      "meaning": "Transição, afastar-se de problemas, viagem e rumo a tempos melhores. Você está deixando para trás um passado difícil.",
+      "meaning_reversed": "Invertido, aponta para estagnação, voltar ao passado ou incapacidade de escapar dos problemas. A travessia pode ser difícil."
+    },
+    "SixOfWands": {
+      "name": "Seis de Paus",
+      "meaning": "Vitória, reconhecimento público, sucesso e confiança. Você superou um desafio e está sendo reconhecido; aproveite o momento.",
+      "meaning_reversed": "Invertido, pode apontar para sucesso atrasado, falsas esperanças, perda de confiança ou não receber o reconhecimento esperado. A vitória pode parecer vazia."
+    },
+    "Strength": {
+      "name": "A Força",
+      "meaning": "Coragem, força interior e resiliência. Enfrente os desafios com paciência e compaixão, domine seus impulsos e encare seus medos com elegância.",
+      "meaning_reversed": "Invertida, pode apontar para fraqueza, insegurança, medo ou falta de autocontrole. Você precisa redescobrir sua coragem interior."
+    },
+    "Temperance": {
+      "name": "A Temperança",
+      "meaning": "Equilíbrio, harmonia e moderação. Seja paciente, busque o meio-termo e una as diferentes partes da sua vida para criar paz.",
+      "meaning_reversed": "Invertida, aponta para desequilíbrio, excesso, discórdia ou ir longe demais em uma direção. Encontre um meio-termo."
+    },
+    "TenOfCups": {
+      "name": "Dez de Copas",
+      "meaning": "Harmonia duradoura, realização emocional e felicidade familiar. Representa um final feliz e uma profunda paz emocional.",
+      "meaning_reversed": "Invertido, aponta para harmonia familiar quebrada, discussões, conflito em casa ou busca de uma ilusão de felicidade perfeita. A paz foi perturbada."
+    },
+    "TenOfPentacles": {
+      "name": "Dez de Pentáculos",
+      "meaning": "Riqueza duradoura, segurança financeira e herança. Família, comunidade e uma base estável para o futuro são os temas centrais.",
+      "meaning_reversed": "Invertido, aponta para insegurança financeira, disputas familiares, rompimento com a tradição ou futuro instável. Sua sensação de segurança pode estar se desvanecendo."
+    },
+    "TenOfSwords": {
+      "name": "Dez de Espadas",
+      "meaning": "Um fim doloroso, crise ou fundo do poço, mas também a promessa de um novo começo. O pior passou e a recuperação pode começar.",
+      "meaning_reversed": "Invertido, aponta para evitar um fim, adiar uma crise ou recuperar-se de um ponto baixo. Você pode temer que o pior ainda esteja por vir."
+    },
+    "TenOfWands": {
+      "name": "Dez de Paus",
+      "meaning": "Fardos pesados, responsabilidade e necessidade de aliviar sua carga. Você assumiu demais; delegue tarefas ou estabeleça limites.",
+      "meaning_reversed": "Invertido, aponta para largar fardos, exaustão ou dificuldade em carregar responsabilidades. Você pode estar cansado de carregar tudo."
+    },
+    "TheChariot": {
+      "name": "O Carro",
+      "meaning": "Força de vontade, determinação e controle. Alcance o sucesso com esforço focado, perseverança e confiança para superar obstáculos.",
+      "meaning_reversed": "Invertido, aponta para falta de controle ou direção, derrota ou ambições que saem do rumo. Retome as rédeas ou reconsidere seus objetivos."
+    },
+    "TheDevil": {
+      "name": "O Diabo",
+      "meaning": "Tentação, materialismo e servidão. Enfrente padrões negativos, vícios e sua sombra para se libertar de crenças limitantes.",
+      "meaning_reversed": "Invertido, aponta para quebrar correntes, escapar de um vício ou libertar-se de crenças limitantes. Você começa a dominar seu lado sombrio."
+    },
+    "TheEmperor": {
+      "name": "O Imperador",
+      "meaning": "Autoridade, estrutura e controle. Assuma o comando, estabeleça limites claros e construa uma base sólida para seus objetivos.",
+      "meaning_reversed": "Invertido, pode apontar para dominação, rigidez, abuso de poder ou falta de estrutura. Afrouxe o controle ou crie mais disciplina."
+    },
+    "TheEmpress": {
+      "name": "A Imperatriz",
+      "meaning": "Abundância, fertilidade e cuidado. Conecte-se com a criatividade, a sensualidade e a beleza da natureza; cultive o crescimento na sua vida.",
+      "meaning_reversed": "Invertida, pode apontar para insegurança, superproteção, criatividade bloqueada ou negligência consigo mesma. Preocupações materiais também podem surgir."
+    },
+    "TheFool": {
+      "name": "O Louco",
+      "meaning": "Novos começos, espontaneidade e um salto de fé. Abrace a aventura e a incerteza com a mente aberta e confie nos seus instintos.",
+      "meaning_reversed": "Invertido, aponta para imprudência, ações impensadas, falta de planejamento ou fuga de responsabilidades. Avalie a situação antes de saltar."
+    },
+    "TheHangedMan": {
+      "name": "O Enforcado",
+      "meaning": "Entrega, sacrifício e mudança de perspectiva. Solte o controle, faça uma pausa e mantenha-se aberto a novas percepções.",
+      "meaning_reversed": "Invertido, aponta para relutância em fazer sacrifícios, energia estagnada, decisões adiadas ou recusa de uma pausa necessária."
+    },
+    "TheHermit": {
+      "name": "O Eremita",
+      "meaning": "Introspecção, solidão e autodescoberta. Afaste-se do barulho do mundo para buscar a sabedoria interior e o crescimento espiritual.",
+      "meaning_reversed": "Invertido, aponta para isolamento excessivo, solidão, afastamento dos outros ou recusa em pedir ajuda. Encontre equilíbrio entre solidão e conexão."
+    },
+    "TheHierophant": {
+      "name": "O Hierofante",
+      "meaning": "Tradição, conformidade e orientação espiritual. Busque sabedoria em fontes estabelecidas e considere caminhos e instituições convencionais.",
+      "meaning_reversed": "Invertido, aponta para inconformismo, desafiar a tradição ou escolher crenças pessoais em vez de regras. Encontre a sua própria verdade."
+    },
+    "TheHighPriestess": {
+      "name": "A Sacerdotisa",
+      "meaning": "Intuição, mistério e conhecimento oculto. Confie na sua sabedoria interior e preste atenção aos seus sonhos e instintos.",
+      "meaning_reversed": "Invertida, aponta para ignorar a intuição, sentimentos reprimidos, superficialidade ou segredos que precisam vir à tona. Sua mente pode estar sobrepondo-se ao conhecimento interior."
+    },
+    "TheLovers": {
+      "name": "Os Enamorados",
+      "meaning": "Amor, parcerias e escolhas. Esta carta representa união, harmonia e decisões conscientes alinhadas com seus valores e seu coração.",
+      "meaning_reversed": "Invertida, aponta para desarmonia, más escolhas, problemas de relacionamento ou valores em conflito. Você pode estar lutando com uma decisão importante."
+    },
+    "TheMagician": {
+      "name": "O Mago",
+      "meaning": "Poder, habilidade e engenhosidade. Concentre sua intenção e aja: você tem as ferramentas e os talentos necessários para alcançar seus objetivos.",
+      "meaning_reversed": "Invertido, pode apontar para manipulação, potencial inexplorado, engano ou falta de força de vontade. Examine seus motivos e recupere o foco."
+    },
+    "TheMoon": {
+      "name": "A Lua",
+      "meaning": "Intuição, ilusão e subconsciente. Explore medos ocultos e incertezas, encare seu mundo interior e confie nos seus instintos.",
+      "meaning_reversed": "Invertida, aponta para confusão se dissipando, superação do medo, conteúdo subconsciente emergindo ou segredos sendo revelados. As ilusões começam a se desfazer."
+    },
+    "TheStar": {
+      "name": "A Estrela",
+      "meaning": "Esperança, inspiração e renovação. Cura, fé e conexão estão ao alcance; mantenha-se otimista e siga seus sonhos.",
+      "meaning_reversed": "Invertida, aponta para desespero, decepção, falta de inspiração ou desânimo. Reconecte-se com sua esperança interior."
+    },
+    "TheSun": {
+      "name": "O Sol",
+      "meaning": "Alegria, vitalidade e sucesso. Abrace a clareza e a positividade, celebre suas conquistas e deixe a felicidade brilhar.",
+      "meaning_reversed": "Invertido, aponta para tristeza passageira, falta de entusiasmo, incerteza ou felicidade adiada. Busque clareza dentro de você."
+    },
+    "TheTower": {
+      "name": "A Torre",
+      "meaning": "Mudança repentina, reviravolta e revelação. Velhas estruturas podem desabar para que você reconstrua sobre uma base mais forte.",
+      "meaning_reversed": "Invertida, aponta para medo da mudança, evitar uma crise necessária ou adiar o inevitável. A energia bloqueada precisa ser liberada."
+    },
+    "TheWorld": {
+      "name": "O Mundo",
+      "meaning": "Conclusão, realização e unidade. Um ciclo termina com sucesso e os objetivos foram alcançados; celebre o que você conquistou.",
+      "meaning_reversed": "Invertido, aponta para um ciclo inacabado, conclusão atrasada ou busca de um encerramento que ainda não chegou. Pode ser necessário um último esforço."
+    },
+    "ThreeOfCups": {
+      "name": "Três de Copas",
+      "meaning": "Celebração, amizade, comunidade e colaboração bem-sucedida. Aproveite a companhia dos outros e celebre as alegrias da vida.",
+      "meaning_reversed": "Invertido, pode apontar para excesso, fofoca, exclusão ou festa demais. A alegria pode ser superficial, ou você pode se sentir excluído."
+    },
+    "ThreeOfPentacles": {
+      "name": "Três de Pentáculos",
+      "meaning": "Trabalho em equipe, reconhecimento de habilidades e o primeiro sucesso de um projeto. Seus talentos estão sendo vistos e valorizados.",
+      "meaning_reversed": "Invertido, pode apontar para mau trabalho em equipe, desacordo, trabalho de baixa qualidade ou falta de reconhecimento. A colaboração está falhando."
+    },
+    "ThreeOfSwords": {
+      "name": "Três de Espadas",
+      "meaning": "Luto, decepção, perda e coração partido. Uma ferida emocional dolorosa é real, mas a cura pode agora começar.",
+      "meaning_reversed": "Invertido, aponta para soltar o luto, superar um coração partido ou adiar uma dor necessária. Você pode estar se recusando a reconhecer sua mágoa."
+    },
+    "ThreeOfWands": {
+      "name": "Três de Paus",
+      "meaning": "Progresso, expansão e os primeiros resultados dos seus esforços. Você está no caminho certo; confie na sua visão e tenha paciência.",
+      "meaning_reversed": "Invertido, pode apontar para atrasos, obstáculos ao crescimento, reveses comerciais ou planos inacabados. Suas expectativas podem ter sido prematuras."
+    },
+    "TwoOfCups": {
+      "name": "Dois de Copas",
+      "meaning": "União, harmonia, atração mútua e formação de parcerias românticas ou profissionais. Duas pessoas ou forças se encontram em equilíbrio.",
+      "meaning_reversed": "Invertido, aponta para um rompimento, desarmonia em um relacionamento, separação ou o fim de uma parceria. A conexão está tensa."
+    },
+    "TwoOfPentacles": {
+      "name": "Dois de Pentáculos",
+      "meaning": "Equilibrar várias responsabilidades, flexibilidade e definição de prioridades. Você está fazendo malabarismos com recursos; mantenha o equilíbrio.",
+      "meaning_reversed": "Invertido, aponta para desequilíbrio financeiro, sobrecarga, confusão ou dificuldade em definir prioridades. Você pode estar deixando as coisas caírem."
+    },
+    "TwoOfSwords": {
+      "name": "Dois de Espadas",
+      "meaning": "Um impasse, evitar uma decisão e uma mente bloqueada. Encare os fatos, tire a venda e faça uma escolha.",
+      "meaning_reversed": "Invertido, aponta para o fim de um impasse, enfrentar a verdade ou adiar uma decisão. Você pode temer as consequências de agir."
+    },
+    "TwoOfWands": {
+      "name": "Dois de Paus",
+      "meaning": "Planejar o futuro e decidir seu próximo passo. Você já conquistou algo; escolha uma direção e seja ousado.",
+      "meaning_reversed": "Invertido, aponta para medo do desconhecido, planos adiados, má preparação ou recuo diante de um objetivo ambicioso. Amplie seus horizontes."
+    },
+    "WheelofFortune": {
+      "name": "A Roda da Fortuna",
+      "meaning": "Ciclos, mudança e destino. A vida tem altos e baixos; abrace a mudança e confie que as circunstâncias podem virar a seu favor.",
+      "meaning_reversed": "Invertida, aponta para azar, resistência à mudança, perturbação inesperada ou falha em aprender com o passado. Você pode se sentir impotente diante do destino."
+    }
+  }
+}

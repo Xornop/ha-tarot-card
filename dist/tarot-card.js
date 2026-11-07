@@ -270,6 +270,27 @@ class TarotBase extends HTMLElement {
            <button class="arcana-btn" type="button" data-kind="minor">${this._escapeHtml(this._t("minor_only"))}</button>
          </div>`
       : "";
+    // themed (default true) = own purple/gold theme; themed: false follows the Home Assistant theme.
+    const haTheme = c.themed === false
+      ? `
+        ha-card {
+          color: var(--primary-text-color); background: var(--ha-card-background, var(--card-background-color));
+          border: var(--ha-card-border-width, 1px) solid var(--ha-card-border-color, var(--divider-color));
+          box-shadow: var(--ha-card-box-shadow, none);
+        }
+        ha-card:hover { box-shadow: var(--ha-card-box-shadow, none); background: var(--ha-card-background, var(--card-background-color)); }
+        .icon {
+          --tc-icon-fill: var(--secondary-background-color);
+          color: var(--primary-text-color); border: 0; background: var(--secondary-background-color); animation: none;
+        }
+        .title { font-family: inherit; letter-spacing: normal; }
+        .hint { color: var(--secondary-text-color); opacity: 1; }
+        .arcana-btn {
+          color: var(--primary-text-color); background: var(--secondary-background-color);
+          border: 1px solid var(--divider-color); letter-spacing: .05em;
+        }
+        .arcana-btn:hover { background: var(--divider-color); }`
+      : "";
     return {
       css: `
         .arcana { display: flex; gap: 10px; padding: 0 16px 14px; }
@@ -299,6 +320,7 @@ class TarotBase extends HTMLElement {
         .icon { width: 46px; height: 46px; }
         .title { display: block; font-family: Georgia, "Times New Roman", serif; font-size: 17px; font-weight: 600; letter-spacing: .04em; }
         .hint { display: block; margin-top: 2px; font-size: 12px; opacity: .7; }
+        ${haTheme}
       `,
       html: `
         <ha-card>
@@ -313,8 +335,8 @@ class TarotBase extends HTMLElement {
 
   _badgeTrigger(title) {
     const showLabel = this._config.show_label !== false;
-    // themed: drop the purple/gold look and follow the Home Assistant theme instead.
-    const themed = this._config.themed === true
+    // themed (default true) = own purple/gold theme; themed: false follows the Home Assistant theme.
+    const themed = this._config.themed === false
       ? `
         .trigger {
           color: var(--primary-text-color);
@@ -502,7 +524,7 @@ const TAROT_EDITOR_DEFAULTS = {
   minor_arcana: true,
   arcana_buttons: false,
   show_label: true,
-  themed: false,
+  themed: true,
 };
 
 function tarotHexToRgb(value) {
@@ -554,7 +576,15 @@ class TarotEditorBase extends HTMLElement {
           select: {
             mode: "dropdown",
             custom_value: true,
-            options: [{ value: "en", label: "English" }, { value: "nl", label: "Nederlands" }],
+            options: [
+              { value: "en", label: "English" },
+              { value: "nl", label: "Nederlands" },
+              { value: "es", label: "Español" },
+              { value: "de", label: "Deutsch" },
+              { value: "fr", label: "Français" },
+              { value: "pt", label: "Português" },
+              { value: "it", label: "Italiano" },
+            ],
           },
         },
       },
@@ -567,8 +597,9 @@ class TarotEditorBase extends HTMLElement {
         ],
       },
       ...(this._isBadge
-        ? [{ name: "show_label", selector: bool }, { name: "themed", selector: bool }]
+        ? [{ name: "show_label", selector: bool }]
         : [{ name: "arcana_buttons", selector: bool }]),
+      { name: "themed", selector: bool },
       {
         type: "expandable", name: "", title: this._label("advanced"),
         schema: [
