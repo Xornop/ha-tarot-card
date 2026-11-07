@@ -21,12 +21,10 @@ A standalone Lovelace custom card that draws a random tarot card and opens it in
 
 ## Install with HACS
 
-1. In HACS, open **⋮ → Custom repositories**.
-2. Add this repository's GitHub URL and select **Dashboard** as the category.
+1. Go to Settings > Marketplace.
+2. Add this repository's GitHub URL under "Add from link".
 3. Find **HA Tarot Card** in HACS and install it.
 4. Refresh the browser / Home Assistant app.
-
-HACS installs the JavaScript file, the language files and the image folder together. You do **not** need to download or copy anything separately.
 
 ## Use the card
 
@@ -140,6 +138,6 @@ Each file has the same structure:
 
 To add another language, copy `en.json` to e.g. `ja.json`, translate the values (keep the keys and card ids), and use `lang: ja`. Missing texts fall back to English. `**bold**` in meanings is supported.
 
-## Images
+## Custom Images
 
-All 78 upright card images are in `dist/tarot_cards/` as `.avif` files. Major and minor arcana are told apart by file name, so they all stay in one folder. Reversed cards are the same image, rotated.
+All 78 upright card images are in `dist/tarot_cards/` as `.avif` files. Major and minor arcana are told apart by file name, so they all stay in one folder. Reversed cards are the same image, rotated. To add your own deck just copy the filenames and use the `image_path` key.
